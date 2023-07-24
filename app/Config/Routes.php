@@ -34,10 +34,26 @@ $routes->get('/', 'Auth::login');
 $routes->post('auth/login', 'Auth::login');
 $routes->get('dashboard', 'Dashboard::index', ['filter' => 'auth']);
 $routes->get('logout', 'Auth::logout');
+
 $routes->get('profile/admin', 'Profile::admin', ['filter' => 'auth']);
 $routes->post('profile/save_admin', 'Profile::save_admin', ['filter' => 'auth']);
 $routes->get('profile/user', 'Profile::user', ['filter' => 'auth']);
 $routes->post('profile/save_user', 'Profile::save_user', ['filter' => 'auth']);
+
+$routes->get('admin', 'Admin::index', ['filter' => 'auth']);
+$routes->get('admin/add_user', 'Admin::addUser', ['filter' => 'auth']);
+$routes->post('admin/saveUser', 'Admin::saveUser', ['filter' => 'auth']);
+
+$routes->get('admin/list_user_level_two', 'Admin::listUserLevelTwo', ['filter' => 'auth']);
+
+$routes->get('admin/edit_user/(:num)', 'Admin::editUser/$1', ['filter' => 'auth']);
+$routes->post('admin/updateUser/(:num)', 'Admin::updateUser/$1', ['filter' => 'auth']);
+
+$routes->get('admin/delete_user/(:num)', 'Admin::deleteUser/$1', ['filter' => 'auth']);
+
+
+
+
 
 
 

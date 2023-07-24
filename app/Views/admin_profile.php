@@ -4,6 +4,13 @@
 <head>
     <title>Admin Profile</title>
 </head>
+<?php
+$session = session();
+$successMsg = $session->getFlashdata('success');
+if ($successMsg) {
+    echo '<p style="color: green;">' . $successMsg . '</p>';
+}
+?>
 
 <body>
     <h1>Admin Profile</h1>

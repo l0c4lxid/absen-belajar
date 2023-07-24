@@ -21,4 +21,12 @@ class Dashboard extends BaseController
             return redirect()->to('login');
         }
     }
+    public function userList()
+    {
+        $userModel = new UserModel();
+        $data['users'] = $userModel->where('level_user', 2)->findAll();
+
+        // Tampilkan view untuk daftar user
+        return view('user_list', $data);
+    }
 }

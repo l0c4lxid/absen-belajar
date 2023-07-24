@@ -38,9 +38,10 @@ class Profile extends BaseController
             'username' => $newUsername,
             'password' => $hashedPassword,
         ]);
-
         // Setelah berhasil disimpan, tampilkan pesan sukses atau lakukan redirect
-        return redirect()->to('profile/admin')->with('success', 'Profile updated successfully!');
+        $session = session();
+        $session->setFlashdata('success', 'Admin profile updated successfully.');
+        return redirect()->to('profile/admin');
     }
 
     public function save_user()
@@ -61,7 +62,9 @@ class Profile extends BaseController
         ]);
 
         // Setelah berhasil disimpan, tampilkan pesan sukses atau lakukan redirect
-        return redirect()->to('profile/user')->with('success', 'Profile updated successfully!');
+        $session = session();
+        $session->setFlashdata('success', 'User profile updated successfully.');
+        return redirect()->to('profile/user');
     }
 
 
