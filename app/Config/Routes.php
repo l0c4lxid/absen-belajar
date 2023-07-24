@@ -19,7 +19,7 @@ $routes->set404Override();
 // where controller filters or CSRF protection are bypassed.
 // If you don't want to define all routes, please use the Auto Routing (Improved).
 // Set `$autoRoutesImproved` to true in `app/Config/Feature.php` and set the following to true.
-// $routes->setAutoRoute(false);
+$routes->setAutoRoute(true);
 
 /*
  * --------------------------------------------------------------------
@@ -44,12 +44,22 @@ $routes->get('admin', 'Admin::index', ['filter' => 'auth']);
 $routes->get('admin/add_user', 'Admin::addUser', ['filter' => 'auth']);
 $routes->post('admin/saveUser', 'Admin::saveUser', ['filter' => 'auth']);
 
-$routes->get('admin/list_user_level_two', 'Admin::listUserLevelTwo', ['filter' => 'auth']);
+$routes->get('admin/listDevisi', 'Admin::listDevisi', ['filter' => 'auth']);
 
 $routes->get('admin/edit_user/(:num)', 'Admin::editUser/$1', ['filter' => 'auth']);
 $routes->post('admin/updateUser/(:num)', 'Admin::updateUser/$1', ['filter' => 'auth']);
 
 $routes->get('admin/delete_user/(:num)', 'Admin::deleteUser/$1', ['filter' => 'auth']);
+
+$routes->get('admin/add_division', 'Admin::addDivision', ['filter' => 'auth']);
+$routes->post('admin/save_division', 'Admin::saveDivision', ['filter' => 'auth']);
+$routes->get('admin/list_division', 'Admin::listDivision', ['filter' => 'auth']);
+$routes->get('admin/delete_division/(:num)', 'Admin::deleteDivision/$1', ['filter' => 'auth']);
+
+
+$routes->get('admin/add_user', 'Admin::getDivisions', ['filter' => 'auth']);
+$routes->post('admin/save_user', 'Admin::saveUser', ['filter' => 'auth']);
+
 
 
 

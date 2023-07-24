@@ -5,6 +5,8 @@
     <title>Add User</title>
 </head>
 <?php
+use App\Models\DevisiModel;
+
 $session = session();
 $successMsg = $session->getFlashdata('success');
 $errorMsg = $session->getFlashdata('error');
@@ -25,9 +27,29 @@ if ($errorMsg) {
         <label for="password">Password:</label>
         <input type="password" name="password" required><br>
 
+        <label for="nama">Nama:</label>
+        <input type="text" name="nama" required><br>
+
+        <label for="alamat">Alamat:</label>
+        <input type="text" name="alamat" required><br>
+
+        <label for="no_telp">No. Telepon:</label>
+        <input type="text" name="no_telp" required><br>
+
+        <label for="devisi">Devisi:</label>
+        <select name="devisi" required>
+            <?php
+            $devisiModel = new DevisiModel();
+            $devisiData = $devisiModel->findAll();
+            foreach ($devisiData as $devisi) {
+                echo '<option value="' . $devisi['devisi'] . '">' . $devisi['devisi'] . '</option>';
+            }
+            ?>
+        </select><br>
+
         <button type="submit">Save</button>
     </form>
-    <a href="<?= base_url('dashboard'); ?>">dashboard</a>
+    <a href="<?= base_url('dashboard'); ?>">Dashboard</a>
 
 </body>
 

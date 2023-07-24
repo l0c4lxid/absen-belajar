@@ -11,6 +11,10 @@
         <tr>
             <th>ID</th>
             <th>Username</th>
+            <th>nama</th>
+            <th>Alamat</th>
+            <th>No Telepon</th>
+            <th>Devisi</th>
             <th>Edit</th>
             <th>Hapus</th>
             <!-- Tambahkan kolom lain sesuai kebutuhan -->
@@ -22,6 +26,18 @@
                 </td>
                 <td>
                     <?= $user['username']; ?>
+                </td>
+                <td>
+                    <?= $user['nama']; ?>
+                </td>
+                <td>
+                    <?= $user['alamat']; ?>
+                </td>
+                <td>
+                    <?= $user['no_telp']; ?>
+                </td>
+                <td>
+                    <?= $user['devisi']; ?>
                 </td>
                 <td><a href="<?= base_url('admin/edit_user/' . $user['id_user']); ?>">Edit</a></td>
                 <td><a href="<?= base_url('admin/delete_user/' . $user['id_user']); ?>"
