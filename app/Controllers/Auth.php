@@ -10,20 +10,21 @@ class Auth extends BaseController
     {
         $data = [
             'judul' => 'Login',
-            'subjudul' => 'Halaman Login',
-            'page' => 'admin/v_dashboard.php',
-            'navbar' => 'admin/v_navbar.php',
-            'footer' => 'admin/v_footer.php',
-            'sidebar' => 'admin/v_sidebar.php',
         ];
         $session = session();
 
         // Cek apakah pengguna sudah login, jika ya, redirect ke halaman dashboard
         if ($session->get('logged_in')) {
-            return redirect()->to('profile/admin');
+            $userLevel = $session->get('level_user');
+
+            if ($userLevel == 1) {
+                return redirect()->to('profile/admin');
+            } elseif ($userLevel == 2) {
+                return redirect()->to('profile/user');
+            }
         }
 
-        helper(['form']);
+        // helper(['form']);
 
         if ($this->request->getMethod() === 'post') {
             $username = $this->request->getPost('username');
@@ -42,8 +43,12 @@ class Auth extends BaseController
                 ];
                 $session->set($sessionData);
 
-                // Redirect ke halaman dashboard berdasarkan level_user
-                return redirect()->to('profile/admin');
+                // Redirect ke halaman dashboard berdasarkan level_user setelah login berhasil
+                if ($user['level_user'] == 1) {
+                    return redirect()->to('profile/admin');
+                } elseif ($user['level_user'] == 2) {
+                    return redirect()->to('profile/user');
+                }
             } else {
                 // Login gagal, tampilkan pesan error
                 echo 'Username or password is incorrect.';
@@ -52,6 +57,7 @@ class Auth extends BaseController
 
         return view('login', $data);
     }
+
     public function logout()
     {
         $session = session();

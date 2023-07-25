@@ -8,8 +8,7 @@
     <thead>
         <tr>
             <th>No</th>
-            <th>ID</th>
-            <th>Division Name</th>
+            <th>Nama Devisi</th>
             <th>Action</th>
             <!-- Tambahkan kolom lain sesuai kebutuhan -->
         </tr>
@@ -20,9 +19,6 @@
             <tr>
                 <td>
                     <?= $no++ ?>
-                </td>
-                <td>
-                    <?= $division['id_devisi']; ?>
                 </td>
                 <td>
                     <?= $division['devisi']; ?>

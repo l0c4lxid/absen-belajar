@@ -29,7 +29,8 @@
             <li class="nav-item">
                 <a href="<?= base_url('profile/admin'); ?>"
                     class="nav-link <?= $subjudul == 'ubah-profile' ? 'active' : '' ?>">
-                    <i class="nav-icon fas fa-tachometer-alt"></i>
+                    <!-- <i class="nav-icon fas fa-tachometer-alt"></i> -->
+                    <i class=" nav-icon fas fa-id-badge"></i>
                     <p>
                         Ubah Profile
                     </p>

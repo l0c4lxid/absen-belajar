@@ -10,24 +10,15 @@ class Profile extends BaseController
     {
         $session = session();
         $userUsername = $session->get('username');
-        // $data = [
-        //     'judul' => 'Ubah Profile Admin',
-        //     'subjudul' => 'ubah-profile',
-        //     'page' => 'admin/admin_profile',
-        //     'navbar' => 'admin/v_navbar.php',
-        //     'footer' => 'admin/v_footer.php',
-        //     'sidebar' => 'admin/v_sidebar.php',
-        // ];
-
         // Tampilkan view untuk pengaturan profil admin
-        return view('admin/temp_admin', [
+        return view('admin/template/temp_admin', [
             'userUsername' => $userUsername,
             'judul' => 'Ubah Profile Admin',
             'subjudul' => 'ubah-profile',
             'page' => 'admin/admin_profile',
-            'navbar' => 'admin/v_navbar.php',
-            'footer' => 'admin/v_footer.php',
-            'sidebar' => 'admin/v_sidebar.php',
+            'navbar' => 'admin/template/v_navbar.php',
+            'footer' => 'admin/template/v_footer.php',
+            'sidebar' => 'admin/template/v_sidebar.php',
         ]);
     }
 

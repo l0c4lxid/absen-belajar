@@ -1,7 +1,6 @@
 <?php
 namespace App\Controllers;
 
-use App\Models\DevisiModel;
 use App\Models\UserModel;
 
 class Admin extends BaseController
@@ -11,12 +10,12 @@ class Admin extends BaseController
         $data = [
             'judul' => 'Dashboard',
             'page' => 'admin/v_dashboard.php',
-            'navbar' => 'admin/v_navbar.php',
-            'footer' => 'admin/v_footer.php',
-            'sidebar' => 'admin/v_sidebar.php',
+            'navbar' => 'admin/template/v_navbar.php',
+            'footer' => 'admin/template/v_footer.php',
+            'sidebar' => 'admin/template/v_sidebar.php',
         ];
         // Tampilkan view untuk dashboard admin
-        return view('admin/temp_admin', $data);
+        return view('admin/template/temp_admin', $data);
     }
 
     public function addUser()
@@ -25,12 +24,12 @@ class Admin extends BaseController
             'judul' => 'Tambah Pekerja Magang',
             'subjudul' => 'tambah-magang',
             'page' => 'admin/add_user',
-            'navbar' => 'admin/v_navbar.php',
-            'footer' => 'admin/v_footer.php',
-            'sidebar' => 'admin/v_sidebar.php',
+            'navbar' => 'admin/template/v_navbar.php',
+            'footer' => 'admin/template/v_footer.php',
+            'sidebar' => 'admin/template/v_sidebar.php',
         ];
         // Tampilkan view untuk menambahkan user baru
-        return view('admin/temp_admin', $data);
+        return view('admin/template/temp_admin', $data);
     }
 
     public function saveUser()
@@ -80,7 +79,7 @@ class Admin extends BaseController
         // Tampilkan notifikasi dan redirect kembali ke halaman tambah user
         $session = session();
         $session->setFlashdata('success', 'User added successfully.');
-        return redirect()->to('admin/add_user');
+        return redirect()->to('admin/addUser');
     }
 
     public function listDevisi()
@@ -95,13 +94,13 @@ class Admin extends BaseController
             'judul' => 'Tambah Pekerja Magang',
             'subjudul' => 'data-magang',
             'page' => 'admin/data_magang',
-            'navbar' => 'admin/v_navbar.php',
-            'footer' => 'admin/v_footer.php',
-            'sidebar' => 'admin/v_sidebar.php',
+            'navbar' => 'admin/template/v_navbar.php',
+            'footer' => 'admin/template/v_footer.php',
+            'sidebar' => 'admin/template/v_sidebar.php',
             'users' => $users, // Add the $users data to the $data array
         ];
         // Tampilkan view untuk menampilkan data user level_user 2
-        return view('admin/temp_admin', $data);
+        return view('admin/template/temp_admin', $data);
     }
     public function editUser($id_user)
     {
@@ -167,52 +166,4 @@ class Admin extends BaseController
             return redirect()->to('admin/listDevisi')->with('error', 'You do not have permission to delete this user.');
         }
     }
-    // public function addDivision()
-    // {
-    //     // Tampilkan halaman tambah divisi
-    //     return view('add_division');
-    // }
-
-    // public function saveDivision()
-    // {
-    //     $divisionModel = new DevisiModel();
-
-    //     // Ambil data dari form
-    //     $divisionName = $this->request->getPost('devisi');
-
-    //     // Simpan data divisi ke dalam database
-    //     $data = [
-    //         'devisi' => $divisionName
-    //         // Tambahkan kolom lain sesuai kebutuhan
-    //     ];
-    //     $divisionModel->insert($data);
-
-    //     // Tampilkan notifikasi dan redirect kembali ke halaman tambah divisi
-    //     $session = session();
-    //     $session->setFlashdata('success', 'Division added successfully.');
-    //     return redirect()->to('admin/add_division');
-    // }
-    // public function listDivision()
-    // {
-    //     $divisionModel = new DevisiModel();
-
-    //     // Ambil data semua divisi dari database
-    //     $divisions = $divisionModel->findAll();
-
-    //     $data['divisions'] = $divisions;
-
-    //     // Tampilkan view untuk menampilkan daftar divisi
-    //     return view('list_division', $data);
-    // }
-
-    // public function deleteDivision($id_devisi)
-    // {
-    //     $divisionModel = new DevisiModel();
-
-    //     // Hapus divisi berdasarkan id_$id_devisi
-    //     $divisionModel->delete($id_devisi);
-
-    //     // Redirect kembali ke halaman list divisi dengan notifikasi
-    //     return redirect()->to('admin/list_division')->with('success', 'Division deleted successfully.');
-    // }
 }

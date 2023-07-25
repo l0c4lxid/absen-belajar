@@ -17,12 +17,12 @@ class Dashboard extends BaseController
                 'judul' => 'Dashboard',
                 'subjudul' => 'Dashboard',
                 'page' => 'admin/v_dashboard.php',
-                'navbar' => 'admin/v_navbar.php',
-                'footer' => 'admin/v_footer.php',
-                'sidebar' => 'admin/v_sidebar.php',
+                'navbar' => 'admin/template/v_navbar.php',
+                'footer' => 'admin/template/v_footer.php',
+                'sidebar' => 'admin/template/v_sidebar.php',
             ];
             // Jika level_user adalah admin, tampilkan view admin_dashboard
-            return view('admin/temp_admin', $data);
+            return view('admin/template/temp_admin', $data);
         } elseif ($level_user == 2) {
             // Jika level_user adalah user, tampilkan view user_dashboard
             return view('user_dashboard');
