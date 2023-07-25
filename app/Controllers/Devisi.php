@@ -9,16 +9,21 @@ class Devisi extends BaseController
 {
     public function addDivision()
     {
+        $divisionModel = new DevisiModel();
+
+        // Ambil data semua divisi dari database
+        $divisions = $divisionModel->findAll();
         $data = [
+            'devisi' => $divisions,
             'judul' => 'Tambah Devisi',
             'subjudul' => 'tambah-devisi',
             'page' => 'admin/add_division',
-            'navbar' => 'admin/v_navbar.php',
-            'footer' => 'admin/v_footer.php',
-            'sidebar' => 'admin/v_sidebar.php',
+            'navbar' => 'admin/template/v_navbar.php',
+            'footer' => 'admin/template/v_footer.php',
+            'sidebar' => 'admin/template/v_sidebar.php',
         ];
         // Tampilkan halaman tambah divisi
-        return view('admin/temp_admin', $data);
+        return view('admin/template/temp_admin', $data);
     }
 
     public function saveDivision()
@@ -37,20 +42,25 @@ class Devisi extends BaseController
 
         // Tampilkan notifikasi dan redirect kembali ke halaman tambah divisi
         $session = session();
-        $session->setFlashdata('success', 'Division added successfully.');
+        $session->setFlashdata('pesan', 'Division added successfully.');
         return redirect()->to('devisi/adddivision');
     }
-    public function listDivision()
+    public function updateDevisi($id_user)
     {
-        $divisionModel = new DevisiModel();
+        $devisiModel = new DevisiModel();
 
-        // Ambil data semua divisi dari database
-        $divisions = $divisionModel->findAll();
+        // Ambil data semua divisi dari form
+        $devisi = $this->request->getPost('devisi');
 
-        $data['divisions'] = $divisions;
+        // $data['divisions'] = $divisions;
+        $data = [
+            'devisi' => $devisi,
+        ];
+        $devisiModel->update($id_user, $data);
 
         // Tampilkan view untuk menampilkan daftar divisi
-        return view('list_division', $data);
+        // return view('admin/temp_admin', $data);
+        return redirect()->to('devisi/addDivision')->with('pesan', 'User updated successfully.');
     }
 
     public function deleteDivision($id_devisi)
@@ -61,6 +71,6 @@ class Devisi extends BaseController
         $divisionModel->delete($id_devisi);
 
         // Redirect kembali ke halaman list divisi dengan notifikasi
-        return redirect()->to('devisi/listdivision')->with('success', 'Division deleted successfully.');
+        return redirect()->to('devisi/addDivision')->with('hapus', 'Division deleted successfully.');
     }
 }
