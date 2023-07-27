@@ -22,7 +22,7 @@ class Admin extends BaseController
     {
         $data = [
             'judul' => 'Tambah Pekerja Magang',
-            'subjudul' => 'tambah-magang',
+            'subjudul' => 'data-magang',
             'page' => 'admin/add_user',
             'navbar' => 'admin/template/v_navbar.php',
             'footer' => 'admin/template/v_footer.php',
@@ -111,10 +111,19 @@ class Admin extends BaseController
 
         // Pastikan data user dengan level_user = 2 hanya bisa diakses oleh admin
         if ($user['level_user'] == 2) {
-            $data['user'] = $user;
+
+            $data = [
+                'judul' => 'Edit Pekerja Magang',
+                'subjudul' => 'data-magang',
+                'page' => 'admin/edit_user',
+                'navbar' => 'admin/template/v_navbar.php',
+                'footer' => 'admin/template/v_footer.php',
+                'sidebar' => 'admin/template/v_sidebar.php',
+                'users' => $user, // Add the $users data to the $data array
+            ];
 
             // Tampilkan view untuk mengedit data user
-            return view('edit_user', $data);
+            return view('admin/template/temp_admin', $data);
         } else {
             // Redirect ke halaman lain jika user tidak memiliki akses untuk mengedit
             return redirect()->to('admin/listDevisi')->with('error', 'You do not have permission to edit this user.');

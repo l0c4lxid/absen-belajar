@@ -28,7 +28,15 @@ class Profile extends BaseController
         $userUsername = $session->get('username');
 
         // Tampilkan view untuk pengaturan profil user
-        return view('user_profile', ['userUsername' => $userUsername]);
+        return view('user/template/temp_user', [
+            'userUsername' => $userUsername,
+            'judul' => 'Ubah Profile User',
+            'subjudul' => 'ubah-profile',
+            'page' => 'user/user_profile',
+            'navbar' => 'user/template/v_navbar.php',
+            'footer' => 'user/template/v_footer.php',
+            'sidebar' => 'user/template/v_sidebar.php',
+        ]);
     }
     public function save_admin()
     {

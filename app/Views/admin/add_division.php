@@ -48,10 +48,10 @@
                                 <?= $value['devisi'] ?>
                             </td>
                             <td class='text-center'>
-                                <button class="btn btn-flat btn-sm btn-warning" data-toggle="modal"
+                                <button class="btn btn-flat btn-warning" data-toggle="modal"
                                     data-target="#modal-edit<?= $value['id_devisi'] ?>"><i class="fas fa-pencil-alt">
                                         Edit</i></button>
-                                <button class="btn btn-flat btn-sm btn-danger" data-toggle="modal"
+                                <button class="btn btn-flat btn-danger" data-toggle="modal"
                                     data-target="#modal-hapus<?= $value['id_devisi'] ?>"><i class="fas fa-trash">
                                         Hapus</i></button>
                             </td>

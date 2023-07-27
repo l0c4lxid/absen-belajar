@@ -63,11 +63,14 @@ if ($errorMsg) {
                             </select>
                         </div>
                         <div class="row">
-                            <div class="col-12">
+                            <div class="col-6">
+                                <a href="javascript:history.go(-1);" class="btn btn-danger btn-block">Kembali</a>
+                            </div>
+                            <div class="col-6">
                                 <button type="submit" class="btn btn-primary btn-block">Simpan</button>
                             </div>
-                            <!-- /.col -->
                         </div>
+
                     </div>
                     <!-- <div class="card-footer">
                         <button type="submit" class="btn btn-primary">Submit</button>

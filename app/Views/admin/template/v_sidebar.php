@@ -18,7 +18,7 @@
             <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
             <li class="nav-item">
-                <a href="<?= base_url('dashboard'); ?>"
+                <a href="<?= base_url('Dashboard'); ?>"
                     class="nav-link <?= $subjudul == 'Dashboard' ? 'active' : '' ?>">
                     <i class="nav-icon fas fa-tachometer-alt"></i>
                     <p>
@@ -27,7 +27,7 @@
                 </a>
             </li>
             <li class="nav-item">
-                <a href="<?= base_url('profile/admin'); ?>"
+                <a href="<?= base_url('Profile/Admin'); ?>"
                     class="nav-link <?= $subjudul == 'ubah-profile' ? 'active' : '' ?>">
                     <!-- <i class="nav-icon fas fa-tachometer-alt"></i> -->
                     <i class=" nav-icon fas fa-id-badge"></i>
@@ -36,17 +36,17 @@
                     </p>
                 </a>
             </li>
-            <li class="nav-item">
-                <a href="<?= base_url('admin/add_user'); ?>"
+            <!-- <li class="nav-item">
+                <a href="<?= base_url('Admin/Add_user'); ?>"
                     class="nav-link <?= $subjudul == 'tambah-magang' ? 'active' : '' ?>">
                     <i class="nav-icon fas fa-clock"></i>
                     <p>
                         Tambah Pegawai Magang
                     </p>
                 </a>
-            </li>
+            </li> -->
             <li class="nav-item">
-                <a href="<?= base_url('admin/listDevisi'); ?>"
+                <a href="<?= base_url('Admin/listDevisi'); ?>"
                     class="nav-link <?= $subjudul == 'data-magang' ? 'active' : '' ?>">
                     <i class="nav-icon fas fa-users"></i>
                     <p>
@@ -55,7 +55,7 @@
                 </a>
             </li>
             <li class="nav-item">
-                <a href="<?= base_url('devisi/addDivision'); ?>"
+                <a href="<?= base_url('Devisi/addDivision'); ?>"
                     class="nav-link <?= $subjudul == 'tambah-devisi' ? 'active' : '' ?>">
                     <i class="nav-icon fas fa-briefcase"></i>
                     <p>
@@ -63,7 +63,7 @@
                     </p>
                 </a>
             </li>
-            <li class="nav-item">
+            <!-- <li class="nav-item">
                 <a href="<?= base_url("devisi/listDivision") ?>"
                     class="nav-link <?= $subjudul == 'list-devisi' ? 'active' : '' ?>">
                     <i class="nav-icon fas fa-user"></i>
@@ -71,7 +71,7 @@
                         List Devisi Magang
                     </p>
                 </a>
-            </li>
+            </li> -->
         </ul>
     </nav>
     <!-- /.sidebar-menu -->

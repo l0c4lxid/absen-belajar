@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <title>User Profile</title>
+    <title>Admin Profile</title>
 </head>
 <?php
 $session = session();
@@ -13,17 +13,37 @@ if ($successMsg) {
 ?>
 
 <body>
-    <h1>User Profile</h1>
-    <form action="<?= base_url('profile/save_user'); ?>" method="post">
-        <label for="username">Username:</label>
-        <input type="text" name="username" value="<?= $userUsername; ?>" required><br>
-
-        <label for="password">Password:</label>
-        <input type="password" name="password" required><br>
-
-        <button type="submit">Save</button>
+    <div class="container-fluid">
+        <div class="row">
+            <!-- left column -->
+            <div class="col-md-12">
+                <form action="<?= base_url('profile/save_user'); ?>" method="post">
+                    <div class="card-body col-md-12">
+                        <div class="form-group">
+                            <label for="username">Username</label>
+                            <input type="text" name="username" required class="form-control" id="username"
+                                value="<?= $userUsername; ?>">
+                        </div>
+                        <div class="form-group">
+                            <label for="password">password</label>
+                            <input type="text" name="password" required class="form-control" id="password"
+                                placeholder="password">
+                        </div>
+                    </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-6">
+                <button type="submit" class="btn btn-primary btn-block">Back to
+                    Dashboard</button>
+            </div>
+            <div class="col-6">
+                <button href='<?= base_url('profile/user'); ?>' class="btn btn-danger btn-block">Simpan</button>
+            </div>
+            <!-- /.col -->
+        </div>
+    </div>
     </form>
-    <a href="<?= base_url('dashboard'); ?>">Back to Dashboard</a>
 </body>
 
 </html>

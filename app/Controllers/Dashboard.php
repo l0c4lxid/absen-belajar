@@ -24,8 +24,16 @@ class Dashboard extends BaseController
             // Jika level_user adalah admin, tampilkan view admin_dashboard
             return view('admin/template/temp_admin', $data);
         } elseif ($level_user == 2) {
+            $data = [
+                'judul' => 'Dashboard',
+                'subjudul' => 'Dashboard',
+                'page' => 'user/user_dashboard',
+                'navbar' => 'user/template/v_navbar.php',
+                'footer' => 'user/template/v_footer.php',
+                'sidebar' => 'user/template/v_sidebar.php',
+            ];
             // Jika level_user adalah user, tampilkan view user_dashboard
-            return view('user_dashboard');
+            return view('user/template/temp_user', $data);
         } else {
             // Jika level_user tidak diketahui, redirect ke halaman login
             return redirect()->to('login');

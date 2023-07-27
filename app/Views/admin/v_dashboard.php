@@ -1,62 +1,122 @@
-<div class="row col-md-12">
-    <div class="col-lg-3 col-6">
-        <!-- small box -->
-        <div class="small-box bg-info">
-            <div class="inner">
-                <h3>150</h3>
+<style>
+    .clock-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: 150px;
+        font-size: 3rem;
+        font-weight: bold;
+        color: #333;
+    }
+</style>
 
-                <p>New Orders</p>
+<div class="col-md-12">
+    <div class="card-body text-center text-primary">
+        <!-- Bagian pukul di sebelah kanan -->
+        <div class='row'>
+            <div class="col-md-6">
+                <h1 class='text-bold bg-gray-dark color-palette'>Pukul :<br><span id="clock"></span></h1>
             </div>
-            <div class="icon">
-                <i class="ion ion-bag"></i>
+            <!-- Bagian tanggal di sebelah kiri -->
+            <div class="col-md-6">
+                <h1 class='text-bold bg-gray-dark color-palette'> Tanggal :<br><span id="date"></span></h1>
             </div>
-            <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+            <div class="col-lg-3 col-6">
+                <!-- small box -->
+                <div class="small-box bg-info">
+                    <div class="inner">
+                        <h3>150</h3>
+
+                        <p>Jumlah Pegawai</p>
+                    </div>
+                    <div class="icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+                </div>
+            </div>
+            <!-- ./col -->
+            <div class="col-lg-3 col-6">
+                <!-- small box -->
+                <div class="small-box bg-success">
+                    <div class="inner">
+                        <h3>53<sup style="font-size: 20px">%</sup></h3>
+
+                        <p>Jumlah Devisi</p>
+                    </div>
+                    <div class="icon">
+                        <i class="fas fa-suitcase"></i>
+                    </div>
+                    <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+                </div>
+            </div>
+            <!-- ./col -->
+            <div class="col-lg-3 col-6">
+                <!-- small box -->
+                <div class="small-box bg-warning">
+                    <div class="inner">
+                        <h3>44</h3>
+
+                        <p>Jumlah Absen Hari Ini</p>
+                    </div>
+                    <div class="icon">
+                        <i class="ion ion-person-add"></i>
+                    </div>
+                    <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+                </div>
+            </div>
+            <!-- ./col -->
+            <div class="col-lg-3 col-6">
+                <!-- small box -->
+                <div class="small-box bg-danger">
+                    <div class="inner">
+                        <h3>65</h3>
+
+                        <p>Belum Absen Hari Ini</p>
+                    </div>
+                    <div class="icon">
+                        <i class="ion ion-pie-graph"></i>
+                    </div>
+                    <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+                </div>
+            </div>
+            <!-- ./col -->
         </div>
     </div>
-    <!-- ./col -->
-    <div class="col-lg-3 col-6">
-        <!-- small box -->
-        <div class="small-box bg-success">
-            <div class="inner">
-                <h3>53<sup style="font-size: 20px">%</sup></h3>
-
-                <p>Bounce Rate</p>
-            </div>
-            <div class="icon">
-                <i class="ion ion-stats-bars"></i>
-            </div>
-            <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
-        </div>
-    </div>
-    <!-- ./col -->
-    <div class="col-lg-3 col-6">
-        <!-- small box -->
-        <div class="small-box bg-warning">
-            <div class="inner">
-                <h3>44</h3>
-
-                <p>User Registrations</p>
-            </div>
-            <div class="icon">
-                <i class="ion ion-person-add"></i>
-            </div>
-            <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
-        </div>
-    </div>
-    <!-- ./col -->
-    <div class="col-lg-3 col-6">
-        <!-- small box -->
-        <div class="small-box bg-danger">
-            <div class="inner">
-                <h3>65</h3>
-
-                <p>Unique Visitors</p>
-            </div>
-            <div class="icon">
-                <i class="ion ion-pie-graph"></i>
-            </div>
-            <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
-        </div>
-    </div>
-    <!-- ./col -->
 </div>
+
+
+<!-- Tambahkan script JavaScript -->
+<script>
+    // Fungsi untuk memperbarui jam dan tanggal secara real-time
+    function updateClock() {
+        const clockElement = document.getElementById('clock');
+        const dateElement = document.getElementById('date');
+        const currentTime = new Date();
+        const hours = currentTime.getHours().toString().padStart(2, '0');
+        const minutes = currentTime.getMinutes().toString().padStart(2, '0');
+        const seconds = currentTime.getSeconds().toString().padStart(2, '0');
+        const day = currentTime.getDate().toString().padStart(2, '0');
+
+        // Array untuk nama bulan dalam Bahasa Indonesia
+        const monthNames = [
+            'Januari', 'Februari', 'Maret', 'April', 'Mei', 'Juni', 'Juli',
+            'Agustus', 'September', 'Oktober', 'November', 'Desember'
+        ];
+
+        const month = monthNames[currentTime.getMonth()];
+        const year = currentTime.getFullYear();
+
+        const clockString = `${hours}:${minutes}:${seconds}`;
+        clockElement.innerText = clockString;
+
+        const dateString = `${day} ${month} ${year}`;
+        dateElement.innerText = dateString;
+    }
+
+    // Memperbarui jam setiap 1 detik
+    setInterval(updateClock, 1000);
+
+    // Memanggil fungsi updateClock() untuk pertama kali
+    updateClock();
+</script>
