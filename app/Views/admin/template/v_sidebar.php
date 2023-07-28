@@ -63,15 +63,15 @@
                     </p>
                 </a>
             </li>
-            <!-- <li class="nav-item">
+            <li class="nav-item">
                 <a href="<?= base_url("devisi/listDivision") ?>"
                     class="nav-link <?= $subjudul == 'list-devisi' ? 'active' : '' ?>">
                     <i class="nav-icon fas fa-user"></i>
                     <p>
-                        List Devisi Magang
+                        Absen
                     </p>
                 </a>
-            </li> -->
+            </li>
         </ul>
     </nav>
     <!-- /.sidebar-menu -->

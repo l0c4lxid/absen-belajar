@@ -60,6 +60,10 @@ $routes->get('admin/delete_division/(:num)', 'Admin::deleteDivision/$1', ['filte
 $routes->get('admin/add_user', 'Admin::getDivisions', ['filter' => 'auth']);
 $routes->post('admin/save_user', 'Admin::saveUser', ['filter' => 'auth']);
 
+$routes->get('absensi/absen_masuk', 'Absensi::absen_masuk');
+$routes->get('absensi/absen_keluar', 'Absensi::absen_keluar');
+$routes->post('absensi/absen_masuk', 'Absensi::absen_masuk');
+$routes->post('absensi/absen_keluar', 'Absensi::absen_keluar');
 
 
 

@@ -1,3 +1,19 @@
+<?php
+if (session()->getFlashdata('pesan')) {
+    echo '<div class="alert alert-success">';
+    echo session()->getFlashdata('pesan');
+    echo '</div>';
+}
+?>
+<?php
+if (session()->getFlashdata('hapus')) {
+    echo '<div class="alert alert-success">';
+    echo session()->getFlashdata('pesan');
+    echo '</div>';
+}
+?>
+
+<!-- Include DataTables CSS -->
 <div class="col-md-12">
     <div class="card card-primary">
         <div class="card-header">
@@ -5,64 +21,43 @@
                 <?= $judul ?>
             </h3>
             <div class="card-tools">
-                <button type="button" class="btn btn-tool" data-toggle="modal" data-target="#modal-tambah"><i
-                        class="fas fa-plus"></i> Tambah
-                </button>
+                <a class="btn btn-primary" href="<?= base_url('admin/add_user/'); ?>"><i class="fas fa-plus"></i>
+                    Tambah
+                </a>
             </div>
             <!-- /.card-tools -->
         </div>
-        <!-- /.card-header -->
-        <div class="card-body table-responsive">
-            <?php
-            if (session()->getFlashdata('pesan')) {
-                echo '<div class="alert alert-success">';
-                echo session()->getFlashdata('pesan');
-                echo '</div>';
-            }
-            ?>
-            <?php
-            if (session()->getFlashdata('hapus')) {
-                echo '<div class="alert alert-success">';
-                echo session()->getFlashdata('pesan');
-                echo '</div>';
-            }
-            ?>
-
-            <table id="myTable" class="table table-head-fixed text-nowrap">
-                <!-- <table class="table" id="example2"> -->
-                <tread>
+        <table id="example1" class="table table-bordered">
+            <thead>
+                <tr>
+                    <th class='text-center' width='50px'>No</th>
+                    <th>Nama Devisi</th>
+                    <th class='text-center'>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <?php $no = 1;
+                foreach ($devisi as $value): ?>
                     <tr>
-                        <th class='text-center' width='50px'>No</th>
-                        <th>Nama Devisi</th>
-                        <th class='text-center'>Action</th>
+                        <td class='text-center'>
+                            <?= $no++ ?>
+                        </td>
+                        <td>
+                            <?= $value['devisi'] ?>
+                        </td>
+                        <td class='text-center'>
+                            <button class="btn btn-flat btn-warning" data-toggle="modal"
+                                data-target="#modal-edit<?= $value['id_devisi'] ?>"><i class="fas fa-pencil-alt">
+                                    Edit</i></button>
+                            <button class="btn btn-flat btn-danger" data-toggle="modal"
+                                data-target="#modal-hapus<?= $value['id_devisi'] ?>"><i class="fas fa-trash">
+                                    Hapus</i></button>
+                        </td>
                     </tr>
-                </tread>
-                <tbody>
-                    <?php $no = 1;
-                    foreach ($devisi as $key => $value) { ?>
-                        <tr>
-                            <td class='text-center'>
-                                <?= $no++ ?>
-                            </td>
-                            <td>
-                                <?= $value['devisi'] ?>
-                            </td>
-                            <td class='text-center'>
-                                <button class="btn btn-flat btn-warning" data-toggle="modal"
-                                    data-target="#modal-edit<?= $value['id_devisi'] ?>"><i class="fas fa-pencil-alt">
-                                        Edit</i></button>
-                                <button class="btn btn-flat btn-danger" data-toggle="modal"
-                                    data-target="#modal-hapus<?= $value['id_devisi'] ?>"><i class="fas fa-trash">
-                                        Hapus</i></button>
-                            </td>
-                        </tr>
-                    <?php } ?>
-                </tbody>
-            </table>
-        </div>
-        <!-- /.card-body -->
+                <?php endforeach; ?>
+            </tbody>
+        </table>
     </div>
-    <!-- /.card -->
 </div>
 
 

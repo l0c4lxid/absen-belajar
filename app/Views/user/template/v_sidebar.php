@@ -29,10 +29,17 @@
             <li class="nav-item">
                 <a href="<?= base_url('profile/user'); ?>"
                     class="nav-link <?= $subjudul == 'ubah-profile' ? 'active' : '' ?>">
-                    <!-- <i class="nav-icon fas fa-tachometer-alt"></i> -->
                     <i class=" nav-icon fas fa-id-badge"></i>
                     <p>
                         Ubah Profile
+                    </p>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="<?= base_url('absensi'); ?>" class="nav-link <?= $subjudul == 'absen' ? 'active' : '' ?>">
+                    <i class=" nav-icon fas fa-user"></i>
+                    <p>
+                        Absen
                     </p>
                 </a>
             </li>

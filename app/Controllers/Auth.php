@@ -36,7 +36,7 @@ class Auth extends BaseController
             if ($user && password_verify($password, $user['password'])) {
                 // Login berhasil, simpan data user ke session
                 $sessionData = [
-                    'user_id' => $user['id_user'],
+                    'id_user' => $user['id_user'],
                     'username' => $user['username'],
                     'level_user' => $user['level_user'],
                     'logged_in' => true,

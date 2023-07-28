@@ -19,7 +19,7 @@
             </div>
             <!-- Bagian tanggal di sebelah kiri -->
             <div class="col-md-6">
-                <h1 class='text-bold bg-gray-dark color-palette'> Tanggal :<br><span id="date"></span></h1>
+                <h1 class='text-bold bg-gray-dark color-palette'> Hari / Tanggal :<br><span id="date"></span></h1>
             </div>
             <div class="col-lg-3 col-6">
                 <!-- small box -->
@@ -85,10 +85,9 @@
     </div>
 </div>
 
-
 <!-- Tambahkan script JavaScript -->
 <script>
-    // Fungsi untuk memperbarui jam dan tanggal secara real-time
+    // Fungsi untuk memperbarui jam, hari, dan tanggal secara real-time
     function updateClock() {
         const clockElement = document.getElementById('clock');
         const dateElement = document.getElementById('date');
@@ -104,13 +103,19 @@
             'Agustus', 'September', 'Oktober', 'November', 'Desember'
         ];
 
+        // Array untuk nama hari dalam Bahasa Indonesia
+        const dayNames = [
+            'Minggu', 'Senin', 'Selasa', 'Rabu', 'Kamis', 'Jumat', 'Sabtu'
+        ];
+
+        const dayName = dayNames[currentTime.getDay()]; // Mendapatkan nama hari dari tanggal saat ini
         const month = monthNames[currentTime.getMonth()];
         const year = currentTime.getFullYear();
 
         const clockString = `${hours}:${minutes}:${seconds}`;
         clockElement.innerText = clockString;
 
-        const dateString = `${day} ${month} ${year}`;
+        const dateString = `${dayName}, ${day} ${month} ${year}`; // Menyusun format tanggal dan nama hari
         dateElement.innerText = dateString;
     }
 

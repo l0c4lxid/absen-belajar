@@ -17,7 +17,7 @@ class App extends BaseConfig
      *
      *    http://example.com/
      */
-    // public string $baseURL = 'https://b88f-103-172-116-25.ngrok-free.app';
+    // public string $baseURL = 'https://f230-104-28-219-244.ngrok-free.app';
     public string $baseURL = 'http://localhost:8080';
 
     /**
@@ -111,7 +111,7 @@ class App extends BaseConfig
      *
      * @see https://www.php.net/manual/en/timezones.php for list of timezones supported by PHP.
      */
-    public string $appTimezone = 'UTC';
+    public string $appTimezone = 'Asia/Jakarta';
 
     /**
      * --------------------------------------------------------------------------

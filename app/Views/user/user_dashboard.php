@@ -20,17 +20,46 @@
                 </div>
                 <!-- Bagian tanggal di sebelah kiri -->
                 <div class="col-md-6">
-                    <h1 class='text-bold bg-gray-dark color-palette'> Tanggal <br><span id="date"></span></h1>
+                    <h1 class='text-bold bg-gray-dark color-palette'>Hari / Tanggal <br><span id="date"></span></h1>
                 </div>
             </div>
+            <!-- <div class='row'>
+
+                <form action="<?= base_url('absensi/absen_masuk') ?>" method="post">
+                    <input class="btn btn-primary" type="submit" name="submit" value="Absen Masuk">
+                </form>
+            </div> -->
+            <div class="row">
+                <div class="col-md-6 col-sm-6 col-12">
+                    <div class="info-box bg-Secondary">
+                        <span class="info-box-icon"><i class="far fa-bookmark"></i></span>
+                        <div class="info-box-content">
+                            <form action="<?= base_url('absensi/absen_masuk') ?>" method="post">
+                                <input class="btn btn-primary col-md-6" type="submit" name="submit" value="Absen Masuk">
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <!-- /.info-box-content -->
+                <div class="col-md-6 col-sm-6 col-12">
+                    <div class="info-box bg-Secondary">
+                        <span class="info-box-icon"><i class="far fa-bookmark"></i></span>
+                        <div class="info-box-content">
+                            <form action="<?= base_url('absensi/absen_keluar') ?>" method="post">
+                                <input class="btn btn-danger col-md-6" type="submit" name="submit" value="Absen Keluar">
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- /.info-box -->
         </div>
     </div>
 </div>
-
-
+</div>
 <!-- Tambahkan script JavaScript -->
 <script>
-    // Fungsi untuk memperbarui jam dan tanggal secara real-time
+    // Fungsi untuk memperbarui jam, hari, dan tanggal secara real-time
     function updateClock() {
         const clockElement = document.getElementById('clock');
         const dateElement = document.getElementById('date');
@@ -46,13 +75,19 @@
             'Agustus', 'September', 'Oktober', 'November', 'Desember'
         ];
 
+        // Array untuk nama hari dalam Bahasa Indonesia
+        const dayNames = [
+            'Minggu', 'Senin', 'Selasa', 'Rabu', 'Kamis', 'Jumat', 'Sabtu'
+        ];
+
+        const dayName = dayNames[currentTime.getDay()]; // Mendapatkan nama hari dari tanggal saat ini
         const month = monthNames[currentTime.getMonth()];
         const year = currentTime.getFullYear();
 
         const clockString = `${hours}:${minutes}:${seconds}`;
         clockElement.innerText = clockString;
 
-        const dateString = `${day} ${month} ${year}`;
+        const dateString = `${dayName}, ${day} ${month} ${year}`; // Menyusun format tanggal dan nama hari
         dateElement.innerText = dateString;
     }
 
