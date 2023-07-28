@@ -21,4 +21,52 @@ class AbsenModel extends Model
 
         return $builder->findAll();
     }
+    public function getAllAbsenWithUserInfo()
+    {
+        $results = $this->select('tbl_absen.*, user.username, user.password, user.nama, user.alamat, user.no_telp, devisi.devisi')
+            ->join('tbl_user as user', 'user.id_user = tbl_absen.id_user')
+            ->join('tbl_devisi as devisi', 'devisi.id_devisi = user.id_devisi')
+            ->where('user.level_user', 2)
+            ->findAll();
+
+        // Memisahkan tanggal dan waktu untuk setiap data
+        foreach ($results as &$absen) {
+            if (isset($absen['jam_masuk'])) {
+                $absen['tanggal_masuk'] = date('Y-m-d', strtotime($absen['jam_masuk']));
+                $absen['waktu_masuk'] = date('H:i:s', strtotime($absen['jam_masuk']));
+            } else {
+                $absen['tanggal_masuk'] = '';
+                $absen['waktu_masuk'] = '';
+            }
+
+            if (isset($absen['jam_keluar'])) {
+                $absen['tanggal_keluar'] = date('Y-m-d', strtotime($absen['jam_keluar']));
+                $absen['waktu_keluar'] = date('H:i:s', strtotime($absen['jam_keluar']));
+            } else {
+                $absen['tanggal_keluar'] = '';
+                $absen['waktu_keluar'] = '';
+            }
+        }
+
+        return $results;
+    }
+    public function getFilteredAbsenWithUserInfo($filter)
+    {
+        $query = $this->select('tbl_absen.*, user.username, user.password, user.nama, user.alamat, user.no_telp, devisi.devisi')
+            ->join('tbl_user as user', 'user.id_user = tbl_absen.id_user')
+            ->join('tbl_devisi as devisi', 'devisi.id_devisi = user.id_devisi')
+            ->where('user.level_user', 2);
+
+        // Menerapkan kriteria filter pada query
+        if (!empty($filter['id_user'])) {
+            $query->where('tbl_absen.id_user', $filter['id_user']);
+        }
+
+        if (!empty($filter['waktu_masuk'])) {
+            $query->where('DATE(tbl_absen.jam_masuk)', $filter['waktu_masuk']);
+        }
+
+        // Eksekusi query dan mengambil hasilnya
+        return $query->findAll();
+    }
 }

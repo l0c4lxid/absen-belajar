@@ -27,36 +27,38 @@ if (session()->getFlashdata('hapus')) {
             </div>
             <!-- /.card-tools -->
         </div>
-        <table id="example1" class="table table-bordered">
-            <thead>
-                <tr>
-                    <th class='text-center' width='50px'>No</th>
-                    <th>Nama Devisi</th>
-                    <th class='text-center'>Action</th>
-                </tr>
-            </thead>
-            <tbody>
-                <?php $no = 1;
-                foreach ($devisi as $value): ?>
+        <div class='card-body'>
+            <table id="example2" class="table table-bordered">
+                <thead>
                     <tr>
-                        <td class='text-center'>
-                            <?= $no++ ?>
-                        </td>
-                        <td>
-                            <?= $value['devisi'] ?>
-                        </td>
-                        <td class='text-center'>
-                            <button class="btn btn-flat btn-warning" data-toggle="modal"
-                                data-target="#modal-edit<?= $value['id_devisi'] ?>"><i class="fas fa-pencil-alt">
-                                    Edit</i></button>
-                            <button class="btn btn-flat btn-danger" data-toggle="modal"
-                                data-target="#modal-hapus<?= $value['id_devisi'] ?>"><i class="fas fa-trash">
-                                    Hapus</i></button>
-                        </td>
+                        <th class='text-center' width='50px'>No</th>
+                        <th>Nama Devisi</th>
+                        <th class='text-center'>Action</th>
                     </tr>
-                <?php endforeach; ?>
-            </tbody>
-        </table>
+                </thead>
+                <tbody>
+                    <?php $no = 1;
+                    foreach ($devisi as $value): ?>
+                        <tr>
+                            <td class='text-center'>
+                                <?= $no++ ?>
+                            </td>
+                            <td>
+                                <?= $value['devisi'] ?>
+                            </td>
+                            <td class='text-center'>
+                                <button class="btn btn-flat btn-warning" data-toggle="modal"
+                                    data-target="#modal-edit<?= $value['id_devisi'] ?>"><i class="fas fa-pencil-alt">
+                                        Edit</i></button>
+                                <button class="btn btn-flat btn-danger" data-toggle="modal"
+                                    data-target="#modal-hapus<?= $value['id_devisi'] ?>"><i class="fas fa-trash">
+                                        Hapus</i></button>
+                            </td>
+                        </tr>
+                    <?php endforeach; ?>
+                </tbody>
+            </table>
+        </div>
     </div>
 </div>
 

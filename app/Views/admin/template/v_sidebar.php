@@ -64,11 +64,11 @@
                 </a>
             </li>
             <li class="nav-item">
-                <a href="<?= base_url("devisi/listDivision") ?>"
-                    class="nav-link <?= $subjudul == 'list-devisi' ? 'active' : '' ?>">
+                <a href="<?= base_url("Absensi/Admin") ?>"
+                    class="nav-link <?= $subjudul == 'absen-all' ? 'active' : '' ?>">
                     <i class="nav-icon fas fa-user"></i>
                     <p>
-                        Absen
+                        Data Absen
                     </p>
                 </a>
             </li>
