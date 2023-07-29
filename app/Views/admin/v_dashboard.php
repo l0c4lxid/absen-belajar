@@ -25,14 +25,17 @@
                 <!-- small box -->
                 <div class="small-box bg-info">
                     <div class="inner">
-                        <h3>150</h3>
+                        <h3>
+                            <?= $jumlahPegawai ?>
+                        </h3>
 
-                        <p>Jumlah Pegawai</p>
+                        <p>Jumlah Pegawai Magang</p>
                     </div>
                     <div class="icon">
                         <i class="fas fa-users"></i>
                     </div>
-                    <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+                    <a href="<?= base_url('Admin/listDevisi') ?>" class="small-box-footer">More info <i
+                            class="fas fa-arrow-circle-right"></i></a>
                 </div>
             </div>
             <!-- ./col -->
@@ -40,14 +43,17 @@
                 <!-- small box -->
                 <div class="small-box bg-success">
                     <div class="inner">
-                        <h3>53<sup style="font-size: 20px">%</sup></h3>
+                        <h3>
+                            <?= $jumlahDevisi ?><sup style="font-size: 20px"></sup>
+                        </h3>
 
                         <p>Jumlah Devisi</p>
                     </div>
                     <div class="icon">
                         <i class="fas fa-suitcase"></i>
                     </div>
-                    <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+                    <a href="<?= base_url('Devisi/addDivision') ?>" class="small-box-footer">More info <i
+                            class="fas fa-arrow-circle-right"></i></a>
                 </div>
             </div>
             <!-- ./col -->
@@ -55,14 +61,17 @@
                 <!-- small box -->
                 <div class="small-box bg-warning">
                     <div class="inner">
-                        <h3>44</h3>
+                        <h3>
+                            <?= $jumlahAbsenMasuk ?>
+                        </h3>
 
-                        <p>Jumlah Absen Hari Ini</p>
+                        <p> Belum Absen Keluar</p>
                     </div>
                     <div class="icon">
                         <i class="ion ion-person-add"></i>
                     </div>
-                    <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+                    <a href="<?= base_url('Absensi/Admin') ?>" class="small-box-footer">More info <i
+                            class="fas fa-arrow-circle-right"></i></a>
                 </div>
             </div>
             <!-- ./col -->
@@ -70,14 +79,16 @@
                 <!-- small box -->
                 <div class="small-box bg-danger">
                     <div class="inner">
-                        <h3>65</h3>
-
-                        <p>Belum Absen Hari Ini</p>
+                        <h3>
+                            <?= $jumlahAbsenKeluar ?>
+                        </h3>
+                        <p>Belum Absen Keluar</p>
                     </div>
                     <div class="icon">
                         <i class="ion ion-pie-graph"></i>
                     </div>
-                    <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+                    <a href="<?= base_url('Absensi/Admin') ?>" class="small-box-footer">More info <i
+                            class="fas fa-arrow-circle-right"></i></a>
                 </div>
             </div>
             <!-- ./col -->

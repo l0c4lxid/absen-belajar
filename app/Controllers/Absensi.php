@@ -16,12 +16,7 @@ class Absensi extends BaseController
     public function index()
     {
         $session = session();
-        $level_user = $session->get('level_user');
 
-        // Check if the user's level is 2, otherwise, deny access.
-        if ($level_user !== 2) {
-            return redirect()->to('dashboard'); // Redirect to a default route or show an error page.
-        }
         $absenModel = new AbsenModel();
         $id_user = $session->get('id_user');
         // Get the query parameters for bulan and tahun

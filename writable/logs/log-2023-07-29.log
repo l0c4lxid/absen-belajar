@@ -174,3 +174,1158 @@ INFO - 2023-07-29 00:26:09 --> Session: Class initialized using 'CodeIgniter\Ses
 INFO - 2023-07-29 00:26:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 INFO - 2023-07-29 00:26:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 INFO - 2023-07-29 00:26:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-29 00:38:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-07-29 00:38:09 --> Undefined variable: jumlahDevisi
+in APPPATH\Views\admin\v_dashboard.php on line 44.
+ 1 APPPATH\Views\admin\v_dashboard.php(44): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: jumlahDevisi', 'D:\\XAMPP7\\htdocs\\absen\\app\\Views\\admin\\v_dashboard.php', 44, [...])
+ 2 SYSTEMPATH\View\View.php(224): include('D:\\XAMPP7\\htdocs\\absen\\app\\Views\\admin\\v_dashboard.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('admin/v_dashboard.php', [], true)
+ 5 APPPATH\Views\admin\template\temp_admin.php(93): view('admin/v_dashboard.php')
+ 6 SYSTEMPATH\View\View.php(224): include('D:\\XAMPP7\\htdocs\\absen\\app\\Views\\admin\\template\\temp_admin.php')
+ 7 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('admin/template/temp_admin', [], true)
+ 9 APPPATH\Controllers\Dashboard.php(25): view('admin/template/temp_admin', [...])
+10 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Dashboard->index()
+11 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+12 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\XAMPP7\\htdocs\\absen\\public\\index.php')
+INFO - 2023-07-29 00:38:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-07-29 00:38:56 --> Undefined variable: jumlahDevisi
+in APPPATH\Views\admin\v_dashboard.php on line 44.
+ 1 APPPATH\Views\admin\v_dashboard.php(44): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: jumlahDevisi', 'D:\\XAMPP7\\htdocs\\absen\\app\\Views\\admin\\v_dashboard.php', 44, [...])
+ 2 SYSTEMPATH\View\View.php(224): include('D:\\XAMPP7\\htdocs\\absen\\app\\Views\\admin\\v_dashboard.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('admin/v_dashboard.php', [], true)
+ 5 APPPATH\Views\admin\template\temp_admin.php(93): view('admin/v_dashboard.php')
+ 6 SYSTEMPATH\View\View.php(224): include('D:\\XAMPP7\\htdocs\\absen\\app\\Views\\admin\\template\\temp_admin.php')
+ 7 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('admin/template/temp_admin', [], true)
+ 9 APPPATH\Controllers\Dashboard.php(25): view('admin/template/temp_admin', [...])
+10 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Dashboard->index()
+11 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+12 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\XAMPP7\\htdocs\\absen\\public\\index.php')
+INFO - 2023-07-29 00:42:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-07-29 00:42:43 --> Undefined variable: jumlahDevisi
+in APPPATH\Views\admin\v_dashboard.php on line 44.
+ 1 APPPATH\Views\admin\v_dashboard.php(44): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: jumlahDevisi', 'D:\\XAMPP7\\htdocs\\absen\\app\\Views\\admin\\v_dashboard.php', 44, [...])
+ 2 SYSTEMPATH\View\View.php(224): include('D:\\XAMPP7\\htdocs\\absen\\app\\Views\\admin\\v_dashboard.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('admin/v_dashboard.php', [], true)
+ 5 APPPATH\Views\admin\template\temp_admin.php(93): view('admin/v_dashboard.php')
+ 6 SYSTEMPATH\View\View.php(224): include('D:\\XAMPP7\\htdocs\\absen\\app\\Views\\admin\\template\\temp_admin.php')
+ 7 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('admin/template/temp_admin', [], true)
+ 9 APPPATH\Controllers\Dashboard.php(25): view('admin/template/temp_admin', [...])
+10 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Dashboard->index()
+11 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+12 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\XAMPP7\\htdocs\\absen\\public\\index.php')
+INFO - 2023-07-29 00:43:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-07-29 00:43:01 --> Undefined variable: jumlahDevisi
+in APPPATH\Views\admin\v_dashboard.php on line 44.
+ 1 APPPATH\Views\admin\v_dashboard.php(44): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: jumlahDevisi', 'D:\\XAMPP7\\htdocs\\absen\\app\\Views\\admin\\v_dashboard.php', 44, [...])
+ 2 SYSTEMPATH\View\View.php(224): include('D:\\XAMPP7\\htdocs\\absen\\app\\Views\\admin\\v_dashboard.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('admin/v_dashboard.php', [], true)
+ 5 APPPATH\Views\admin\template\temp_admin.php(93): view('admin/v_dashboard.php')
+ 6 SYSTEMPATH\View\View.php(224): include('D:\\XAMPP7\\htdocs\\absen\\app\\Views\\admin\\template\\temp_admin.php')
+ 7 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('admin/template/temp_admin', [], true)
+ 9 APPPATH\Controllers\Dashboard.php(25): view('admin/template/temp_admin', [...])
+10 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Dashboard->index()
+11 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+12 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\XAMPP7\\htdocs\\absen\\public\\index.php')
+INFO - 2023-07-29 00:43:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-07-29 00:43:03 --> Undefined variable: jumlahDevisi
+in APPPATH\Views\admin\v_dashboard.php on line 44.
+ 1 APPPATH\Views\admin\v_dashboard.php(44): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: jumlahDevisi', 'D:\\XAMPP7\\htdocs\\absen\\app\\Views\\admin\\v_dashboard.php', 44, [...])
+ 2 SYSTEMPATH\View\View.php(224): include('D:\\XAMPP7\\htdocs\\absen\\app\\Views\\admin\\v_dashboard.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('admin/v_dashboard.php', [], true)
+ 5 APPPATH\Views\admin\template\temp_admin.php(93): view('admin/v_dashboard.php')
+ 6 SYSTEMPATH\View\View.php(224): include('D:\\XAMPP7\\htdocs\\absen\\app\\Views\\admin\\template\\temp_admin.php')
+ 7 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('admin/template/temp_admin', [], true)
+ 9 APPPATH\Controllers\Dashboard.php(25): view('admin/template/temp_admin', [...])
+10 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Dashboard->index()
+11 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+12 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\XAMPP7\\htdocs\\absen\\public\\index.php')
+INFO - 2023-07-29 00:43:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-07-29 00:43:04 --> Undefined variable: jumlahDevisi
+in APPPATH\Views\admin\v_dashboard.php on line 44.
+ 1 APPPATH\Views\admin\v_dashboard.php(44): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: jumlahDevisi', 'D:\\XAMPP7\\htdocs\\absen\\app\\Views\\admin\\v_dashboard.php', 44, [...])
+ 2 SYSTEMPATH\View\View.php(224): include('D:\\XAMPP7\\htdocs\\absen\\app\\Views\\admin\\v_dashboard.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('admin/v_dashboard.php', [], true)
+ 5 APPPATH\Views\admin\template\temp_admin.php(93): view('admin/v_dashboard.php')
+ 6 SYSTEMPATH\View\View.php(224): include('D:\\XAMPP7\\htdocs\\absen\\app\\Views\\admin\\template\\temp_admin.php')
+ 7 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('admin/template/temp_admin', [], true)
+ 9 APPPATH\Controllers\Dashboard.php(25): view('admin/template/temp_admin', [...])
+10 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Dashboard->index()
+11 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+12 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\XAMPP7\\htdocs\\absen\\public\\index.php')
+INFO - 2023-07-29 00:43:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-07-29 00:43:05 --> Undefined variable: jumlahDevisi
+in APPPATH\Views\admin\v_dashboard.php on line 44.
+ 1 APPPATH\Views\admin\v_dashboard.php(44): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: jumlahDevisi', 'D:\\XAMPP7\\htdocs\\absen\\app\\Views\\admin\\v_dashboard.php', 44, [...])
+ 2 SYSTEMPATH\View\View.php(224): include('D:\\XAMPP7\\htdocs\\absen\\app\\Views\\admin\\v_dashboard.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('admin/v_dashboard.php', [], true)
+ 5 APPPATH\Views\admin\template\temp_admin.php(93): view('admin/v_dashboard.php')
+ 6 SYSTEMPATH\View\View.php(224): include('D:\\XAMPP7\\htdocs\\absen\\app\\Views\\admin\\template\\temp_admin.php')
+ 7 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('admin/template/temp_admin', [], true)
+ 9 APPPATH\Controllers\Dashboard.php(25): view('admin/template/temp_admin', [...])
+10 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Dashboard->index()
+11 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+12 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\XAMPP7\\htdocs\\absen\\public\\index.php')
+INFO - 2023-07-29 00:43:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-07-29 00:43:18 --> Undefined variable: jumlahDevisi
+in APPPATH\Views\admin\v_dashboard.php on line 44.
+ 1 APPPATH\Views\admin\v_dashboard.php(44): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: jumlahDevisi', 'D:\\XAMPP7\\htdocs\\absen\\app\\Views\\admin\\v_dashboard.php', 44, [...])
+ 2 SYSTEMPATH\View\View.php(224): include('D:\\XAMPP7\\htdocs\\absen\\app\\Views\\admin\\v_dashboard.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('admin/v_dashboard.php', [], true)
+ 5 APPPATH\Views\admin\template\temp_admin.php(93): view('admin/v_dashboard.php')
+ 6 SYSTEMPATH\View\View.php(224): include('D:\\XAMPP7\\htdocs\\absen\\app\\Views\\admin\\template\\temp_admin.php')
+ 7 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('admin/template/temp_admin', [], true)
+ 9 APPPATH\Controllers\Dashboard.php(25): view('admin/template/temp_admin', [...])
+10 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Dashboard->index()
+11 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+12 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\XAMPP7\\htdocs\\absen\\public\\index.php')
+INFO - 2023-07-29 00:43:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-07-29 00:43:49 --> Undefined variable: jumlahDevisi
+in APPPATH\Views\admin\v_dashboard.php on line 44.
+ 1 APPPATH\Views\admin\v_dashboard.php(44): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: jumlahDevisi', 'D:\\XAMPP7\\htdocs\\absen\\app\\Views\\admin\\v_dashboard.php', 44, [...])
+ 2 SYSTEMPATH\View\View.php(224): include('D:\\XAMPP7\\htdocs\\absen\\app\\Views\\admin\\v_dashboard.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('admin/v_dashboard.php', [], true)
+ 5 APPPATH\Views\admin\template\temp_admin.php(93): view('admin/v_dashboard.php')
+ 6 SYSTEMPATH\View\View.php(224): include('D:\\XAMPP7\\htdocs\\absen\\app\\Views\\admin\\template\\temp_admin.php')
+ 7 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('admin/template/temp_admin', [], true)
+ 9 APPPATH\Controllers\Dashboard.php(25): view('admin/template/temp_admin', [...])
+10 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Dashboard->index()
+11 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+12 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\XAMPP7\\htdocs\\absen\\public\\index.php')
+INFO - 2023-07-29 00:45:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-29 00:46:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-29 00:46:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-29 00:46:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-29 00:46:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-29 00:49:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-29 00:50:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-29 00:50:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-29 00:50:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-29 00:50:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-29 00:50:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-29 00:51:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-29 00:51:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-29 00:51:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-29 00:54:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-29 00:56:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-29 00:58:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-29 00:59:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-29 00:59:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-29 00:59:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-29 00:59:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-29 00:59:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-29 00:59:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-29 00:59:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-29 00:59:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-29 00:59:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-29 00:59:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-29 01:00:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-29 01:00:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-29 01:00:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-29 01:00:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-29 01:00:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-29 01:00:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-29 01:00:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-29 01:00:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-29 01:00:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-29 01:00:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-29 01:00:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-29 01:00:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-07-29 01:00:50 --> mysqli_sql_exception: Duplicate entry '2' for key 'id_user_2' in D:\XAMPP7\htdocs\absen\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 D:\XAMPP7\htdocs\absen\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `tb...', 0)
+#1 D:\XAMPP7\htdocs\absen\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tb...')
+#2 D:\XAMPP7\htdocs\absen\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tb...')
+#3 D:\XAMPP7\htdocs\absen\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tb...', Array, false)
+#4 D:\XAMPP7\htdocs\absen\system\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+#5 D:\XAMPP7\htdocs\absen\system\BaseModel.php(782): CodeIgniter\Model->doInsert(Array)
+#6 D:\XAMPP7\htdocs\absen\system\Model.php(730): CodeIgniter\BaseModel->insert(Array, false)
+#7 D:\XAMPP7\htdocs\absen\system\BaseModel.php(692): CodeIgniter\Model->insert(Array, false)
+#8 D:\XAMPP7\htdocs\absen\app\Controllers\Absensi.php(127): CodeIgniter\BaseModel->save(Array)
+#9 D:\XAMPP7\htdocs\absen\system\CodeIgniter.php(932): App\Controllers\Absensi->absen_masuk()
+#10 D:\XAMPP7\htdocs\absen\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Absensi))
+#11 D:\XAMPP7\htdocs\absen\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 D:\XAMPP7\htdocs\absen\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#13 D:\XAMPP7\htdocs\absen\system\Commands\Server\rewrite.php(47): require_once('D:\\XAMPP7\\htdoc...')
+#14 {main}
+CRITICAL - 2023-07-29 01:00:50 --> Duplicate entry '2' for key 'id_user_2'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `tbl_absen` (`id_user`, `jam_masuk`, `keterangan`) VALUES (\'2\', \'2023-07-29 01:00:50\', \'Masuk\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tbl_absen` (`id_user`, `jam_masuk`, `keterangan`) VALUES (\'2\', \'2023-07-29 01:00:50\', \'Masuk\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tbl_absen` (`id_user`, `jam_masuk`, `keterangan`) VALUES (\'2\', \'2023-07-29 01:00:50\', \'Masuk\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tbl_absen` (`id_user`, `jam_masuk`, `keterangan`) VALUES (:id_user:, :jam_masuk:, :keterangan:)', [...], false)
+ 5 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(782): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(730): CodeIgniter\BaseModel->insert([...], false)
+ 8 SYSTEMPATH\BaseModel.php(692): CodeIgniter\Model->insert([...], false)
+ 9 APPPATH\Controllers\Absensi.php(127): CodeIgniter\BaseModel->save([...])
+10 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Absensi->absen_masuk()
+11 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Absensi))
+12 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\XAMPP7\\htdocs\\absen\\public\\index.php')
+INFO - 2023-07-29 01:01:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-07-29 01:01:15 --> mysqli_sql_exception: Duplicate entry '2' for key 'id_user_2' in D:\XAMPP7\htdocs\absen\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 D:\XAMPP7\htdocs\absen\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `tb...', 0)
+#1 D:\XAMPP7\htdocs\absen\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tb...')
+#2 D:\XAMPP7\htdocs\absen\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tb...')
+#3 D:\XAMPP7\htdocs\absen\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tb...', Array, false)
+#4 D:\XAMPP7\htdocs\absen\system\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+#5 D:\XAMPP7\htdocs\absen\system\BaseModel.php(782): CodeIgniter\Model->doInsert(Array)
+#6 D:\XAMPP7\htdocs\absen\system\Model.php(730): CodeIgniter\BaseModel->insert(Array, false)
+#7 D:\XAMPP7\htdocs\absen\system\BaseModel.php(692): CodeIgniter\Model->insert(Array, false)
+#8 D:\XAMPP7\htdocs\absen\app\Controllers\Absensi.php(127): CodeIgniter\BaseModel->save(Array)
+#9 D:\XAMPP7\htdocs\absen\system\CodeIgniter.php(932): App\Controllers\Absensi->absen_masuk()
+#10 D:\XAMPP7\htdocs\absen\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Absensi))
+#11 D:\XAMPP7\htdocs\absen\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 D:\XAMPP7\htdocs\absen\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#13 D:\XAMPP7\htdocs\absen\system\Commands\Server\rewrite.php(47): require_once('D:\\XAMPP7\\htdoc...')
+#14 {main}
+CRITICAL - 2023-07-29 01:01:15 --> Duplicate entry '2' for key 'id_user_2'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `tbl_absen` (`id_user`, `jam_masuk`, `keterangan`) VALUES (\'2\', \'2023-07-29 01:01:15\', \'Masuk\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tbl_absen` (`id_user`, `jam_masuk`, `keterangan`) VALUES (\'2\', \'2023-07-29 01:01:15\', \'Masuk\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tbl_absen` (`id_user`, `jam_masuk`, `keterangan`) VALUES (\'2\', \'2023-07-29 01:01:15\', \'Masuk\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tbl_absen` (`id_user`, `jam_masuk`, `keterangan`) VALUES (:id_user:, :jam_masuk:, :keterangan:)', [...], false)
+ 5 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(782): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(730): CodeIgniter\BaseModel->insert([...], false)
+ 8 SYSTEMPATH\BaseModel.php(692): CodeIgniter\Model->insert([...], false)
+ 9 APPPATH\Controllers\Absensi.php(127): CodeIgniter\BaseModel->save([...])
+10 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Absensi->absen_masuk()
+11 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Absensi))
+12 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\XAMPP7\\htdocs\\absen\\public\\index.php')
+INFO - 2023-07-29 01:02:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-29 01:02:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-29 01:02:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-29 01:02:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-29 01:02:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-29 01:02:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-29 01:02:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-29 01:02:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-07-29 01:02:16 --> mysqli_sql_exception: Duplicate entry '2' for key 'id_user_2' in D:\XAMPP7\htdocs\absen\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 D:\XAMPP7\htdocs\absen\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `tb...', 0)
+#1 D:\XAMPP7\htdocs\absen\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tb...')
+#2 D:\XAMPP7\htdocs\absen\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tb...')
+#3 D:\XAMPP7\htdocs\absen\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tb...', Array, false)
+#4 D:\XAMPP7\htdocs\absen\system\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+#5 D:\XAMPP7\htdocs\absen\system\BaseModel.php(782): CodeIgniter\Model->doInsert(Array)
+#6 D:\XAMPP7\htdocs\absen\system\Model.php(730): CodeIgniter\BaseModel->insert(Array, false)
+#7 D:\XAMPP7\htdocs\absen\system\BaseModel.php(692): CodeIgniter\Model->insert(Array, false)
+#8 D:\XAMPP7\htdocs\absen\app\Controllers\Absensi.php(127): CodeIgniter\BaseModel->save(Array)
+#9 D:\XAMPP7\htdocs\absen\system\CodeIgniter.php(932): App\Controllers\Absensi->absen_masuk()
+#10 D:\XAMPP7\htdocs\absen\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Absensi))
+#11 D:\XAMPP7\htdocs\absen\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 D:\XAMPP7\htdocs\absen\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#13 D:\XAMPP7\htdocs\absen\system\Commands\Server\rewrite.php(47): require_once('D:\\XAMPP7\\htdoc...')
+#14 {main}
+CRITICAL - 2023-07-29 01:02:16 --> Duplicate entry '2' for key 'id_user_2'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `tbl_absen` (`id_user`, `jam_masuk`, `keterangan`) VALUES (\'2\', \'2023-07-29 01:02:16\', \'Masuk\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tbl_absen` (`id_user`, `jam_masuk`, `keterangan`) VALUES (\'2\', \'2023-07-29 01:02:16\', \'Masuk\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tbl_absen` (`id_user`, `jam_masuk`, `keterangan`) VALUES (\'2\', \'2023-07-29 01:02:16\', \'Masuk\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tbl_absen` (`id_user`, `jam_masuk`, `keterangan`) VALUES (:id_user:, :jam_masuk:, :keterangan:)', [...], false)
+ 5 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(782): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(730): CodeIgniter\BaseModel->insert([...], false)
+ 8 SYSTEMPATH\BaseModel.php(692): CodeIgniter\Model->insert([...], false)
+ 9 APPPATH\Controllers\Absensi.php(127): CodeIgniter\BaseModel->save([...])
+10 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Absensi->absen_masuk()
+11 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Absensi))
+12 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\XAMPP7\\htdocs\\absen\\public\\index.php')
+INFO - 2023-07-29 01:02:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-07-29 01:02:41 --> mysqli_sql_exception: Duplicate entry '2' for key 'id_user_2' in D:\XAMPP7\htdocs\absen\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 D:\XAMPP7\htdocs\absen\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `tb...', 0)
+#1 D:\XAMPP7\htdocs\absen\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tb...')
+#2 D:\XAMPP7\htdocs\absen\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tb...')
+#3 D:\XAMPP7\htdocs\absen\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tb...', Array, false)
+#4 D:\XAMPP7\htdocs\absen\system\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+#5 D:\XAMPP7\htdocs\absen\system\BaseModel.php(782): CodeIgniter\Model->doInsert(Array)
+#6 D:\XAMPP7\htdocs\absen\system\Model.php(730): CodeIgniter\BaseModel->insert(Array, false)
+#7 D:\XAMPP7\htdocs\absen\system\BaseModel.php(692): CodeIgniter\Model->insert(Array, false)
+#8 D:\XAMPP7\htdocs\absen\app\Controllers\Absensi.php(127): CodeIgniter\BaseModel->save(Array)
+#9 D:\XAMPP7\htdocs\absen\system\CodeIgniter.php(932): App\Controllers\Absensi->absen_masuk()
+#10 D:\XAMPP7\htdocs\absen\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Absensi))
+#11 D:\XAMPP7\htdocs\absen\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 D:\XAMPP7\htdocs\absen\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#13 D:\XAMPP7\htdocs\absen\system\Commands\Server\rewrite.php(47): require_once('D:\\XAMPP7\\htdoc...')
+#14 {main}
+CRITICAL - 2023-07-29 01:02:41 --> Duplicate entry '2' for key 'id_user_2'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `tbl_absen` (`id_user`, `jam_masuk`, `keterangan`) VALUES (\'2\', \'2023-07-29 01:02:41\', \'Masuk\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tbl_absen` (`id_user`, `jam_masuk`, `keterangan`) VALUES (\'2\', \'2023-07-29 01:02:41\', \'Masuk\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tbl_absen` (`id_user`, `jam_masuk`, `keterangan`) VALUES (\'2\', \'2023-07-29 01:02:41\', \'Masuk\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tbl_absen` (`id_user`, `jam_masuk`, `keterangan`) VALUES (:id_user:, :jam_masuk:, :keterangan:)', [...], false)
+ 5 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(782): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(730): CodeIgniter\BaseModel->insert([...], false)
+ 8 SYSTEMPATH\BaseModel.php(692): CodeIgniter\Model->insert([...], false)
+ 9 APPPATH\Controllers\Absensi.php(127): CodeIgniter\BaseModel->save([...])
+10 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Absensi->absen_masuk()
+11 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Absensi))
+12 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\XAMPP7\\htdocs\\absen\\public\\index.php')
+INFO - 2023-07-29 01:03:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-07-29 01:03:46 --> mysqli_sql_exception: Duplicate entry '2' for key 'id_user_2' in D:\XAMPP7\htdocs\absen\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 D:\XAMPP7\htdocs\absen\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `tb...', 0)
+#1 D:\XAMPP7\htdocs\absen\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tb...')
+#2 D:\XAMPP7\htdocs\absen\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tb...')
+#3 D:\XAMPP7\htdocs\absen\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tb...', Array, false)
+#4 D:\XAMPP7\htdocs\absen\system\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+#5 D:\XAMPP7\htdocs\absen\system\BaseModel.php(782): CodeIgniter\Model->doInsert(Array)
+#6 D:\XAMPP7\htdocs\absen\system\Model.php(730): CodeIgniter\BaseModel->insert(Array, false)
+#7 D:\XAMPP7\htdocs\absen\system\BaseModel.php(692): CodeIgniter\Model->insert(Array, false)
+#8 D:\XAMPP7\htdocs\absen\app\Controllers\Absensi.php(127): CodeIgniter\BaseModel->save(Array)
+#9 D:\XAMPP7\htdocs\absen\system\CodeIgniter.php(932): App\Controllers\Absensi->absen_masuk()
+#10 D:\XAMPP7\htdocs\absen\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Absensi))
+#11 D:\XAMPP7\htdocs\absen\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 D:\XAMPP7\htdocs\absen\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#13 D:\XAMPP7\htdocs\absen\system\Commands\Server\rewrite.php(47): require_once('D:\\XAMPP7\\htdoc...')
+#14 {main}
+CRITICAL - 2023-07-29 01:03:46 --> Duplicate entry '2' for key 'id_user_2'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `tbl_absen` (`id_user`, `jam_masuk`, `keterangan`) VALUES (\'2\', \'2023-07-29 01:03:46\', \'Masuk\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tbl_absen` (`id_user`, `jam_masuk`, `keterangan`) VALUES (\'2\', \'2023-07-29 01:03:46\', \'Masuk\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tbl_absen` (`id_user`, `jam_masuk`, `keterangan`) VALUES (\'2\', \'2023-07-29 01:03:46\', \'Masuk\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tbl_absen` (`id_user`, `jam_masuk`, `keterangan`) VALUES (:id_user:, :jam_masuk:, :keterangan:)', [...], false)
+ 5 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(782): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(730): CodeIgniter\BaseModel->insert([...], false)
+ 8 SYSTEMPATH\BaseModel.php(692): CodeIgniter\Model->insert([...], false)
+ 9 APPPATH\Controllers\Absensi.php(127): CodeIgniter\BaseModel->save([...])
+10 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Absensi->absen_masuk()
+11 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Absensi))
+12 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\XAMPP7\\htdocs\\absen\\public\\index.php')
+INFO - 2023-07-29 01:03:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-29 01:03:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-29 01:03:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-07-29 01:03:51 --> mysqli_sql_exception: Duplicate entry '2' for key 'id_user_2' in D:\XAMPP7\htdocs\absen\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 D:\XAMPP7\htdocs\absen\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `tb...', 0)
+#1 D:\XAMPP7\htdocs\absen\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tb...')
+#2 D:\XAMPP7\htdocs\absen\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tb...')
+#3 D:\XAMPP7\htdocs\absen\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tb...', Array, false)
+#4 D:\XAMPP7\htdocs\absen\system\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+#5 D:\XAMPP7\htdocs\absen\system\BaseModel.php(782): CodeIgniter\Model->doInsert(Array)
+#6 D:\XAMPP7\htdocs\absen\system\Model.php(730): CodeIgniter\BaseModel->insert(Array, false)
+#7 D:\XAMPP7\htdocs\absen\system\BaseModel.php(692): CodeIgniter\Model->insert(Array, false)
+#8 D:\XAMPP7\htdocs\absen\app\Controllers\Absensi.php(127): CodeIgniter\BaseModel->save(Array)
+#9 D:\XAMPP7\htdocs\absen\system\CodeIgniter.php(932): App\Controllers\Absensi->absen_masuk()
+#10 D:\XAMPP7\htdocs\absen\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Absensi))
+#11 D:\XAMPP7\htdocs\absen\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 D:\XAMPP7\htdocs\absen\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#13 D:\XAMPP7\htdocs\absen\system\Commands\Server\rewrite.php(47): require_once('D:\\XAMPP7\\htdoc...')
+#14 {main}
+CRITICAL - 2023-07-29 01:03:51 --> Duplicate entry '2' for key 'id_user_2'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `tbl_absen` (`id_user`, `jam_masuk`, `keterangan`) VALUES (\'2\', \'2023-07-29 01:03:51\', \'Masuk\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tbl_absen` (`id_user`, `jam_masuk`, `keterangan`) VALUES (\'2\', \'2023-07-29 01:03:51\', \'Masuk\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tbl_absen` (`id_user`, `jam_masuk`, `keterangan`) VALUES (\'2\', \'2023-07-29 01:03:51\', \'Masuk\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tbl_absen` (`id_user`, `jam_masuk`, `keterangan`) VALUES (:id_user:, :jam_masuk:, :keterangan:)', [...], false)
+ 5 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(782): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(730): CodeIgniter\BaseModel->insert([...], false)
+ 8 SYSTEMPATH\BaseModel.php(692): CodeIgniter\Model->insert([...], false)
+ 9 APPPATH\Controllers\Absensi.php(127): CodeIgniter\BaseModel->save([...])
+10 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Absensi->absen_masuk()
+11 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Absensi))
+12 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\XAMPP7\\htdocs\\absen\\public\\index.php')
+INFO - 2023-07-29 01:05:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-29 01:05:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-29 01:05:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-29 01:05:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-29 01:05:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-29 01:05:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-29 01:05:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-07-29 01:05:53 --> mysqli_sql_exception: Duplicate entry '2' for key 'id_user_2' in D:\XAMPP7\htdocs\absen\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 D:\XAMPP7\htdocs\absen\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `tb...', 0)
+#1 D:\XAMPP7\htdocs\absen\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tb...')
+#2 D:\XAMPP7\htdocs\absen\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tb...')
+#3 D:\XAMPP7\htdocs\absen\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tb...', Array, false)
+#4 D:\XAMPP7\htdocs\absen\system\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+#5 D:\XAMPP7\htdocs\absen\system\BaseModel.php(782): CodeIgniter\Model->doInsert(Array)
+#6 D:\XAMPP7\htdocs\absen\system\Model.php(730): CodeIgniter\BaseModel->insert(Array, false)
+#7 D:\XAMPP7\htdocs\absen\system\BaseModel.php(692): CodeIgniter\Model->insert(Array, false)
+#8 D:\XAMPP7\htdocs\absen\app\Controllers\Absensi.php(122): CodeIgniter\BaseModel->save(Array)
+#9 D:\XAMPP7\htdocs\absen\system\CodeIgniter.php(932): App\Controllers\Absensi->absen_masuk()
+#10 D:\XAMPP7\htdocs\absen\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Absensi))
+#11 D:\XAMPP7\htdocs\absen\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 D:\XAMPP7\htdocs\absen\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#13 D:\XAMPP7\htdocs\absen\system\Commands\Server\rewrite.php(47): require_once('D:\\XAMPP7\\htdoc...')
+#14 {main}
+CRITICAL - 2023-07-29 01:05:53 --> Duplicate entry '2' for key 'id_user_2'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `tbl_absen` (`id_user`, `jam_masuk`, `keterangan`) VALUES (\'2\', \'2023-07-29 01:05:53\', \'Masuk\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tbl_absen` (`id_user`, `jam_masuk`, `keterangan`) VALUES (\'2\', \'2023-07-29 01:05:53\', \'Masuk\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tbl_absen` (`id_user`, `jam_masuk`, `keterangan`) VALUES (\'2\', \'2023-07-29 01:05:53\', \'Masuk\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tbl_absen` (`id_user`, `jam_masuk`, `keterangan`) VALUES (:id_user:, :jam_masuk:, :keterangan:)', [...], false)
+ 5 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(782): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(730): CodeIgniter\BaseModel->insert([...], false)
+ 8 SYSTEMPATH\BaseModel.php(692): CodeIgniter\Model->insert([...], false)
+ 9 APPPATH\Controllers\Absensi.php(122): CodeIgniter\BaseModel->save([...])
+10 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Absensi->absen_masuk()
+11 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Absensi))
+12 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\XAMPP7\\htdocs\\absen\\public\\index.php')
+INFO - 2023-07-29 01:08:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-07-29 01:08:06 --> mysqli_sql_exception: Duplicate entry '2' for key 'id_user_2' in D:\XAMPP7\htdocs\absen\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 D:\XAMPP7\htdocs\absen\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `tb...', 0)
+#1 D:\XAMPP7\htdocs\absen\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tb...')
+#2 D:\XAMPP7\htdocs\absen\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tb...')
+#3 D:\XAMPP7\htdocs\absen\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tb...', Array, false)
+#4 D:\XAMPP7\htdocs\absen\system\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+#5 D:\XAMPP7\htdocs\absen\system\BaseModel.php(782): CodeIgniter\Model->doInsert(Array)
+#6 D:\XAMPP7\htdocs\absen\system\Model.php(730): CodeIgniter\BaseModel->insert(Array, false)
+#7 D:\XAMPP7\htdocs\absen\system\BaseModel.php(692): CodeIgniter\Model->insert(Array, false)
+#8 D:\XAMPP7\htdocs\absen\app\Controllers\Absensi.php(122): CodeIgniter\BaseModel->save(Array)
+#9 D:\XAMPP7\htdocs\absen\system\CodeIgniter.php(932): App\Controllers\Absensi->absen_masuk()
+#10 D:\XAMPP7\htdocs\absen\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Absensi))
+#11 D:\XAMPP7\htdocs\absen\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 D:\XAMPP7\htdocs\absen\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#13 D:\XAMPP7\htdocs\absen\system\Commands\Server\rewrite.php(47): require_once('D:\\XAMPP7\\htdoc...')
+#14 {main}
+CRITICAL - 2023-07-29 01:08:06 --> Duplicate entry '2' for key 'id_user_2'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `tbl_absen` (`id_user`, `jam_masuk`, `keterangan`) VALUES (\'2\', \'2023-07-29 01:08:06\', \'Masuk\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tbl_absen` (`id_user`, `jam_masuk`, `keterangan`) VALUES (\'2\', \'2023-07-29 01:08:06\', \'Masuk\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tbl_absen` (`id_user`, `jam_masuk`, `keterangan`) VALUES (\'2\', \'2023-07-29 01:08:06\', \'Masuk\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tbl_absen` (`id_user`, `jam_masuk`, `keterangan`) VALUES (:id_user:, :jam_masuk:, :keterangan:)', [...], false)
+ 5 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(782): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(730): CodeIgniter\BaseModel->insert([...], false)
+ 8 SYSTEMPATH\BaseModel.php(692): CodeIgniter\Model->insert([...], false)
+ 9 APPPATH\Controllers\Absensi.php(122): CodeIgniter\BaseModel->save([...])
+10 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Absensi->absen_masuk()
+11 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Absensi))
+12 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\XAMPP7\\htdocs\\absen\\public\\index.php')
+INFO - 2023-07-29 01:08:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-29 01:08:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-29 01:08:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-07-29 01:08:10 --> mysqli_sql_exception: Duplicate entry '2' for key 'id_user_2' in D:\XAMPP7\htdocs\absen\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 D:\XAMPP7\htdocs\absen\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `tb...', 0)
+#1 D:\XAMPP7\htdocs\absen\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tb...')
+#2 D:\XAMPP7\htdocs\absen\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tb...')
+#3 D:\XAMPP7\htdocs\absen\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tb...', Array, false)
+#4 D:\XAMPP7\htdocs\absen\system\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+#5 D:\XAMPP7\htdocs\absen\system\BaseModel.php(782): CodeIgniter\Model->doInsert(Array)
+#6 D:\XAMPP7\htdocs\absen\system\Model.php(730): CodeIgniter\BaseModel->insert(Array, false)
+#7 D:\XAMPP7\htdocs\absen\system\BaseModel.php(692): CodeIgniter\Model->insert(Array, false)
+#8 D:\XAMPP7\htdocs\absen\app\Controllers\Absensi.php(122): CodeIgniter\BaseModel->save(Array)
+#9 D:\XAMPP7\htdocs\absen\system\CodeIgniter.php(932): App\Controllers\Absensi->absen_masuk()
+#10 D:\XAMPP7\htdocs\absen\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Absensi))
+#11 D:\XAMPP7\htdocs\absen\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 D:\XAMPP7\htdocs\absen\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#13 D:\XAMPP7\htdocs\absen\system\Commands\Server\rewrite.php(47): require_once('D:\\XAMPP7\\htdoc...')
+#14 {main}
+CRITICAL - 2023-07-29 01:08:10 --> Duplicate entry '2' for key 'id_user_2'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `tbl_absen` (`id_user`, `jam_masuk`, `keterangan`) VALUES (\'2\', \'2023-07-29 01:08:10\', \'Masuk\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tbl_absen` (`id_user`, `jam_masuk`, `keterangan`) VALUES (\'2\', \'2023-07-29 01:08:10\', \'Masuk\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tbl_absen` (`id_user`, `jam_masuk`, `keterangan`) VALUES (\'2\', \'2023-07-29 01:08:10\', \'Masuk\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tbl_absen` (`id_user`, `jam_masuk`, `keterangan`) VALUES (:id_user:, :jam_masuk:, :keterangan:)', [...], false)
+ 5 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(782): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(730): CodeIgniter\BaseModel->insert([...], false)
+ 8 SYSTEMPATH\BaseModel.php(692): CodeIgniter\Model->insert([...], false)
+ 9 APPPATH\Controllers\Absensi.php(122): CodeIgniter\BaseModel->save([...])
+10 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Absensi->absen_masuk()
+11 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Absensi))
+12 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\XAMPP7\\htdocs\\absen\\public\\index.php')
+INFO - 2023-07-29 01:12:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-07-29 01:12:01 --> mysqli_sql_exception: Duplicate entry '2' for key 'id_user_2' in D:\XAMPP7\htdocs\absen\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 D:\XAMPP7\htdocs\absen\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `tb...', 0)
+#1 D:\XAMPP7\htdocs\absen\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tb...')
+#2 D:\XAMPP7\htdocs\absen\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tb...')
+#3 D:\XAMPP7\htdocs\absen\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tb...', Array, false)
+#4 D:\XAMPP7\htdocs\absen\system\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+#5 D:\XAMPP7\htdocs\absen\system\BaseModel.php(782): CodeIgniter\Model->doInsert(Array)
+#6 D:\XAMPP7\htdocs\absen\system\Model.php(730): CodeIgniter\BaseModel->insert(Array, false)
+#7 D:\XAMPP7\htdocs\absen\system\BaseModel.php(692): CodeIgniter\Model->insert(Array, false)
+#8 D:\XAMPP7\htdocs\absen\app\Controllers\Absensi.php(122): CodeIgniter\BaseModel->save(Array)
+#9 D:\XAMPP7\htdocs\absen\system\CodeIgniter.php(932): App\Controllers\Absensi->absen_masuk()
+#10 D:\XAMPP7\htdocs\absen\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Absensi))
+#11 D:\XAMPP7\htdocs\absen\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 D:\XAMPP7\htdocs\absen\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#13 D:\XAMPP7\htdocs\absen\system\Commands\Server\rewrite.php(47): require_once('D:\\XAMPP7\\htdoc...')
+#14 {main}
+CRITICAL - 2023-07-29 01:12:01 --> Duplicate entry '2' for key 'id_user_2'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `tbl_absen` (`id_user`, `jam_masuk`, `keterangan`) VALUES (\'2\', \'2023-07-29 01:12:01\', \'Masuk\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tbl_absen` (`id_user`, `jam_masuk`, `keterangan`) VALUES (\'2\', \'2023-07-29 01:12:01\', \'Masuk\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tbl_absen` (`id_user`, `jam_masuk`, `keterangan`) VALUES (\'2\', \'2023-07-29 01:12:01\', \'Masuk\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tbl_absen` (`id_user`, `jam_masuk`, `keterangan`) VALUES (:id_user:, :jam_masuk:, :keterangan:)', [...], false)
+ 5 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(782): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(730): CodeIgniter\BaseModel->insert([...], false)
+ 8 SYSTEMPATH\BaseModel.php(692): CodeIgniter\Model->insert([...], false)
+ 9 APPPATH\Controllers\Absensi.php(122): CodeIgniter\BaseModel->save([...])
+10 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Absensi->absen_masuk()
+11 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Absensi))
+12 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\XAMPP7\\htdocs\\absen\\public\\index.php')
+INFO - 2023-07-29 01:14:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-29 01:14:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-29 01:14:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-29 01:14:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-29 01:14:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-29 01:14:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-29 01:17:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-07-29 01:17:17 --> mysqli_sql_exception: Unknown column 'user_id' in 'field list' in D:\XAMPP7\htdocs\absen\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 D:\XAMPP7\htdocs\absen\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `user_id...', 0)
+#1 D:\XAMPP7\htdocs\absen\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `user_id...')
+#2 D:\XAMPP7\htdocs\absen\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `user_id...')
+#3 D:\XAMPP7\htdocs\absen\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `user_id...', Array, false)
+#4 D:\XAMPP7\htdocs\absen\system\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\XAMPP7\htdocs\absen\system\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+#6 D:\XAMPP7\htdocs\absen\app\Controllers\Dashboard.php(34): CodeIgniter\BaseModel->findAll()
+#7 D:\XAMPP7\htdocs\absen\system\CodeIgniter.php(932): App\Controllers\Dashboard->index()
+#8 D:\XAMPP7\htdocs\absen\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+#9 D:\XAMPP7\htdocs\absen\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\XAMPP7\htdocs\absen\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 D:\XAMPP7\htdocs\absen\system\Commands\Server\rewrite.php(47): require_once('D:\\XAMPP7\\htdoc...')
+#12 {main}
+CRITICAL - 2023-07-29 01:17:17 --> Unknown column 'user_id' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `user_id`, SUM(jam_masuk) as total_jam_masuk
+FROM `tbl_absen`
+WHERE DATE(jam_masuk) = \'2023-07-29\'
+GROUP BY `user_id`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `user_id`, SUM(jam_masuk) as total_jam_masuk
+FROM `tbl_absen`
+WHERE DATE(jam_masuk) = \'2023-07-29\'
+GROUP BY `user_id`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `user_id`, SUM(jam_masuk) as total_jam_masuk
+FROM `tbl_absen`
+WHERE DATE(jam_masuk) = \'2023-07-29\'
+GROUP BY `user_id`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `user_id`, SUM(jam_masuk) as total_jam_masuk
+FROM `tbl_absen`
+WHERE DATE(jam_masuk) = :DATE(jam_masuk):
+GROUP BY `user_id`', [...], false)
+ 5 SYSTEMPATH\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Controllers\Dashboard.php(34): CodeIgniter\BaseModel->findAll()
+ 8 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Dashboard->index()
+ 9 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+10 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\XAMPP7\\htdocs\\absen\\public\\index.php')
+INFO - 2023-07-29 01:17:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-07-29 01:18:36 --> Maximum execution time of 60 seconds exceeded
+in SYSTEMPATH\Common.php on line 424.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+INFO - 2023-07-29 01:18:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-29 01:18:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-29 01:18:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-07-29 01:19:39 --> Maximum execution time of 60 seconds exceeded
+in SYSTEMPATH\Common.php on line 424.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+INFO - 2023-07-29 01:19:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-29 01:19:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-29 01:19:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-29 08:55:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-29 08:55:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-29 08:55:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-29 08:55:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-29 08:55:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-29 08:55:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-07-29 08:55:48 --> mysqli_sql_exception: Duplicate entry '2' for key 'id_user_2' in D:\XAMPP7\htdocs\absen\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 D:\XAMPP7\htdocs\absen\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `tb...', 0)
+#1 D:\XAMPP7\htdocs\absen\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tb...')
+#2 D:\XAMPP7\htdocs\absen\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tb...')
+#3 D:\XAMPP7\htdocs\absen\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tb...', Array, false)
+#4 D:\XAMPP7\htdocs\absen\system\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+#5 D:\XAMPP7\htdocs\absen\system\BaseModel.php(782): CodeIgniter\Model->doInsert(Array)
+#6 D:\XAMPP7\htdocs\absen\system\Model.php(730): CodeIgniter\BaseModel->insert(Array, false)
+#7 D:\XAMPP7\htdocs\absen\system\BaseModel.php(692): CodeIgniter\Model->insert(Array, false)
+#8 D:\XAMPP7\htdocs\absen\app\Controllers\Absensi.php(122): CodeIgniter\BaseModel->save(Array)
+#9 D:\XAMPP7\htdocs\absen\system\CodeIgniter.php(932): App\Controllers\Absensi->absen_masuk()
+#10 D:\XAMPP7\htdocs\absen\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Absensi))
+#11 D:\XAMPP7\htdocs\absen\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 D:\XAMPP7\htdocs\absen\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#13 D:\XAMPP7\htdocs\absen\system\Commands\Server\rewrite.php(47): require_once('D:\\XAMPP7\\htdoc...')
+#14 {main}
+CRITICAL - 2023-07-29 08:55:48 --> Duplicate entry '2' for key 'id_user_2'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `tbl_absen` (`id_user`, `jam_masuk`, `keterangan`) VALUES (\'2\', \'2023-07-29 08:55:48\', \'Masuk\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tbl_absen` (`id_user`, `jam_masuk`, `keterangan`) VALUES (\'2\', \'2023-07-29 08:55:48\', \'Masuk\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tbl_absen` (`id_user`, `jam_masuk`, `keterangan`) VALUES (\'2\', \'2023-07-29 08:55:48\', \'Masuk\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tbl_absen` (`id_user`, `jam_masuk`, `keterangan`) VALUES (:id_user:, :jam_masuk:, :keterangan:)', [...], false)
+ 5 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(782): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(730): CodeIgniter\BaseModel->insert([...], false)
+ 8 SYSTEMPATH\BaseModel.php(692): CodeIgniter\Model->insert([...], false)
+ 9 APPPATH\Controllers\Absensi.php(122): CodeIgniter\BaseModel->save([...])
+10 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Absensi->absen_masuk()
+11 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Absensi))
+12 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\XAMPP7\\htdocs\\absen\\public\\index.php')
+INFO - 2023-07-29 08:55:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-29 08:56:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-29 08:56:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-29 08:56:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-29 08:56:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-07-29 08:56:28 --> mysqli_sql_exception: Duplicate entry '2' for key 'id_user_2' in D:\XAMPP7\htdocs\absen\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 D:\XAMPP7\htdocs\absen\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `tb...', 0)
+#1 D:\XAMPP7\htdocs\absen\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tb...')
+#2 D:\XAMPP7\htdocs\absen\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tb...')
+#3 D:\XAMPP7\htdocs\absen\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tb...', Array, false)
+#4 D:\XAMPP7\htdocs\absen\system\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+#5 D:\XAMPP7\htdocs\absen\system\BaseModel.php(782): CodeIgniter\Model->doInsert(Array)
+#6 D:\XAMPP7\htdocs\absen\system\Model.php(730): CodeIgniter\BaseModel->insert(Array, false)
+#7 D:\XAMPP7\htdocs\absen\system\BaseModel.php(692): CodeIgniter\Model->insert(Array, false)
+#8 D:\XAMPP7\htdocs\absen\app\Controllers\Absensi.php(122): CodeIgniter\BaseModel->save(Array)
+#9 D:\XAMPP7\htdocs\absen\system\CodeIgniter.php(932): App\Controllers\Absensi->absen_masuk()
+#10 D:\XAMPP7\htdocs\absen\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Absensi))
+#11 D:\XAMPP7\htdocs\absen\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 D:\XAMPP7\htdocs\absen\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#13 D:\XAMPP7\htdocs\absen\system\Commands\Server\rewrite.php(47): require_once('D:\\XAMPP7\\htdoc...')
+#14 {main}
+CRITICAL - 2023-07-29 08:56:28 --> Duplicate entry '2' for key 'id_user_2'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `tbl_absen` (`id_user`, `jam_masuk`, `keterangan`) VALUES (\'2\', \'2023-07-29 08:56:28\', \'Masuk\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tbl_absen` (`id_user`, `jam_masuk`, `keterangan`) VALUES (\'2\', \'2023-07-29 08:56:28\', \'Masuk\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tbl_absen` (`id_user`, `jam_masuk`, `keterangan`) VALUES (\'2\', \'2023-07-29 08:56:28\', \'Masuk\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tbl_absen` (`id_user`, `jam_masuk`, `keterangan`) VALUES (:id_user:, :jam_masuk:, :keterangan:)', [...], false)
+ 5 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(782): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(730): CodeIgniter\BaseModel->insert([...], false)
+ 8 SYSTEMPATH\BaseModel.php(692): CodeIgniter\Model->insert([...], false)
+ 9 APPPATH\Controllers\Absensi.php(122): CodeIgniter\BaseModel->save([...])
+10 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Absensi->absen_masuk()
+11 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Absensi))
+12 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\XAMPP7\\htdocs\\absen\\public\\index.php')
+INFO - 2023-07-29 08:57:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-29 08:57:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-29 08:57:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-07-29 08:57:58 --> mysqli_sql_exception: Duplicate entry '2' for key 'id_user_2' in D:\XAMPP7\htdocs\absen\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 D:\XAMPP7\htdocs\absen\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `tb...', 0)
+#1 D:\XAMPP7\htdocs\absen\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tb...')
+#2 D:\XAMPP7\htdocs\absen\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tb...')
+#3 D:\XAMPP7\htdocs\absen\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tb...', Array, false)
+#4 D:\XAMPP7\htdocs\absen\system\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+#5 D:\XAMPP7\htdocs\absen\system\BaseModel.php(782): CodeIgniter\Model->doInsert(Array)
+#6 D:\XAMPP7\htdocs\absen\system\Model.php(730): CodeIgniter\BaseModel->insert(Array, false)
+#7 D:\XAMPP7\htdocs\absen\system\BaseModel.php(692): CodeIgniter\Model->insert(Array, false)
+#8 D:\XAMPP7\htdocs\absen\app\Controllers\Absensi.php(122): CodeIgniter\BaseModel->save(Array)
+#9 D:\XAMPP7\htdocs\absen\system\CodeIgniter.php(932): App\Controllers\Absensi->absen_masuk()
+#10 D:\XAMPP7\htdocs\absen\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Absensi))
+#11 D:\XAMPP7\htdocs\absen\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 D:\XAMPP7\htdocs\absen\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#13 D:\XAMPP7\htdocs\absen\system\Commands\Server\rewrite.php(47): require_once('D:\\XAMPP7\\htdoc...')
+#14 {main}
+CRITICAL - 2023-07-29 08:57:58 --> Duplicate entry '2' for key 'id_user_2'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `tbl_absen` (`id_user`, `jam_masuk`, `keterangan`) VALUES (\'2\', \'2023-07-29 08:57:58\', \'Masuk\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tbl_absen` (`id_user`, `jam_masuk`, `keterangan`) VALUES (\'2\', \'2023-07-29 08:57:58\', \'Masuk\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tbl_absen` (`id_user`, `jam_masuk`, `keterangan`) VALUES (\'2\', \'2023-07-29 08:57:58\', \'Masuk\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tbl_absen` (`id_user`, `jam_masuk`, `keterangan`) VALUES (:id_user:, :jam_masuk:, :keterangan:)', [...], false)
+ 5 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(782): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(730): CodeIgniter\BaseModel->insert([...], false)
+ 8 SYSTEMPATH\BaseModel.php(692): CodeIgniter\Model->insert([...], false)
+ 9 APPPATH\Controllers\Absensi.php(122): CodeIgniter\BaseModel->save([...])
+10 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Absensi->absen_masuk()
+11 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Absensi))
+12 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\XAMPP7\\htdocs\\absen\\public\\index.php')
+INFO - 2023-07-29 09:01:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-29 09:01:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-29 09:01:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-29 09:01:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-29 09:01:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-29 09:01:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-07-29 09:01:29 --> mysqli_sql_exception: Duplicate entry '2' for key 'id_user_2' in D:\XAMPP7\htdocs\absen\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 D:\XAMPP7\htdocs\absen\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `tb...', 0)
+#1 D:\XAMPP7\htdocs\absen\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tb...')
+#2 D:\XAMPP7\htdocs\absen\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tb...')
+#3 D:\XAMPP7\htdocs\absen\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tb...', Array, false)
+#4 D:\XAMPP7\htdocs\absen\system\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+#5 D:\XAMPP7\htdocs\absen\system\BaseModel.php(782): CodeIgniter\Model->doInsert(Array)
+#6 D:\XAMPP7\htdocs\absen\system\Model.php(730): CodeIgniter\BaseModel->insert(Array, false)
+#7 D:\XAMPP7\htdocs\absen\system\BaseModel.php(692): CodeIgniter\Model->insert(Array, false)
+#8 D:\XAMPP7\htdocs\absen\app\Controllers\Absensi.php(122): CodeIgniter\BaseModel->save(Array)
+#9 D:\XAMPP7\htdocs\absen\system\CodeIgniter.php(932): App\Controllers\Absensi->absen_masuk()
+#10 D:\XAMPP7\htdocs\absen\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Absensi))
+#11 D:\XAMPP7\htdocs\absen\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 D:\XAMPP7\htdocs\absen\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#13 D:\XAMPP7\htdocs\absen\system\Commands\Server\rewrite.php(47): require_once('D:\\XAMPP7\\htdoc...')
+#14 {main}
+CRITICAL - 2023-07-29 09:01:29 --> Duplicate entry '2' for key 'id_user_2'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `tbl_absen` (`id_user`, `jam_masuk`, `keterangan`) VALUES (\'2\', \'2023-07-29 09:01:29\', \'Masuk\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tbl_absen` (`id_user`, `jam_masuk`, `keterangan`) VALUES (\'2\', \'2023-07-29 09:01:29\', \'Masuk\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tbl_absen` (`id_user`, `jam_masuk`, `keterangan`) VALUES (\'2\', \'2023-07-29 09:01:29\', \'Masuk\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tbl_absen` (`id_user`, `jam_masuk`, `keterangan`) VALUES (:id_user:, :jam_masuk:, :keterangan:)', [...], false)
+ 5 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(782): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(730): CodeIgniter\BaseModel->insert([...], false)
+ 8 SYSTEMPATH\BaseModel.php(692): CodeIgniter\Model->insert([...], false)
+ 9 APPPATH\Controllers\Absensi.php(122): CodeIgniter\BaseModel->save([...])
+10 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Absensi->absen_masuk()
+11 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Absensi))
+12 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\XAMPP7\\htdocs\\absen\\public\\index.php')
+INFO - 2023-07-29 09:04:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-29 09:04:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-29 09:04:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-07-29 09:04:14 --> Call to undefined method App\Models\AbsenModel::getLastAbsenMasukDate
+in SYSTEMPATH\Model.php on line 838.
+ 1 APPPATH\Controllers\Absensi.php(112): CodeIgniter\Model->__call('getLastAbsenMasukDate', [...])
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Absensi->absen_masuk()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Absensi))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\XAMPP7\\htdocs\\absen\\public\\index.php')
+INFO - 2023-07-29 09:04:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-29 09:04:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-07-29 09:05:00 --> mysqli_sql_exception: Duplicate entry '2' for key 'id_user_2' in D:\XAMPP7\htdocs\absen\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 D:\XAMPP7\htdocs\absen\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `tb...', 0)
+#1 D:\XAMPP7\htdocs\absen\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tb...')
+#2 D:\XAMPP7\htdocs\absen\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tb...')
+#3 D:\XAMPP7\htdocs\absen\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tb...', Array, false)
+#4 D:\XAMPP7\htdocs\absen\system\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+#5 D:\XAMPP7\htdocs\absen\system\BaseModel.php(782): CodeIgniter\Model->doInsert(Array)
+#6 D:\XAMPP7\htdocs\absen\system\Model.php(730): CodeIgniter\BaseModel->insert(Array, false)
+#7 D:\XAMPP7\htdocs\absen\system\BaseModel.php(692): CodeIgniter\Model->insert(Array, false)
+#8 D:\XAMPP7\htdocs\absen\app\Controllers\Absensi.php(126): CodeIgniter\BaseModel->save(Array)
+#9 D:\XAMPP7\htdocs\absen\system\CodeIgniter.php(932): App\Controllers\Absensi->absen_masuk()
+#10 D:\XAMPP7\htdocs\absen\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Absensi))
+#11 D:\XAMPP7\htdocs\absen\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 D:\XAMPP7\htdocs\absen\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#13 D:\XAMPP7\htdocs\absen\system\Commands\Server\rewrite.php(47): require_once('D:\\XAMPP7\\htdoc...')
+#14 {main}
+CRITICAL - 2023-07-29 09:05:00 --> Duplicate entry '2' for key 'id_user_2'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `tbl_absen` (`id_user`, `jam_masuk`, `keterangan`) VALUES (\'2\', \'2023-07-29 09:05:00\', \'Masuk\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tbl_absen` (`id_user`, `jam_masuk`, `keterangan`) VALUES (\'2\', \'2023-07-29 09:05:00\', \'Masuk\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tbl_absen` (`id_user`, `jam_masuk`, `keterangan`) VALUES (\'2\', \'2023-07-29 09:05:00\', \'Masuk\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tbl_absen` (`id_user`, `jam_masuk`, `keterangan`) VALUES (:id_user:, :jam_masuk:, :keterangan:)', [...], false)
+ 5 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(782): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(730): CodeIgniter\BaseModel->insert([...], false)
+ 8 SYSTEMPATH\BaseModel.php(692): CodeIgniter\Model->insert([...], false)
+ 9 APPPATH\Controllers\Absensi.php(126): CodeIgniter\BaseModel->save([...])
+10 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Absensi->absen_masuk()
+11 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Absensi))
+12 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\XAMPP7\\htdocs\\absen\\public\\index.php')
+INFO - 2023-07-29 09:07:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-29 09:07:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-29 09:07:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-29 09:07:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-07-29 09:07:34 --> mysqli_sql_exception: Duplicate entry '2' for key 'id_user_2' in D:\XAMPP7\htdocs\absen\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 D:\XAMPP7\htdocs\absen\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `tb...', 0)
+#1 D:\XAMPP7\htdocs\absen\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tb...')
+#2 D:\XAMPP7\htdocs\absen\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tb...')
+#3 D:\XAMPP7\htdocs\absen\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tb...', Array, false)
+#4 D:\XAMPP7\htdocs\absen\system\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+#5 D:\XAMPP7\htdocs\absen\system\BaseModel.php(782): CodeIgniter\Model->doInsert(Array)
+#6 D:\XAMPP7\htdocs\absen\system\Model.php(730): CodeIgniter\BaseModel->insert(Array, false)
+#7 D:\XAMPP7\htdocs\absen\system\BaseModel.php(692): CodeIgniter\Model->insert(Array, false)
+#8 D:\XAMPP7\htdocs\absen\app\Controllers\Absensi.php(126): CodeIgniter\BaseModel->save(Array)
+#9 D:\XAMPP7\htdocs\absen\system\CodeIgniter.php(932): App\Controllers\Absensi->absen_masuk()
+#10 D:\XAMPP7\htdocs\absen\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Absensi))
+#11 D:\XAMPP7\htdocs\absen\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 D:\XAMPP7\htdocs\absen\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#13 D:\XAMPP7\htdocs\absen\system\Commands\Server\rewrite.php(47): require_once('D:\\XAMPP7\\htdoc...')
+#14 {main}
+CRITICAL - 2023-07-29 09:07:34 --> Duplicate entry '2' for key 'id_user_2'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `tbl_absen` (`id_user`, `jam_masuk`, `keterangan`) VALUES (\'2\', \'2023-07-29 09:07:34\', \'Masuk\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tbl_absen` (`id_user`, `jam_masuk`, `keterangan`) VALUES (\'2\', \'2023-07-29 09:07:34\', \'Masuk\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tbl_absen` (`id_user`, `jam_masuk`, `keterangan`) VALUES (\'2\', \'2023-07-29 09:07:34\', \'Masuk\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tbl_absen` (`id_user`, `jam_masuk`, `keterangan`) VALUES (:id_user:, :jam_masuk:, :keterangan:)', [...], false)
+ 5 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(782): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(730): CodeIgniter\BaseModel->insert([...], false)
+ 8 SYSTEMPATH\BaseModel.php(692): CodeIgniter\Model->insert([...], false)
+ 9 APPPATH\Controllers\Absensi.php(126): CodeIgniter\BaseModel->save([...])
+10 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Absensi->absen_masuk()
+11 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Absensi))
+12 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\XAMPP7\\htdocs\\absen\\public\\index.php')
+INFO - 2023-07-29 09:08:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-29 09:08:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-29 09:08:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-07-29 09:08:04 --> There is no data to update.
+in SYSTEMPATH\BaseModel.php on line 1680.
+ 1 SYSTEMPATH\BaseModel.php(1680): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('update')
+ 2 SYSTEMPATH\BaseModel.php(910): CodeIgniter\BaseModel->transformDataToArray(null, 'update')
+ 3 SYSTEMPATH\Model.php(756): CodeIgniter\BaseModel->update([...], null)
+ 4 APPPATH\Models\AbsenModel.php(93): CodeIgniter\Model->update([...])
+ 5 APPPATH\Controllers\Absensi.php(129): App\Models\AbsenModel->updateLastAbsenMasukDate('2', '2023-07-29')
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Absensi->absen_masuk()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Absensi))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\XAMPP7\\htdocs\\absen\\public\\index.php')
+INFO - 2023-07-29 09:09:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-29 09:09:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-29 09:09:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-07-29 09:09:23 --> mysqli_sql_exception: Unknown column 'id' in 'field list' in D:\XAMPP7\htdocs\absen\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 D:\XAMPP7\htdocs\absen\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `id`, `j...', 0)
+#1 D:\XAMPP7\htdocs\absen\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `id`, `j...')
+#2 D:\XAMPP7\htdocs\absen\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `id`, `j...')
+#3 D:\XAMPP7\htdocs\absen\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `id`, `j...', Array, false)
+#4 D:\XAMPP7\htdocs\absen\system\Model.php(836): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\XAMPP7\htdocs\absen\app\Models\AbsenModel.php(78): CodeIgniter\Model->__call('get', Array)
+#6 D:\XAMPP7\htdocs\absen\app\Controllers\Absensi.php(112): App\Models\AbsenModel->getLastAbsenMasukDate('2')
+#7 D:\XAMPP7\htdocs\absen\system\CodeIgniter.php(932): App\Controllers\Absensi->absen_masuk()
+#8 D:\XAMPP7\htdocs\absen\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Absensi))
+#9 D:\XAMPP7\htdocs\absen\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\XAMPP7\htdocs\absen\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 D:\XAMPP7\htdocs\absen\system\Commands\Server\rewrite.php(47): require_once('D:\\XAMPP7\\htdoc...')
+#12 {main}
+CRITICAL - 2023-07-29 09:09:23 --> Unknown column 'id' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `id`, `jam_masuk`
+FROM `tbl_absen`
+WHERE `id_user` = \'2\'
+ORDER BY `jam_masuk` DESC
+ LIMIT 1', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `id`, `jam_masuk`
+FROM `tbl_absen`
+WHERE `id_user` = \'2\'
+ORDER BY `jam_masuk` DESC
+ LIMIT 1')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `id`, `jam_masuk`
+FROM `tbl_absen`
+WHERE `id_user` = \'2\'
+ORDER BY `jam_masuk` DESC
+ LIMIT 1')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `id`, `jam_masuk`
+FROM `tbl_absen`
+WHERE `id_user` = :id_user:
+ORDER BY `jam_masuk` DESC
+ LIMIT 1', [...], false)
+ 5 SYSTEMPATH\Model.php(836): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Models\AbsenModel.php(78): CodeIgniter\Model->__call('get', [])
+ 7 APPPATH\Controllers\Absensi.php(112): App\Models\AbsenModel->getLastAbsenMasukDate('2')
+ 8 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Absensi->absen_masuk()
+ 9 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Absensi))
+10 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\XAMPP7\\htdocs\\absen\\public\\index.php')
+INFO - 2023-07-29 09:10:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-29 09:10:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-29 09:10:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-07-29 09:10:08 --> mysqli_sql_exception: Unknown column 'id' in 'field list' in D:\XAMPP7\htdocs\absen\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 D:\XAMPP7\htdocs\absen\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `id`, `j...', 0)
+#1 D:\XAMPP7\htdocs\absen\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `id`, `j...')
+#2 D:\XAMPP7\htdocs\absen\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `id`, `j...')
+#3 D:\XAMPP7\htdocs\absen\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `id`, `j...', Array, false)
+#4 D:\XAMPP7\htdocs\absen\system\Model.php(836): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\XAMPP7\htdocs\absen\app\Models\AbsenModel.php(78): CodeIgniter\Model->__call('get', Array)
+#6 D:\XAMPP7\htdocs\absen\app\Controllers\Absensi.php(112): App\Models\AbsenModel->getLastAbsenMasukDate('2')
+#7 D:\XAMPP7\htdocs\absen\system\CodeIgniter.php(932): App\Controllers\Absensi->absen_masuk()
+#8 D:\XAMPP7\htdocs\absen\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Absensi))
+#9 D:\XAMPP7\htdocs\absen\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\XAMPP7\htdocs\absen\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 D:\XAMPP7\htdocs\absen\system\Commands\Server\rewrite.php(47): require_once('D:\\XAMPP7\\htdoc...')
+#12 {main}
+CRITICAL - 2023-07-29 09:10:08 --> Unknown column 'id' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `id`, `jam_masuk`
+FROM `tbl_absen`
+WHERE `id_user` = \'2\'
+ORDER BY `jam_masuk` DESC
+ LIMIT 1', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `id`, `jam_masuk`
+FROM `tbl_absen`
+WHERE `id_user` = \'2\'
+ORDER BY `jam_masuk` DESC
+ LIMIT 1')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `id`, `jam_masuk`
+FROM `tbl_absen`
+WHERE `id_user` = \'2\'
+ORDER BY `jam_masuk` DESC
+ LIMIT 1')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `id`, `jam_masuk`
+FROM `tbl_absen`
+WHERE `id_user` = :id_user:
+ORDER BY `jam_masuk` DESC
+ LIMIT 1', [...], false)
+ 5 SYSTEMPATH\Model.php(836): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Models\AbsenModel.php(78): CodeIgniter\Model->__call('get', [])
+ 7 APPPATH\Controllers\Absensi.php(112): App\Models\AbsenModel->getLastAbsenMasukDate('2')
+ 8 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Absensi->absen_masuk()
+ 9 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Absensi))
+10 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\XAMPP7\\htdocs\\absen\\public\\index.php')
+INFO - 2023-07-29 09:11:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-29 09:11:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-29 09:11:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-29 09:11:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-29 09:11:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-29 09:11:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-29 09:11:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-29 09:11:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-29 09:11:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-29 09:11:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-29 09:11:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-29 09:12:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-29 09:12:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-29 09:12:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-29 09:12:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-29 09:12:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-29 09:12:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-29 09:12:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-29 09:12:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-29 09:12:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-29 09:12:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-29 09:12:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-29 09:12:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-29 09:12:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-29 09:12:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-29 09:12:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-29 09:13:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-07-29 09:13:01 --> Call to undefined method App\Models\AbsenModel::getLastAbsenMasukDate
+in SYSTEMPATH\Model.php on line 838.
+ 1 APPPATH\Controllers\Absensi.php(112): CodeIgniter\Model->__call('getLastAbsenMasukDate', [...])
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Absensi->absen_masuk()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Absensi))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\XAMPP7\\htdocs\\absen\\public\\index.php')
+INFO - 2023-07-29 09:13:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-29 09:13:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-29 09:13:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-29 09:13:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-29 09:13:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-29 09:13:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-29 09:13:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-29 09:13:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-29 09:13:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-29 09:13:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-29 09:13:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-29 09:13:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-29 09:13:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-29 09:13:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-29 09:13:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-29 09:13:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-29 09:13:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-29 09:13:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-29 09:13:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-29 09:13:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-29 09:13:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-29 09:13:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-29 09:14:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-29 09:14:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-29 09:14:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-29 09:14:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-29 09:14:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-29 09:14:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-29 09:14:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-29 09:15:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-29 09:15:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-29 09:15:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-29 09:16:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-29 09:16:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-29 09:16:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-29 09:16:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-29 09:17:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-29 09:17:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-29 09:17:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-29 09:17:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-07-29 09:18:13 --> Maximum execution time of 60 seconds exceeded
+in SYSTEMPATH\Common.php on line 424.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+INFO - 2023-07-29 09:18:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-29 09:18:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-07-29 09:19:36 --> Maximum execution time of 60 seconds exceeded
+in SYSTEMPATH\Common.php on line 424.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+INFO - 2023-07-29 09:19:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-29 09:19:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-07-29 09:20:36 --> Maximum execution time of 60 seconds exceeded
+in SYSTEMPATH\Common.php on line 424.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+INFO - 2023-07-29 09:21:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-29 09:21:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-07-29 09:22:10 --> Maximum execution time of 60 seconds exceeded
+in SYSTEMPATH\Common.php on line 424.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+INFO - 2023-07-29 09:22:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-29 09:22:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-29 09:22:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-07-29 09:23:10 --> Maximum execution time of 60 seconds exceeded
+in SYSTEMPATH\Common.php on line 424.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+INFO - 2023-07-29 09:23:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-29 09:23:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-29 09:23:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-29 09:23:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-07-29 09:24:14 --> Maximum execution time of 60 seconds exceeded
+in SYSTEMPATH\Common.php on line 424.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+INFO - 2023-07-29 09:24:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-29 09:24:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-29 09:24:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-29 09:24:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-29 09:24:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-29 09:24:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-29 09:24:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-29 09:24:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-29 09:24:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-07-29 09:25:29 --> Maximum execution time of 60 seconds exceeded
+in SYSTEMPATH\Common.php on line 424.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+INFO - 2023-07-29 09:25:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-29 09:25:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-29 09:25:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-29 09:25:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-29 09:25:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-07-29 09:25:42 --> Undefined variable: totalJamMasukHariIni
+in APPPATH\Views\admin\v_dashboard.php on line 65.
+ 1 APPPATH\Views\admin\v_dashboard.php(65): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: totalJamMasukHariIni', 'D:\\XAMPP7\\htdocs\\absen\\app\\Views\\admin\\v_dashboard.php', 65, [...])
+ 2 SYSTEMPATH\View\View.php(224): include('D:\\XAMPP7\\htdocs\\absen\\app\\Views\\admin\\v_dashboard.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('admin/v_dashboard.php', [], true)
+ 5 APPPATH\Views\admin\template\temp_admin.php(93): view('admin/v_dashboard.php')
+ 6 SYSTEMPATH\View\View.php(224): include('D:\\XAMPP7\\htdocs\\absen\\app\\Views\\admin\\template\\temp_admin.php')
+ 7 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('admin/template/temp_admin', [], true)
+ 9 APPPATH\Controllers\Dashboard.php(41): view('admin/template/temp_admin', [...])
+10 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Dashboard->index()
+11 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+12 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\XAMPP7\\htdocs\\absen\\public\\index.php')
+INFO - 2023-07-29 09:26:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-29 09:26:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-29 09:26:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-29 09:26:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-29 09:27:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-29 09:27:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-29 09:30:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-29 09:31:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-29 09:38:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-29 09:38:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-29 09:39:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-29 09:39:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-29 09:39:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-29 09:41:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-29 09:43:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-29 09:47:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-29 09:49:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-29 09:49:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-07-29 09:49:58 --> Undefined variable: jumlahDevisi
+in APPPATH\Views\admin\v_dashboard.php on line 47.
+ 1 APPPATH\Views\admin\v_dashboard.php(47): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: jumlahDevisi', 'D:\\XAMPP7\\htdocs\\absen\\app\\Views\\admin\\v_dashboard.php', 47, [...])
+ 2 SYSTEMPATH\View\View.php(224): include('D:\\XAMPP7\\htdocs\\absen\\app\\Views\\admin\\v_dashboard.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('admin/v_dashboard.php', [], true)
+ 5 APPPATH\Views\admin\template\temp_admin.php(93): view('admin/v_dashboard.php')
+ 6 SYSTEMPATH\View\View.php(224): include('D:\\XAMPP7\\htdocs\\absen\\app\\Views\\admin\\template\\temp_admin.php')
+ 7 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('admin/template/temp_admin', [], true)
+ 9 APPPATH\Controllers\Dashboard.php(65): view('admin/template/temp_admin', [...])
+10 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Dashboard->index()
+11 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+12 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\XAMPP7\\htdocs\\absen\\public\\index.php')
+INFO - 2023-07-29 09:50:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-07-29 09:50:17 --> Undefined variable: jumlahDevisi
+in APPPATH\Views\admin\v_dashboard.php on line 47.
+ 1 APPPATH\Views\admin\v_dashboard.php(47): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: jumlahDevisi', 'D:\\XAMPP7\\htdocs\\absen\\app\\Views\\admin\\v_dashboard.php', 47, [...])
+ 2 SYSTEMPATH\View\View.php(224): include('D:\\XAMPP7\\htdocs\\absen\\app\\Views\\admin\\v_dashboard.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('admin/v_dashboard.php', [], true)
+ 5 APPPATH\Views\admin\template\temp_admin.php(93): view('admin/v_dashboard.php')
+ 6 SYSTEMPATH\View\View.php(224): include('D:\\XAMPP7\\htdocs\\absen\\app\\Views\\admin\\template\\temp_admin.php')
+ 7 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('admin/template/temp_admin', [], true)
+ 9 APPPATH\Controllers\Dashboard.php(65): view('admin/template/temp_admin', [...])
+10 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Dashboard->index()
+11 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+12 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\XAMPP7\\htdocs\\absen\\public\\index.php')
+INFO - 2023-07-29 09:50:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-29 09:52:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-29 09:53:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-29 09:53:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-29 09:53:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-29 09:53:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-29 09:53:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-29 09:54:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-29 09:54:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-29 10:03:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

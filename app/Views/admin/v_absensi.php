@@ -13,11 +13,11 @@
                 <thead>
                     <tr>
                         <th>No.</th>
+                        <th>Nama</th>
                         <th>Tanggal</th>
                         <th>Waktu Masuk</th>
                         <th>Waktu Keluar</th>
                         <th>Keterangan</th>
-                        <th>Nama</th>
                         <th>Devisi</th>
                     </tr>
                 </thead>
@@ -28,6 +28,9 @@
                         <tr>
                             <td>
                                 <?= $nomer++ ?>.
+                            </td>
+                            <td>
+                                <?php echo $absen['nama']; ?>
                             </td>
                             <td>
                                 <?php echo $absen['tanggal_masuk']; ?>
@@ -41,9 +44,7 @@
                             <td>
                                 <?php echo $absen['keterangan']; ?>
                             </td>
-                            <td>
-                                <?php echo $absen['nama']; ?>
-                            </td>
+
                             <td>
                                 <?php echo $absen['devisi']; ?>
                             </td>

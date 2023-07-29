@@ -2,6 +2,9 @@
 
 namespace App\Controllers;
 
+use App\Controllers\BaseController;
+use App\Models\AbsenModel;
+use App\Models\DevisiModel;
 use App\Models\UserModel;
 
 class Dashboard extends BaseController
@@ -13,6 +16,34 @@ class Dashboard extends BaseController
         $level_user = $session->get('level_user');
 
         if ($level_user == 1) {
+            $devisiModel = new DevisiModel();
+            $pegawaiModel = new UserModel();
+            $absenModel = new AbsenModel();
+
+            // Menghitung jumlah devisi berdasarkan jumlah id_devisi
+            $jumlahDevisi = $devisiModel->countAllResults();
+            // Menghitung jumlah pegawai dengan level_user = 2
+            $jumlahPegawai = $pegawaiModel->where('level_user', 2)->countAllResults();
+
+            $jumlahAbsenMasuk = $absenModel->where('keterangan', 'Masuk')
+                ->where('DATE(jam_masuk)', date('Y-m-d'))
+                ->countAllResults();
+
+            // Menghitung jumlah absen keluar pada hari ini
+            $jumlahAbsenKeluar = $absenModel->where('keterangan', 'Keluar')
+                ->where('DATE(jam_keluar)', date('Y-m-d'))
+                ->countAllResults();
+            if ($jumlahAbsenKeluar > 0) {
+                $jumlahAbsenMasuk = $jumlahAbsenKeluar;
+            }
+            // Menghitung jumlah pegawai yang belum absen masuk pada hari ini
+            $jumlahPegawaiBelumAbsenMasuk = $jumlahPegawai - $jumlahAbsenMasuk;
+
+            // Menghitung jumlah pegawai yang belum absen keluar pada hari ini
+            $jumlahPegawaiBelumAbsenKeluar = $jumlahPegawai - $jumlahAbsenKeluar;
+
+
+
             $data = [
                 'judul' => 'Dashboard',
                 'subjudul' => 'Dashboard',
@@ -20,6 +51,12 @@ class Dashboard extends BaseController
                 'navbar' => 'admin/template/v_navbar.php',
                 'footer' => 'admin/template/v_footer.php',
                 'sidebar' => 'admin/template/v_sidebar.php',
+                'jumlahDevisi' => $jumlahDevisi,
+                'jumlahPegawai' => $jumlahPegawai,
+                'jumlahAbsenMasuk' => $jumlahPegawaiBelumAbsenMasuk,
+                'jumlahAbsenKeluar' => $jumlahPegawaiBelumAbsenKeluar,
+
+
             ];
             // Jika level_user adalah admin, tampilkan view admin_dashboard
             return view('admin/template/temp_admin', $data);
