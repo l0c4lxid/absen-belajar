@@ -46,7 +46,7 @@
                 </a>
             </li> -->
             <li class="nav-item">
-                <a href="<?= base_url('Admin/listDevisi'); ?>"
+                <a href="<?= base_url('Admin/SemuaUser'); ?>"
                     class="nav-link <?= $subjudul == 'data-magang' ? 'active' : '' ?>">
                     <i class="nav-icon fas fa-users"></i>
                     <p>
@@ -55,7 +55,7 @@
                 </a>
             </li>
             <li class="nav-item">
-                <a href="<?= base_url('Devisi/addDivision'); ?>"
+                <a href="<?= base_url('Devisi/TambahDevisi'); ?>"
                     class="nav-link <?= $subjudul == 'tambah-devisi' ? 'active' : '' ?>">
                     <i class="nav-icon fas fa-briefcase"></i>
                     <p>

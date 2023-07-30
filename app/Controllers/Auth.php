@@ -18,9 +18,9 @@ class Auth extends BaseController
             $userLevel = $session->get('level_user');
 
             if ($userLevel == 1) {
-                return redirect()->to('profile/admin');
+                return redirect()->to('Dashboard');
             } elseif ($userLevel == 2) {
-                return redirect()->to('profile/user');
+                return redirect()->to('Dashboard');
             }
         }
 

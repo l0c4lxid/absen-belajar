@@ -19,12 +19,12 @@ class Admin extends BaseController
         return view('admin/template/temp_admin', $data);
     }
 
-    public function addUser()
+    public function TambahUser()
     {
         $data = [
             'judul' => 'Tambah Pekerja Magang',
             'subjudul' => 'data-magang',
-            'page' => 'admin/add_user',
+            'page' => 'admin/tambah_user',
             'navbar' => 'admin/template/v_navbar.php',
             'footer' => 'admin/template/v_footer.php',
             'sidebar' => 'admin/template/v_sidebar.php',
@@ -80,10 +80,10 @@ class Admin extends BaseController
         // Tampilkan notifikasi dan redirect kembali ke halaman tambah user
         $session = session();
         $session->setFlashdata('success', 'User added successfully.');
-        return redirect()->to('admin/addUser');
+        return redirect()->to('admin/SemuaUser');
     }
 
-    public function listDevisi()
+    public function SemuaUser()
     {
         $userModel = new UserModel();
 
@@ -127,7 +127,7 @@ class Admin extends BaseController
             return view('admin/template/temp_admin', $data);
         } else {
             // Redirect ke halaman lain jika user tidak memiliki akses untuk mengedit
-            return redirect()->to('admin/listDevisi')->with('error', 'You do not have permission to edit this user.');
+            return redirect()->to('admin/SemuaUser')->with('error', 'You do not have permission to edit this user.');
         }
     }
 
@@ -155,7 +155,7 @@ class Admin extends BaseController
         $userModel->update($id_user, $data);
 
         // Redirect kembali ke halaman list user level 2 dengan notifikasi
-        return redirect()->to('admin/listDevisi')->with('success', 'User updated successfully.');
+        return redirect()->to('admin/SemuaUser')->with('success', 'User updated successfully.');
     }
     public function deleteUser($id_user)
     {
@@ -170,10 +170,10 @@ class Admin extends BaseController
             $userModel->delete($id_user);
 
             // Redirect kembali ke halaman list user level 2 dengan notifikasi
-            return redirect()->to('admin/listDevisi')->with('success', 'User deleted successfully.');
+            return redirect()->to('admin/SemuaUser')->with('success', 'User deleted successfully.');
         } else {
             // Redirect ke halaman lain jika user tidak memiliki akses untuk menghapus
-            return redirect()->to('admin/listDevisi')->with('error', 'You do not have permission to delete this user.');
+            return redirect()->to('admin/SemuaUser')->with('error', 'You do not have permission to delete this user.');
         }
     }
 }

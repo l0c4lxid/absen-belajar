@@ -21,9 +21,9 @@ if (session()->getFlashdata('hapus')) {
                 <?= $judul ?>
             </h3>
             <div class="card-tools">
-                <a class="btn btn-primary" href="<?= base_url('admin/add_user/'); ?>"><i class="fas fa-plus"></i>
-                    Tambah
-                </a>
+                <button type="button" class="btn btn-tool" data-toggle="modal" data-target="#modal-tambah"><i
+                        class="fas fa-plus"></i> Tambah
+                </button>
             </div>
             <!-- /.card-tools -->
         </div>

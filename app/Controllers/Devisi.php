@@ -7,17 +7,17 @@ use App\Models\DevisiModel;
 
 class Devisi extends BaseController
 {
-    public function addDivision()
+    public function TambahDevisi()
     {
-        $divisionModel = new DevisiModel();
+        $devisiModel = new DevisiModel();
 
         // Ambil data semua divisi dari database
-        $divisions = $divisionModel->findAll();
+        $devisi = $devisiModel->findAll();
         $data = [
-            'devisi' => $divisions,
+            'devisi' => $devisi,
             'judul' => 'Tambah Devisi',
             'subjudul' => 'tambah-devisi',
-            'page' => 'admin/add_division',
+            'page' => 'admin/tambah_devisi',
             'navbar' => 'admin/template/v_navbar.php',
             'footer' => 'admin/template/v_footer.php',
             'sidebar' => 'admin/template/v_sidebar.php',
