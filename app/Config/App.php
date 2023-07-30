@@ -17,8 +17,8 @@ class App extends BaseConfig
      *
      *    http://example.com/
      */
-    public string $baseURL = 'https://7f5e-103-172-116-133.ngrok-free.app';
-    // public string $baseURL = 'http://localhost:8080';
+    // public string $baseURL = 'https://7f5e-103-172-116-133.ngrok-free.app';
+    public string $baseURL = 'http://localhost:8080';
 
 
     /**

@@ -1,37 +1,9 @@
-<!DOCTYPE html>
-<html>
-
-<head>
-    <title>Edit User</title>
-</head>
-<?php
-use App\Models\DevisiModel;
-
-$session = session();
-$successMsg = $session->getFlashdata('success');
-$errorMsg = $session->getFlashdata('error');
-if ($successMsg) {
-    echo '<p style="color: green;">' . $successMsg . '</p>';
-}
-if ($errorMsg) {
-    echo '<p style="color: red;">' . $errorMsg . '</p>';
-}
-?>
-
-<body>
-    <div class="col-md-12">
-        <div class="card">
-            <div class="card-body text-left text-primary">
+<div class="col-md-12">
+    <div class="card">
+        <div class="card-body text-left text-primary">
+            <form action="<?= base_url('admin/updateUser/' . $users['id_user']); ?>" method="post">
                 <div class="row">
-                    <div class="col-md-6">
 
-                        <form action="<?= base_url('admin/updateUser/' . $users['id_user']); ?>" method="post">
-                            <div class='form-group'>
-                                <label for="nama">nama:</label>
-                                <input class="form-control" type="text" name="nama" value="<?= $users['nama']; ?>"
-                                    required>
-                            </div>
-                    </div>
                     <div class="col-md-6">
 
                         <div class='form-group'>
@@ -43,10 +15,21 @@ if ($errorMsg) {
                     </div>
                     <div class="col-md-6">
 
-                        <div class='form-group'>
+                        <div class='form-group '>
 
                             <label for="password">Password:</label>
                             <input class="form-control" type="password" name="password">
+                            <h5 class='text-warning'>Biarkan Jika tidak ingin di Ubah !!</h5>
+                        </div>
+
+                    </div>
+                    <div class="col-md-12">
+                        <hr>
+                    </div>
+                    <div class="col-md-6">
+                        <div class='form-group'>
+                            <label for="nama">Nama :</label>
+                            <input class="form-control" type="text" name="nama" value="<?= $users['nama']; ?>" required>
                         </div>
                     </div>
                     <div class="col-md-6">
@@ -85,12 +68,7 @@ if ($errorMsg) {
                     <div class="col-6">
                         <button class='btn btn-danger btn-block' type="submit">Update</button>
                     </div>
-                    </form>
-                </div>
-            </div>
+            </form>
         </div>
     </div>
-
-</body>
-
-</html>
+</div>

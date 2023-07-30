@@ -1,18 +1,3 @@
-<?php
-if (session()->getFlashdata('pesan')) {
-    echo '<div class="alert alert-success">';
-    echo session()->getFlashdata('pesan');
-    echo '</div>';
-}
-?>
-<?php
-if (session()->getFlashdata('hapus')) {
-    echo '<div class="alert alert-success">';
-    echo session()->getFlashdata('pesan');
-    echo '</div>';
-}
-?>
-
 <!-- Include DataTables CSS -->
 <div class="col-md-12">
     <div class="card card-primary">
@@ -28,6 +13,17 @@ if (session()->getFlashdata('hapus')) {
             <!-- /.card-tools -->
         </div>
         <div class='card-body'>
+            <?php
+            $session = session();
+            $successMsg = $session->getFlashdata('success');
+            $errorMsg = $session->getFlashdata('error');
+            if ($successMsg) {
+                echo $successMsg;
+            }
+            if ($errorMsg) {
+                echo $errorMsg;
+            }
+            ?>
             <table id="example2" class="table table-bordered">
                 <thead>
                     <tr>

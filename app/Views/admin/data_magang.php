@@ -13,12 +13,21 @@
             <!-- /.card-tools -->
         </div>
         <div class="card-body">
+            <?php
+            $session = session();
+            $successMsg = $session->getFlashdata('success');
+            $errorMsg = $session->getFlashdata('error');
+            if ($successMsg) {
+                echo '<p style="color: green;">' . $successMsg . '</p>';
+            }
+            if ($errorMsg) {
+                echo '<p style="color: red;">' . $errorMsg . '</p>';
+            }
+            ?>
             <table id="example2" class="table table-bordered">
                 <thead>
                     <tr>
                         <th class="text-center">No.</th>
-                        <th class="text-center">ID</th>
-                        <th>Username</th>
                         <th>Nama</th>
                         <th>Alamat</th>
                         <th>No Telepon</th>
@@ -32,13 +41,7 @@
                     foreach ($users as $user): ?>
                         <tr>
                             <td class="text-center">
-                                <?= $no++ ?>
-                            </td>
-                            <td class="text-center">
-                                <?= $user['id_user']; ?>
-                            </td>
-                            <td>
-                                <?= $user['username']; ?>
+                                <?= $no++ ?>.
                             </td>
                             <td>
                                 <?= $user['nama']; ?>

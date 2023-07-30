@@ -42,7 +42,17 @@ class Devisi extends BaseController
 
         // Tampilkan notifikasi dan redirect kembali ke halaman tambah divisi
         $session = session();
-        $session->setFlashdata('pesan', 'Division added successfully.');
+        $session->setFlashdata('success', '<div class="card card-success shadow">
+        <div class="card-header col-md-12">
+            <h3 class="card-title">Devisi Berhasil Ditambahkan.</h3>
+            <div class="card-tools">
+                <button type="button" class="btn btn-tool" data-card-widget="remove"><i
+                        class="fas fa-times"></i>
+                </button>
+            </div>
+            <!-- /.card-tools -->
+        </div>
+    </div>');
         return redirect()->to('devisi/TambahDevisi');
     }
     public function updateDevisi($id_user)
@@ -60,7 +70,17 @@ class Devisi extends BaseController
 
         // Tampilkan view untuk menampilkan daftar divisi
         // return view('admin/temp_admin', $data);
-        return redirect()->to('devisi/TambahDevisi')->with('pesan', 'User updated successfully.');
+        return redirect()->to('devisi/TambahDevisi')->with('success', '<div class="card card-warning shadow">
+        <div class="card-header col-md-12">
+            <h3 class="card-title">Devisi Telah Diganti</h3>
+            <div class="card-tools">
+                <button type="button" class="btn btn-tool" data-card-widget="remove"><i
+                        class="fas fa-times"></i>
+                </button>
+            </div>
+            <!-- /.card-tools -->
+        </div>
+    </div>');
     }
 
     public function deleteDivision($id_devisi)
@@ -71,6 +91,16 @@ class Devisi extends BaseController
         $divisionModel->delete($id_devisi);
 
         // Redirect kembali ke halaman list divisi dengan notifikasi
-        return redirect()->to('devisi/TambahDevisi')->with('hapus', 'Division deleted successfully.');
+        return redirect()->to('devisi/TambahDevisi')->with('success', '<div class="card card-danger shadow">
+        <div class="card-header col-md-12">
+            <h3 class="card-title">Devisi Telah Dihapus.</h3>
+            <div class="card-tools">
+                <button type="button" class="btn btn-tool" data-card-widget="remove"><i
+                        class="fas fa-times"></i>
+                </button>
+            </div>
+            <!-- /.card-tools -->
+        </div>
+    </div>');
     }
 }

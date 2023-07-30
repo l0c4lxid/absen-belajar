@@ -4,7 +4,19 @@
 
 <!-- Include DataTables CSS -->
 
+
 <table id="example1" class="table table-bordered">
+    <?php
+    $session = session();
+    $successMsg = $session->getFlashdata('success');
+    $errorMsg = $session->getFlashdata('error');
+    if ($successMsg) {
+        echo '<p style="color: green;">' . $successMsg . '</p>';
+    }
+    if ($errorMsg) {
+        echo '<p style="color: red;">' . $errorMsg . '</p>';
+    }
+    ?>
     <thead>
         <tr>
             <th>No</th>
@@ -31,21 +43,3 @@
         <?php endforeach; ?>
     </tbody>
 </table>
-
-<script>
-    $(function () {
-        $("#example1").DataTable({
-            "responsive": true, "lengthChange": false, "autoWidth": false,
-            "buttons": ["copy", "csv", "excel", "pdf", "print", "colvis"]
-        }).buttons().container().appendTo('#example1_wrapper .col-md-6:eq(0)');
-        $('#example2').DataTable({
-            "paging": true,
-            "lengthChange": false,
-            "searching": false,
-            "ordering": true,
-            "info": true,
-            "autoWidth": false,
-            "responsive": true,
-        });
-    });
-</script>

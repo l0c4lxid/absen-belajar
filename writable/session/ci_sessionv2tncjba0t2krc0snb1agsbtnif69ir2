@@ -1,0 +1,11 @@
+__ci_last_regenerate|i:1690694655;_ci_previous_url|s:41:"http://localhost:8080/devisi/TambahDevisi";id_user|s:1:"1";username|s:5:"admin";level_user|s:1:"1";logged_in|b:1;success|s:431:"<div class="card card-success shadow">
+        <div class="card-header col-md-12">
+            <h3 class="card-title">Devisi deleted successfully.</h3>
+            <div class="card-tools">
+                <button type="button" class="btn btn-tool" data-card-widget="remove"><i
+                        class="fas fa-times"></i>
+                </button>
+            </div>
+            <!-- /.card-tools -->
+        </div>
+    </div>";__ci_vars|a:1:{s:7:"success";s:3:"old";}
