@@ -8,11 +8,12 @@
             <!-- /.card-tools -->
         </div>
         <form action="<?= base_url('absensi'); ?>" method="GET">
+
             <div class="container card-body">
                 <?php
                 $session = session();
                 $successMsg = $session->getFlashdata('success');
-                $errorMsg = $session->getFlashdata('error_message');
+                $errorMsg = $session->getFlashdata('error');
                 if ($successMsg) {
                     echo '<p style="color: green;">' . $successMsg . '</p>';
                 }
@@ -94,7 +95,12 @@
                                     <?php echo date('H:i:s', strtotime($absen['jam_masuk'])); ?>
                                 </td>
                                 <td>
-                                    <?php echo date('H:i:s', strtotime($absen['jam_keluar'])); ?>
+                                    <?php
+                                    // Tampilkan waktu keluar jika tidak NULL, jika NULL, jangan tampilkan apa pun
+                                    if ($absen['jam_keluar'] !== NULL) {
+                                        echo date('H:i:s', strtotime($absen['jam_keluar']));
+                                    }
+                                    ?>
                                 </td>
                                 <!-- <td>
                                     <?php echo $absen['keterangan']; ?>

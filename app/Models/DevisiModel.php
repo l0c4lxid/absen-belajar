@@ -7,5 +7,5 @@ class DevisiModel extends Model
 {
     protected $table = 'tbl_devisi';
     protected $primaryKey = 'id_devisi';
-    protected $allowedFields = ['devisi'];
+    protected $allowedFields = ['keterangan'];
 }

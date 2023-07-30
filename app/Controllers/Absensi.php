@@ -76,7 +76,17 @@ class Absensi extends BaseController
 
         if ($absenMasukToday) {
             // User has already done "absen masuk" today
-            $session->setFlashdata('error_message', 'Anda telah melakukan absen masuk hari ini!');
+            $session->setFlashdata('error', '<div class="card card-warning shadow">
+            <div class="card-header col-md-12">
+                <h3 class="card-title">Anda telah melakukan absen masuk hari ini!</h3>
+                <div class="card-tools">
+                    <button type="button" class="btn btn-tool" data-card-widget="remove"><i
+                            class="fas fa-times"></i>
+                    </button>
+                </div>
+                <!-- /.card-tools -->
+            </div>
+        </div>');
             return redirect()->to(base_url('absensi'));
         }
 
@@ -89,7 +99,17 @@ class Absensi extends BaseController
         $this->absenModel->save($data);
 
         // Set flash data to show success message in the next request
-        $session->setFlashdata('success_message', 'Absen masuk berhasil!');
+        $session->setFlashdata('success', '<div class="card card-success shadow">
+        <div class="card-header col-md-12">
+            <h3 class="card-title">Absen masuk berhasil!</h3>
+            <div class="card-tools">
+                <button type="button" class="btn btn-tool" data-card-widget="remove"><i
+                        class="fas fa-times"></i>
+                </button>
+            </div>
+            <!-- /.card-tools -->
+        </div>
+    </div>');
         return redirect()->to(base_url('absensi'));
     }
 
@@ -111,14 +131,34 @@ class Absensi extends BaseController
 
         if (!$absenMasukToday) {
             // User hasn't done "absen masuk" today, can't do "absen keluar"
-            $session->setFlashdata('error_message', 'Anda belum melakukan absen masuk hari ini!');
+            $session->setFlashdata('error', '<div class="card card-warning shadow">
+            <div class="card-header col-md-12">
+                <h3 class="card-title">Anda belum melakukan absen masuk hari ini!</h3>
+                <div class="card-tools">
+                    <button type="button" class="btn btn-tool" data-card-widget="remove"><i
+                            class="fas fa-times"></i>
+                    </button>
+                </div>
+                <!-- /.card-tools -->
+            </div>
+        </div>');
             return redirect()->to(base_url('absensi'));
         }
 
         // Check if the user has already done "absen keluar" today
         if ($absenMasukToday['jam_keluar']) {
             // User has already done "absen keluar" today
-            $session->setFlashdata('error_message', 'Anda telah melakukan absen keluar hari ini!');
+            $session->setFlashdata('error', '<div class="card card-warning shadow">
+            <div class="card-header col-md-12">
+                <h3 class="card-title">Anda telah melakukan absen keluar hari ini!</h3>
+                <div class="card-tools">
+                    <button type="button" class="btn btn-tool" data-card-widget="remove"><i
+                            class="fas fa-times"></i>
+                    </button>
+                </div>
+                <!-- /.card-tools -->
+            </div>
+        </div>');
             return redirect()->to(base_url('absensi'));
         }
 

@@ -31,11 +31,11 @@ class Devisi extends BaseController
         $divisionModel = new DevisiModel();
 
         // Ambil data dari form
-        $divisionName = $this->request->getPost('devisi');
+        $divisionName = $this->request->getPost('keterangan');
 
         // Simpan data divisi ke dalam database
         $data = [
-            'devisi' => $divisionName
+            'keterangan' => $divisionName
             // Tambahkan kolom lain sesuai kebutuhan
         ];
         $divisionModel->insert($data);
@@ -43,24 +43,24 @@ class Devisi extends BaseController
         // Tampilkan notifikasi dan redirect kembali ke halaman tambah divisi
         $session = session();
         $session->setFlashdata('pesan', 'Division added successfully.');
-        return redirect()->to('devisi/adddivision');
+        return redirect()->to('devisi/TambahDevisi');
     }
     public function updateDevisi($id_user)
     {
         $devisiModel = new DevisiModel();
 
         // Ambil data semua divisi dari form
-        $devisi = $this->request->getPost('devisi');
+        $devisi = $this->request->getPost('keterangan');
 
         // $data['divisions'] = $divisions;
         $data = [
-            'devisi' => $devisi,
+            'keterangan' => $devisi,
         ];
         $devisiModel->update($id_user, $data);
 
         // Tampilkan view untuk menampilkan daftar divisi
         // return view('admin/temp_admin', $data);
-        return redirect()->to('devisi/addDivision')->with('pesan', 'User updated successfully.');
+        return redirect()->to('devisi/TambahDevisi')->with('pesan', 'User updated successfully.');
     }
 
     public function deleteDivision($id_devisi)
@@ -71,6 +71,6 @@ class Devisi extends BaseController
         $divisionModel->delete($id_devisi);
 
         // Redirect kembali ke halaman list divisi dengan notifikasi
-        return redirect()->to('devisi/addDivision')->with('hapus', 'Division deleted successfully.');
+        return redirect()->to('devisi/TambahDevisi')->with('hapus', 'Division deleted successfully.');
     }
 }

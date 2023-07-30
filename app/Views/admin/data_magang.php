@@ -6,7 +6,7 @@
                 <?= $judul ?>
             </h3>
             <div class="card-tools">
-                <a class="btn btn-primary" href="<?= base_url('admin/add_user/'); ?>"><i class="fas fa-plus"></i>
+                <a class="btn btn-primary" href="<?= base_url('admin/TambahUser/'); ?>"><i class="fas fa-plus"></i>
                     Tambah
                 </a>
             </div>
@@ -50,7 +50,7 @@
                                 <?= $user['no_telp']; ?>
                             </td>
                             <td>
-                                <?= $user['devisi']; ?>
+                                <?= $user['keterangan']; ?>
                             </td>
                             <td class="text-center">
                                 <a class="btn btn-warning" href="<?= base_url('admin/edit_user/' . $user['id_user']); ?>"><i

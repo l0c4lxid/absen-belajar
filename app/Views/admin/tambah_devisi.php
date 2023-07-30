@@ -44,7 +44,7 @@ if (session()->getFlashdata('hapus')) {
                                 <?= $no++ ?>
                             </td>
                             <td>
-                                <?= $value['devisi'] ?>
+                                <?= $value['keterangan'] ?>
                             </td>
                             <td class='text-center'>
                                 <button class="btn btn-flat btn-warning" data-toggle="modal"
@@ -78,7 +78,7 @@ if (session()->getFlashdata('hapus')) {
                 <?php echo form_open('devisi/saveDivision') ?>
                 <div class='form-group'>
                     <label>Nama Devisi</label>
-                    <input type='text' id="devisi" name="devisi" class="form-control" required></input>
+                    <input type='text' id="keterangan" name="keterangan" class="form-control" required></input>
                 </div>
                 <div class="modal-footer justify-content-between">
                     <button type="button" class="btn btn-default" data-dismiss="modal">Tutup</button>
@@ -107,8 +107,8 @@ if (session()->getFlashdata('hapus')) {
                     <?php echo form_open('devisi/updateDevisi/' . $value['id_devisi']) ?>
                     <div class='form-group'>
                         <label>Nama Devisi</label>
-                        <input type='text' id="devisi" name="devisi" class="form-control" value="<?= $value['devisi'] ?>"
-                            required></input>
+                        <input type='text' id="keterangan" name="keterangan" class="form-control"
+                            value="<?= $value['keterangan'] ?>" required></input>
                     </div>
                     <div class="modal-footer justify-content-between">
                         <button type="button" class="btn btn-default" data-dismiss="modal">Tutup</button>
@@ -136,7 +136,7 @@ if (session()->getFlashdata('hapus')) {
                 <div class="modal-body">
                     Apakah Ingin Hapus Data ?<br>
                     <b>
-                        <?= $value['devisi'] ?>
+                        <?= $value['keterangan'] ?>
                     </b>
                 </div>
                 <div class="modal-footer justify-content-between">

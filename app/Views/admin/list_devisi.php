@@ -21,7 +21,7 @@
                     <?= $no++ ?>
                 </td>
                 <td>
-                    <?= $division['devisi']; ?>
+                    <?= $division['keterangan']; ?>
                 </td>
                 <td>
                     <a href="<?= base_url('admin/delete_division/' . $division['id_devisi']); ?>"

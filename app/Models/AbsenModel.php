@@ -23,7 +23,7 @@ class AbsenModel extends Model
     }
     public function getAllAbsenWithUserInfo()
     {
-        $results = $this->select('tbl_absen.*, user.username, user.password, user.nama, user.alamat, user.no_telp, devisi.devisi')
+        $results = $this->select('tbl_absen.*, user.username, user.password, user.nama, user.alamat, user.no_telp, devisi.keterangan')
             ->join('tbl_user as user', 'user.id_user = tbl_absen.id_user')
             ->join('tbl_devisi as devisi', 'devisi.id_devisi = user.id_devisi')
             ->where('user.level_user', 2)

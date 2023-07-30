@@ -46,7 +46,7 @@ if ($errorMsg) {
                         <div class='form-group'>
 
                             <label for="password">Password:</label>
-                            <input class="form-control" type="password" name="password" required>
+                            <input class="form-control" type="password" name="password">
                         </div>
                     </div>
                     <div class="col-md-6">
@@ -69,12 +69,11 @@ if ($errorMsg) {
 
                         <div class='form-group'>
                             <label for="devisi">Devisi:</label>
-                            <select class="form-control" name="devisi" required>
+                            <select class="form-control" id="devisi" name="devisi" required>
                                 <?php
-                                $devisiModel = new DevisiModel();
-                                $devisiData = $devisiModel->findAll();
                                 foreach ($devisiData as $devisi) {
-                                    echo '<option value="' . $devisi['devisi'] . '">' . $devisi['devisi'] . '</option>';
+                                    $selected = ($devisi['id_devisi'] == $users['id_devisi']) ? 'selected' : '';
+                                    echo '<option value="' . $devisi['id_devisi'] . '" ' . $selected . '>' . $devisi['keterangan'] . '</option>';
                                 }
                                 ?>
                             </select>

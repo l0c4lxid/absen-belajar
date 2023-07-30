@@ -57,7 +57,7 @@ if ($errorMsg) {
                                 $devisiModel = new DevisiModel();
                                 $devisiData = $devisiModel->findAll();
                                 foreach ($devisiData as $devisi) {
-                                    echo '<option value="' . $devisi['devisi'] . '">' . $devisi['devisi'] . '</option>';
+                                    echo '<option value="' . $devisi['id_devisi'] . '">' . $devisi['keterangan'] . '</option>';
                                 }
                                 ?>
                             </select>

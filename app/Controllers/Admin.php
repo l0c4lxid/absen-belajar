@@ -2,6 +2,7 @@
 namespace App\Controllers;
 
 use App\Models\UserModel;
+use App\Models\DevisiModel;
 
 class Admin extends BaseController
 {
@@ -36,6 +37,7 @@ class Admin extends BaseController
     public function saveUser()
     {
         $userModel = new UserModel();
+        $devisiModel = new DevisiModel();
 
         // Ambil data dari form
         $username = $this->request->getPost('username');
@@ -43,7 +45,7 @@ class Admin extends BaseController
         $nama = $this->request->getPost('nama');
         $alamat = $this->request->getPost('alamat');
         $no_telp = $this->request->getPost('no_telp');
-        $devisi = $this->request->getPost('devisi');
+        $id_devisi = $this->request->getPost('devisi'); // Ambil nilai id_devisi dari form
 
         // Cek apakah username sudah ada di database
         $existingUser = $userModel->where('username', $username)->first();
@@ -66,6 +68,13 @@ class Admin extends BaseController
         }
 
         // Jika username belum ada, lanjutkan untuk menyimpan user baru
+        $devisi = $devisiModel->find($id_devisi); // Ambil data devisi berdasarkan id_devisi
+        if (!$devisi) {
+            // Jika id_devisi tidak valid (tidak ada di tabel devisi), mungkin ada kesalahan
+            // Tampilkan pesan error atau lakukan penanganan sesuai kebutuhan
+            return redirect()->to('admin/add_user')->with('error', 'Devisi tidak valid.');
+        }
+
         $data = [
             'username' => $username,
             'password' => password_hash($password, PASSWORD_DEFAULT),
@@ -73,7 +82,9 @@ class Admin extends BaseController
             'nama' => $nama,
             'alamat' => $alamat,
             'no_telp' => $no_telp,
-            'devisi' => $devisi,
+            'devisi' => $devisi['keterangan'],
+            // Simpan keterangan devisi ke tabel tbl_user
+            'id_devisi' => $id_devisi, // Simpan id_devisi ke tabel tbl_user
         ];
         $userModel->insert($data);
 
@@ -83,12 +94,13 @@ class Admin extends BaseController
         return redirect()->to('admin/SemuaUser');
     }
 
+
     public function SemuaUser()
     {
         $userModel = new UserModel();
 
-        // Ambil data user dengan level_user 2 dari database
-        $users = $userModel->where('level_user', 2)->findAll();
+        // Ambil data user dengan level_user 2 beserta relasi devisi dari database
+        $users = $userModel->getUsersWithDevisi();
 
         // Prepare the data for the view
         $data = [
@@ -106,13 +118,13 @@ class Admin extends BaseController
     public function editUser($id_user)
     {
         $userModel = new UserModel();
+        $devisiModel = new DevisiModel();
 
         // Ambil data user berdasarkan id_user
         $user = $userModel->find($id_user);
 
         // Pastikan data user dengan level_user = 2 hanya bisa diakses oleh admin
         if ($user['level_user'] == 2) {
-
             $data = [
                 'judul' => 'Edit Pekerja Magang',
                 'subjudul' => 'data-magang',
@@ -120,7 +132,8 @@ class Admin extends BaseController
                 'navbar' => 'admin/template/v_navbar.php',
                 'footer' => 'admin/template/v_footer.php',
                 'sidebar' => 'admin/template/v_sidebar.php',
-                'users' => $user, // Add the $users data to the $data array
+                'users' => $user,
+                'devisiData' => $devisiModel->findAll(), // Mengambil data devisi untuk dropdown
             ];
 
             // Tampilkan view untuk mengedit data user
@@ -143,20 +156,32 @@ class Admin extends BaseController
         $no_telp = $this->request->getPost('no_telp');
         $devisi = $this->request->getPost('devisi');
 
+        // Ambil data user berdasarkan id_user
+        $userData = $userModel->find($id_user);
+
         // Update data user berdasarkan id_user
         $data = [
             'username' => $username,
-            'password' => password_hash($password, PASSWORD_DEFAULT),
             'nama' => $nama,
             'alamat' => $alamat,
             'no_telp' => $no_telp,
-            'devisi' => $devisi,
+            'id_devisi' => $devisi, // Ganti 'devisi' menjadi 'id_devisi'
         ];
+
+        // Cek apakah password dikosongkan pada form, jika tidak kosong, update password
+        if (!empty($password)) {
+            $data['password'] = password_hash($password, PASSWORD_DEFAULT);
+        } else {
+            // Jika password dikosongkan, gunakan password yang sudah ada di database
+            $data['password'] = $userData['password'];
+        }
+
         $userModel->update($id_user, $data);
 
         // Redirect kembali ke halaman list user level 2 dengan notifikasi
         return redirect()->to('admin/SemuaUser')->with('success', 'User updated successfully.');
     }
+
     public function deleteUser($id_user)
     {
         $userModel = new UserModel();

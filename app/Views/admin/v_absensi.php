@@ -17,7 +17,6 @@
                         <th>Tanggal</th>
                         <th>Waktu Masuk</th>
                         <th>Waktu Keluar</th>
-                        <th>Keterangan</th>
                         <th>Devisi</th>
                     </tr>
                 </thead>
@@ -43,10 +42,6 @@
                             </td>
                             <td>
                                 <?php echo $absen['keterangan']; ?>
-                            </td>
-
-                            <td>
-                                <?php echo $absen['devisi']; ?>
                             </td>
                         </tr>
                     <?php endforeach; ?>
