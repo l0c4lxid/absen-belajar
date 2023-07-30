@@ -69,15 +69,4 @@ class AbsenModel extends Model
         // Eksekusi query dan mengambil hasilnya
         return $query->findAll();
     }
-    public function countAbsenMasukByIdUser($id_user)
-    {
-        $today = date('Y-m-d');
-
-        $jumlahAbsenMasuk = $this->where('id_user', $id_user)
-            ->where('keterangan', 'Masuk')
-            ->where('DATE(jam_masuk)', $today)
-            ->countAllResults();
-
-        return $jumlahAbsenMasuk;
-    }
 }
