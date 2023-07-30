@@ -25,17 +25,19 @@ class Dashboard extends BaseController
             // Menghitung jumlah pegawai dengan level_user = 2
             $jumlahPegawai = $pegawaiModel->where('level_user', 2)->countAllResults();
 
+            $currentDate = date('Y-m-d');
+
+            // Menghitung jumlah absen masuk pada hari ini
             $jumlahAbsenMasuk = $absenModel->where('keterangan', 'Masuk')
-                ->where('DATE(jam_masuk)', date('Y-m-d'))
+                ->orWhere('keterangan', 'Keluar')
+                ->where('DATE(jam_masuk)', $currentDate)
                 ->countAllResults();
 
             // Menghitung jumlah absen keluar pada hari ini
             $jumlahAbsenKeluar = $absenModel->where('keterangan', 'Keluar')
-                ->where('DATE(jam_keluar)', date('Y-m-d'))
+                ->where('DATE(jam_keluar)', $currentDate)
                 ->countAllResults();
-            if ($jumlahAbsenKeluar > 0) {
-                $jumlahAbsenMasuk = $jumlahAbsenKeluar;
-            }
+
             // Menghitung jumlah pegawai yang belum absen masuk pada hari ini
             $jumlahPegawaiBelumAbsenMasuk = $jumlahPegawai - $jumlahAbsenMasuk;
 

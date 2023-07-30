@@ -65,7 +65,7 @@
                             <?= $jumlahAbsenMasuk ?>
                         </h3>
 
-                        <p> Belum Absen Keluar</p>
+                        <p> Belum Absen Masuk</p>
                     </div>
                     <div class="icon">
                         <i class="ion ion-person-add"></i>

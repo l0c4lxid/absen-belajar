@@ -45,9 +45,9 @@ class Auth extends BaseController
 
                 // Redirect ke halaman dashboard berdasarkan level_user setelah login berhasil
                 if ($user['level_user'] == 1) {
-                    return redirect()->to('profile/admin');
+                    return redirect()->to('Dashboard');
                 } elseif ($user['level_user'] == 2) {
-                    return redirect()->to('profile/user');
+                    return redirect()->to('Dashboard');
                 }
             } else {
                 // Login gagal, tampilkan pesan error
