@@ -7,6 +7,11 @@ use App\Models\UserModel;
 
 class Absensi extends BaseController
 {
+    public function __construct()
+    {
+        $this->absenModel = new AbsenModel();
+        $this->userModel = new UserModel();
+    }
     public function index()
     {
         $session = session();
@@ -78,6 +83,7 @@ class Absensi extends BaseController
 
     public function absen_masuk()
     {
+
         $session = session();
         // Pastikan user telah login dan sesi telah berisi data user dengan level_user
         if (!$session->has('id_user')) {
@@ -138,42 +144,59 @@ class Absensi extends BaseController
         }
         $userId = $session->get('id_user');
 
-        // Check if the user has already done "absen masuk" today in the database
+        // Periksa apakah user sudah melakukan "absen masuk" hari ini di database
         $today = date('Y-m-d');
         $absenMasukToday = $this->absenModel->where('id_user', $userId)
             ->where('DATE(jam_masuk)', $today)
             ->first();
 
         if (!$absenMasukToday) {
-            // User hasn't done "absen masuk" today, can't do "absen keluar"
+            // User belum melakukan "absen masuk" hari ini, tidak bisa melakukan "absen keluar"
             $session->setFlashdata('error', '<div class="card card-warning shadow">
-            <div class="card-header col-md-12">
-                <h3 class="card-title">Anda belum melakukan absen masuk hari ini!</h3>
-                <div class="card-tools">
-                    <button type="button" class="btn btn-tool" data-card-widget="remove"><i
-                            class="fas fa-times"></i>
-                    </button>
-                </div>
-                <!-- /.card-tools -->
+        <div class="card-header col-md-12">
+            <h3 class="card-title">Anda belum melakukan absen masuk hari ini!</h3>
+            <div class="card-tools">
+                <button type="button" class="btn btn-tool" data-card-widget="remove"><i
+                        class="fas fa-times"></i>
+                </button>
             </div>
-        </div>');
+            <!-- /.card-tools -->
+        </div>
+    </div>');
             return redirect()->to(base_url('absensi'));
         }
 
-        // Check if the user has already done "absen keluar" today
-        if ($absenMasukToday['jam_keluar']) {
-            // User has already done "absen keluar" today
+        // Pastikan 'jam_masuk' sudah terisi sebelum mengizinkan 'absen_keluar'
+        if (!$absenMasukToday['jam_masuk']) {
+            // 'jam_masuk' belum terisi, tidak diizinkan untuk melakukan "absen keluar"
             $session->setFlashdata('error', '<div class="card card-warning shadow">
-            <div class="card-header col-md-12">
-                <h3 class="card-title">Anda telah melakukan absen keluar hari ini!</h3>
-                <div class="card-tools">
-                    <button type="button" class="btn btn-tool" data-card-widget="remove"><i
-                            class="fas fa-times"></i>
-                    </button>
-                </div>
-                <!-- /.card-tools -->
+        <div class="card-header col-md-12">
+            <h3 class="card-title">Anda belum melakukan absen masuk hari ini!</h3>
+            <div class="card-tools">
+                <button type="button" class="btn btn-tool" data-card-widget="remove"><i
+                        class="fas fa-times"></i>
+                </button>
             </div>
-        </div>');
+            <!-- /.card-tools -->
+        </div>
+    </div>');
+            return redirect()->to(base_url('absensi'));
+        }
+
+        // Periksa apakah user sudah melakukan "absen keluar" hari ini
+        if ($absenMasukToday['jam_keluar']) {
+            // User telah melakukan "absen keluar" hari ini
+            $session->setFlashdata('error', '<div class="card card-warning shadow">
+        <div class="card-header col-md-12">
+            <h3 class="card-title">Anda telah melakukan absen keluar hari ini!</h3>
+            <div class="card-tools">
+                <button type="button" class="btn btn-tool" data-card-widget="remove"><i
+                        class="fas fa-times"></i>
+                </button>
+            </div>
+            <!-- /.card-tools -->
+        </div>
+    </div>');
             return redirect()->to(base_url('absensi'));
         }
 
@@ -183,7 +206,8 @@ class Absensi extends BaseController
             'keterangan' => 'Keluar',
         ];
         $this->absenModel->where('id_user', $userId)
-            ->where('jam_keluar', null)
+            ->where('DATE(jam_masuk)', $today)
+            ->where('jam_keluar', null) // Update hanya jika 'jam_keluar' belum diisi
             ->set($data)
             ->update();
 

@@ -24,8 +24,6 @@ class Auth extends BaseController
             }
         }
 
-        // helper(['form']);
-
         if ($this->request->getMethod() === 'post') {
             $username = $this->request->getPost('username');
             $password = $this->request->getPost('password');
@@ -50,13 +48,24 @@ class Auth extends BaseController
                     return redirect()->to('Dashboard');
                 }
             } else {
-                // Login gagal, tampilkan pesan error
-                echo 'Username or password is incorrect.';
+                // Login gagal, tampilkan pesan error dan kembalikan data yang dimasukkan sebelumnya
+                $data['username'] = $username;
+                $session->setFlashdata('error', '<div class="card card-danger">
+            <div class="card-header col-md-12">
+                <h3 class="card-title">Username / Password Salah !</h3>
+                <div class="card-tools">
+                    <button type="button" class="btn btn-tool" data-card-widget="remove"><i
+                            class="fas fa-times"></i>
+                    </button>
+                </div>
+                <!-- /.card-tools -->
+            </div>
+        </div>');
             }
         }
-
         return view('login', $data);
     }
+
 
     public function logout()
     {

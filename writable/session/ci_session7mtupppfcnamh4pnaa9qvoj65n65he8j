@@ -1,0 +1,11 @@
+__ci_last_regenerate|i:1690860255;_ci_previous_url|s:32:"http://localhost:8080/auth/login";error|s:517:"<div class="card card-warning shadow">
+                <div class="card-header col-md-12">
+                    <h3 class="card-title">Username or password is incorrect!</h3>
+                    <div class="card-tools">
+                        <button type="button" class="btn btn-tool" data-card-widget="remove"><i
+                                class="fas fa-times"></i>
+                        </button>
+                    </div>
+                    <!-- /.card-tools -->
+                </div>
+            </div>";__ci_vars|a:1:{s:5:"error";s:3:"new";}

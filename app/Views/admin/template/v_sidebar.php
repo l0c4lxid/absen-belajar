@@ -3,7 +3,7 @@
     <!-- Sidebar user panel (optional) -->
     <div class="user-panel mt-3 pb-3 mb-3 d-flex">
         <div class="image">
-            <img src="<?= base_url() ?>dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
+            <img>
         </div>
         <div class="info">
             <a href="<?= base_url('Dashboard') ?>" class="d-block">
@@ -36,15 +36,6 @@
                     </p>
                 </a>
             </li>
-            <!-- <li class="nav-item">
-                <a href="<?= base_url('Admin/Add_user'); ?>"
-                    class="nav-link <?= $subjudul == 'tambah-magang' ? 'active' : '' ?>">
-                    <i class="nav-icon fas fa-clock"></i>
-                    <p>
-                        Tambah Pegawai Magang
-                    </p>
-                </a>
-            </li> -->
             <li class="nav-item">
                 <a href="<?= base_url('Admin/SemuaUser'); ?>"
                     class="nav-link <?= $subjudul == 'data-magang' ? 'active' : '' ?>">
@@ -75,7 +66,7 @@
             <li class="nav-item">
                 <a href="<?= base_url("Absensi/Laporan") ?>"
                     class="nav-link <?= $subjudul == 'absen-laporan' ? 'active' : '' ?>">
-                    <i class="nav-icon fas fa-user"></i>
+                    <i class="nav-icon fas fa-print"></i>
                     <p>
                         Laporan Absen
                     </p>
