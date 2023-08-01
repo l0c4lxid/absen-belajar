@@ -11,9 +11,9 @@
 </style>
 
 <div class="col-md-12">
-    <div class="card-body text-center text-primary">
+    <div class="card-body text-center">
         <!-- Bagian pukul di sebelah kanan -->
-        <div class='row'>
+        <div class='row col-md-12'>
             <div class="col-md-6">
                 <h1 class='text-bold bg-gray-dark color-palette'>Pukul :<br><span id="clock"></span></h1>
             </div>
@@ -52,7 +52,7 @@
                     <div class="icon">
                         <i class="fas fa-suitcase"></i>
                     </div>
-                    <a href="<?= base_url('Devisi/addDivision') ?>" class="small-box-footer">More info <i
+                    <a href="<?= base_url('Devisi/TambahDevisi') ?>" class="small-box-footer">More info <i
                             class="fas fa-arrow-circle-right"></i></a>
                 </div>
             </div>

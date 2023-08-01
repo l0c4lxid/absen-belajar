@@ -32,7 +32,7 @@
                     <!-- <i class="nav-icon fas fa-tachometer-alt"></i> -->
                     <i class=" nav-icon fas fa-id-badge"></i>
                     <p>
-                        Ubah Profile
+                        Ubah Sandi
                     </p>
                 </a>
             </li>
@@ -69,6 +69,15 @@
                     <i class="nav-icon fas fa-user"></i>
                     <p>
                         Data Absen
+                    </p>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="<?= base_url("Absensi/Laporan") ?>"
+                    class="nav-link <?= $subjudul == 'absen-laporan' ? 'active' : '' ?>">
+                    <i class="nav-icon fas fa-user"></i>
+                    <p>
+                        Laporan Absen
                     </p>
                 </a>
             </li>

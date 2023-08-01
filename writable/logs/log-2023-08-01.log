@@ -1,0 +1,332 @@
+INFO - 2023-08-01 08:50:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-01 08:52:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-01 08:52:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-01 08:52:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-08-01 08:52:25 --> Invalid file: "admin/absensi/absen_view.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(212): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('admin/absensi/absen_view.php')
+ 2 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('admin/absensi/absen_view', [], true)
+ 3 APPPATH\Views\admin\template\temp_admin.php(93): view('admin/absensi/absen_view')
+ 4 SYSTEMPATH\View\View.php(224): include('D:\\XAMPP7\\htdocs\\absen\\app\\Views\\admin\\template\\temp_admin.php')
+ 5 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 6 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('admin/template/temp_admin', [], true)
+ 7 APPPATH\Controllers\Absensi.php(49): view('admin/template/temp_admin', [...])
+ 8 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Absensi->Laporan()
+ 9 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Absensi))
+10 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\XAMPP7\\htdocs\\absen\\public\\index.php')
+INFO - 2023-08-01 08:52:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-08-01 08:52:54 --> Undefined variable: allAbsenWithUserInfo
+in APPPATH\Views\admin\v_absensi.php on line 26.
+ 1 APPPATH\Views\admin\v_absensi.php(26): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: allAbsenWithUserInfo', 'D:\\XAMPP7\\htdocs\\absen\\app\\Views\\admin\\v_absensi.php', 26, [...])
+ 2 SYSTEMPATH\View\View.php(224): include('D:\\XAMPP7\\htdocs\\absen\\app\\Views\\admin\\v_absensi.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('admin/v_absensi', [], true)
+ 5 APPPATH\Views\admin\template\temp_admin.php(93): view('admin/v_absensi')
+ 6 SYSTEMPATH\View\View.php(224): include('D:\\XAMPP7\\htdocs\\absen\\app\\Views\\admin\\template\\temp_admin.php')
+ 7 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('admin/template/temp_admin', [], true)
+ 9 APPPATH\Controllers\Absensi.php(49): view('admin/template/temp_admin', [...])
+10 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Absensi->Laporan()
+11 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Absensi))
+12 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\XAMPP7\\htdocs\\absen\\public\\index.php')
+INFO - 2023-08-01 08:53:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-01 08:53:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-01 08:53:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-01 08:53:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-01 08:53:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-01 08:53:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-01 08:54:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-01 08:54:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-01 08:54:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-01 08:55:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-01 08:58:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-01 08:58:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-01 08:58:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-01 09:01:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-01 09:02:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-01 09:02:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-08-01 09:03:23 --> mysqli_sql_exception: Unknown column 'user_level' in 'where clause' in D:\XAMPP7\htdocs\absen\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 D:\XAMPP7\htdocs\absen\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *\nFROM `...', 0)
+#1 D:\XAMPP7\htdocs\absen\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 D:\XAMPP7\htdocs\absen\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 D:\XAMPP7\htdocs\absen\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 D:\XAMPP7\htdocs\absen\system\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\XAMPP7\htdocs\absen\system\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+#6 D:\XAMPP7\htdocs\absen\app\Controllers\Absensi.php(39): CodeIgniter\BaseModel->findAll()
+#7 D:\XAMPP7\htdocs\absen\system\CodeIgniter.php(932): App\Controllers\Absensi->Laporan()
+#8 D:\XAMPP7\htdocs\absen\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Absensi))
+#9 D:\XAMPP7\htdocs\absen\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\XAMPP7\htdocs\absen\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 D:\XAMPP7\htdocs\absen\system\Commands\Server\rewrite.php(47): require_once('D:\\XAMPP7\\htdoc...')
+#12 {main}
+CRITICAL - 2023-08-01 09:03:23 --> Unknown column 'user_level' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *
+FROM `tbl_user`
+WHERE `user_level` = 2', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `tbl_user`
+WHERE `user_level` = 2')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `tbl_user`
+WHERE `user_level` = 2')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `tbl_user`
+WHERE `user_level` = :user_level:', [...], false)
+ 5 SYSTEMPATH\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Controllers\Absensi.php(39): CodeIgniter\BaseModel->findAll()
+ 8 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Absensi->Laporan()
+ 9 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Absensi))
+10 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\XAMPP7\\htdocs\\absen\\public\\index.php')
+ERROR - 2023-08-01 09:03:34 --> mysqli_sql_exception: Unknown column 'user_level' in 'where clause' in D:\XAMPP7\htdocs\absen\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 D:\XAMPP7\htdocs\absen\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *\nFROM `...', 0)
+#1 D:\XAMPP7\htdocs\absen\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 D:\XAMPP7\htdocs\absen\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 D:\XAMPP7\htdocs\absen\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 D:\XAMPP7\htdocs\absen\system\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\XAMPP7\htdocs\absen\system\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+#6 D:\XAMPP7\htdocs\absen\app\Controllers\Absensi.php(39): CodeIgniter\BaseModel->findAll()
+#7 D:\XAMPP7\htdocs\absen\system\CodeIgniter.php(932): App\Controllers\Absensi->Laporan()
+#8 D:\XAMPP7\htdocs\absen\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Absensi))
+#9 D:\XAMPP7\htdocs\absen\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\XAMPP7\htdocs\absen\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 D:\XAMPP7\htdocs\absen\system\Commands\Server\rewrite.php(47): require_once('D:\\XAMPP7\\htdoc...')
+#12 {main}
+CRITICAL - 2023-08-01 09:03:34 --> Unknown column 'user_level' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *
+FROM `tbl_user`
+WHERE `user_level` = 2', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `tbl_user`
+WHERE `user_level` = 2')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `tbl_user`
+WHERE `user_level` = 2')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `tbl_user`
+WHERE `user_level` = :user_level:', [...], false)
+ 5 SYSTEMPATH\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Controllers\Absensi.php(39): CodeIgniter\BaseModel->findAll()
+ 8 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Absensi->Laporan()
+ 9 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Absensi))
+10 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\XAMPP7\\htdocs\\absen\\public\\index.php')
+ERROR - 2023-08-01 09:03:36 --> mysqli_sql_exception: Unknown column 'user_level' in 'where clause' in D:\XAMPP7\htdocs\absen\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 D:\XAMPP7\htdocs\absen\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *\nFROM `...', 0)
+#1 D:\XAMPP7\htdocs\absen\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 D:\XAMPP7\htdocs\absen\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 D:\XAMPP7\htdocs\absen\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 D:\XAMPP7\htdocs\absen\system\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\XAMPP7\htdocs\absen\system\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+#6 D:\XAMPP7\htdocs\absen\app\Controllers\Absensi.php(39): CodeIgniter\BaseModel->findAll()
+#7 D:\XAMPP7\htdocs\absen\system\CodeIgniter.php(932): App\Controllers\Absensi->Laporan()
+#8 D:\XAMPP7\htdocs\absen\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Absensi))
+#9 D:\XAMPP7\htdocs\absen\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\XAMPP7\htdocs\absen\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 D:\XAMPP7\htdocs\absen\system\Commands\Server\rewrite.php(47): require_once('D:\\XAMPP7\\htdoc...')
+#12 {main}
+CRITICAL - 2023-08-01 09:03:36 --> Unknown column 'user_level' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *
+FROM `tbl_user`
+WHERE `user_level` = 2', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `tbl_user`
+WHERE `user_level` = 2')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `tbl_user`
+WHERE `user_level` = 2')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `tbl_user`
+WHERE `user_level` = :user_level:', [...], false)
+ 5 SYSTEMPATH\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Controllers\Absensi.php(39): CodeIgniter\BaseModel->findAll()
+ 8 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Absensi->Laporan()
+ 9 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Absensi))
+10 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\XAMPP7\\htdocs\\absen\\public\\index.php')
+ERROR - 2023-08-01 09:04:31 --> mysqli_sql_exception: Unknown column 'user_level' in 'where clause' in D:\XAMPP7\htdocs\absen\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 D:\XAMPP7\htdocs\absen\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *\nFROM `...', 0)
+#1 D:\XAMPP7\htdocs\absen\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 D:\XAMPP7\htdocs\absen\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 D:\XAMPP7\htdocs\absen\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 D:\XAMPP7\htdocs\absen\system\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\XAMPP7\htdocs\absen\system\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+#6 D:\XAMPP7\htdocs\absen\app\Controllers\Absensi.php(39): CodeIgniter\BaseModel->findAll()
+#7 D:\XAMPP7\htdocs\absen\system\CodeIgniter.php(932): App\Controllers\Absensi->Laporan()
+#8 D:\XAMPP7\htdocs\absen\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Absensi))
+#9 D:\XAMPP7\htdocs\absen\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\XAMPP7\htdocs\absen\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 D:\XAMPP7\htdocs\absen\system\Commands\Server\rewrite.php(47): require_once('D:\\XAMPP7\\htdoc...')
+#12 {main}
+CRITICAL - 2023-08-01 09:04:31 --> Unknown column 'user_level' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *
+FROM `tbl_user`
+WHERE `user_level` = 2', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `tbl_user`
+WHERE `user_level` = 2')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `tbl_user`
+WHERE `user_level` = 2')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `tbl_user`
+WHERE `user_level` = :user_level:', [...], false)
+ 5 SYSTEMPATH\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Controllers\Absensi.php(39): CodeIgniter\BaseModel->findAll()
+ 8 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Absensi->Laporan()
+ 9 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Absensi))
+10 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\XAMPP7\\htdocs\\absen\\public\\index.php')
+ERROR - 2023-08-01 09:04:33 --> mysqli_sql_exception: Unknown column 'user_level' in 'where clause' in D:\XAMPP7\htdocs\absen\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 D:\XAMPP7\htdocs\absen\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *\nFROM `...', 0)
+#1 D:\XAMPP7\htdocs\absen\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 D:\XAMPP7\htdocs\absen\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 D:\XAMPP7\htdocs\absen\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 D:\XAMPP7\htdocs\absen\system\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\XAMPP7\htdocs\absen\system\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+#6 D:\XAMPP7\htdocs\absen\app\Controllers\Absensi.php(39): CodeIgniter\BaseModel->findAll()
+#7 D:\XAMPP7\htdocs\absen\system\CodeIgniter.php(932): App\Controllers\Absensi->Laporan()
+#8 D:\XAMPP7\htdocs\absen\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Absensi))
+#9 D:\XAMPP7\htdocs\absen\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\XAMPP7\htdocs\absen\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 D:\XAMPP7\htdocs\absen\system\Commands\Server\rewrite.php(47): require_once('D:\\XAMPP7\\htdoc...')
+#12 {main}
+CRITICAL - 2023-08-01 09:04:33 --> Unknown column 'user_level' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *
+FROM `tbl_user`
+WHERE `user_level` = 2', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `tbl_user`
+WHERE `user_level` = 2')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `tbl_user`
+WHERE `user_level` = 2')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `tbl_user`
+WHERE `user_level` = :user_level:', [...], false)
+ 5 SYSTEMPATH\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Controllers\Absensi.php(39): CodeIgniter\BaseModel->findAll()
+ 8 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Absensi->Laporan()
+ 9 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Absensi))
+10 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\XAMPP7\\htdocs\\absen\\public\\index.php')
+INFO - 2023-08-01 09:04:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-01 09:05:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-01 09:05:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-01 09:05:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-01 09:05:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-01 09:05:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-01 09:06:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-01 09:06:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-08-01 09:06:46 --> Undefined variable: users
+in APPPATH\Views\admin\v_absensi.php on line 29.
+ 1 APPPATH\Views\admin\v_absensi.php(29): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: users', 'D:\\XAMPP7\\htdocs\\absen\\app\\Views\\admin\\v_absensi.php', 29, [...])
+ 2 SYSTEMPATH\View\View.php(224): include('D:\\XAMPP7\\htdocs\\absen\\app\\Views\\admin\\v_absensi.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('admin/v_absensi', [], true)
+ 5 APPPATH\Views\admin\template\temp_admin.php(93): view('admin/v_absensi')
+ 6 SYSTEMPATH\View\View.php(224): include('D:\\XAMPP7\\htdocs\\absen\\app\\Views\\admin\\template\\temp_admin.php')
+ 7 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('admin/template/temp_admin', [], true)
+ 9 APPPATH\Controllers\Absensi.php(63): view('admin/template/temp_admin', [...])
+10 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Absensi->Admin()
+11 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Absensi))
+12 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\XAMPP7\\htdocs\\absen\\public\\index.php')
+INFO - 2023-08-01 09:07:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-01 09:07:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-01 09:07:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-01 09:20:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-01 09:20:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-01 09:21:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-08-01 09:21:03 --> Undefined index: keterangan
+in APPPATH\Views\admin\v_absensi.php on line 117.
+ 1 APPPATH\Views\admin\v_absensi.php(117): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: keterangan', 'D:\\XAMPP7\\htdocs\\absen\\app\\Views\\admin\\v_absensi.php', 117, [...])
+ 2 SYSTEMPATH\View\View.php(224): include('D:\\XAMPP7\\htdocs\\absen\\app\\Views\\admin\\v_absensi.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('admin/v_absensi', [], true)
+ 5 APPPATH\Views\admin\template\temp_admin.php(93): view('admin/v_absensi')
+ 6 SYSTEMPATH\View\View.php(224): include('D:\\XAMPP7\\htdocs\\absen\\app\\Views\\admin\\template\\temp_admin.php')
+ 7 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('admin/template/temp_admin', [], true)
+ 9 APPPATH\Controllers\Absensi.php(62): view('admin/template/temp_admin', [...])
+10 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Absensi->Laporan()
+11 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Absensi))
+12 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\XAMPP7\\htdocs\\absen\\public\\index.php')
+INFO - 2023-08-01 09:22:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-01 09:22:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-01 09:22:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-01 09:22:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-01 09:22:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-01 09:23:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-01 09:23:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-01 09:51:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-01 09:55:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-08-01 09:55:44 --> Undefined variable: userInfo
+in APPPATH\Views\admin\v_absensi.php on line 102.
+ 1 APPPATH\Views\admin\v_absensi.php(102): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: userInfo', 'D:\\XAMPP7\\htdocs\\absen\\app\\Views\\admin\\v_absensi.php', 102, [...])
+ 2 SYSTEMPATH\View\View.php(224): include('D:\\XAMPP7\\htdocs\\absen\\app\\Views\\admin\\v_absensi.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('admin/v_absensi', [], true)
+ 5 APPPATH\Views\admin\template\temp_admin.php(93): view('admin/v_absensi')
+ 6 SYSTEMPATH\View\View.php(224): include('D:\\XAMPP7\\htdocs\\absen\\app\\Views\\admin\\template\\temp_admin.php')
+ 7 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('admin/template/temp_admin', [], true)
+ 9 APPPATH\Controllers\Absensi.php(62): view('admin/template/temp_admin', [...])
+10 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Absensi->Laporan()
+11 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Absensi))
+12 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\XAMPP7\\htdocs\\absen\\public\\index.php')
+INFO - 2023-08-01 09:56:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-01 09:56:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-01 09:56:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-01 09:56:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-01 09:57:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-01 09:57:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-01 09:57:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-01 09:57:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-01 09:57:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-01 09:57:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-01 09:58:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-01 09:58:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-01 10:00:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-01 10:00:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-01 10:00:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-01 10:00:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-01 10:00:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-01 10:00:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-01 10:00:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-01 10:00:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-01 10:00:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-01 10:00:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-01 10:00:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-01 10:00:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-01 10:00:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

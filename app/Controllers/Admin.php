@@ -45,7 +45,7 @@ class Admin extends BaseController
         $nama = $this->request->getPost('nama');
         $alamat = $this->request->getPost('alamat');
         $no_telp = $this->request->getPost('no_telp');
-        $id_devisi = $this->request->getPost('devisi'); // Ambil nilai id_devisi dari form
+        $id_devisi = $this->request->getPost('id_devisi'); // Ambil nilai id_devisi dari form
 
         // Cek apakah username sudah ada di database
         $existingUser = $userModel->where('username', $username)->first();
@@ -82,7 +82,6 @@ class Admin extends BaseController
             'nama' => $nama,
             'alamat' => $alamat,
             'no_telp' => $no_telp,
-            'devisi' => $devisi['keterangan'],
             // Simpan keterangan devisi ke tabel tbl_user
             'id_devisi' => $id_devisi, // Simpan id_devisi ke tabel tbl_user
         ];

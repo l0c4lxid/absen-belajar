@@ -33,6 +33,25 @@ class Devisi extends BaseController
         // Ambil data dari form
         $divisionName = $this->request->getPost('keterangan');
 
+        // Cek apakah data divisi sudah ada di database
+        $existingDivision = $divisionModel->where('keterangan', $divisionName)->first();
+        if ($existingDivision) {
+            // Jika data sudah ada, tampilkan pesan error
+            $session = session();
+            $session->setFlashdata('error', '<div class="card card-warning shadow">
+            <div class="card-header col-md-12">
+                <h3 class="card-title">Divisi Sudah Ada !!</h3>
+                <div class="card-tools">
+                    <button type="button" class="btn btn-tool" data-card-widget="remove"><i
+                            class="fas fa-times"></i>
+                    </button>
+                </div>
+                <!-- /.card-tools -->
+            </div>
+        </div>');
+            return redirect()->to('devisi/TambahDevisi');
+        }
+
         // Simpan data divisi ke dalam database
         $data = [
             'keterangan' => $divisionName
@@ -44,7 +63,7 @@ class Devisi extends BaseController
         $session = session();
         $session->setFlashdata('success', '<div class="card card-success shadow">
         <div class="card-header col-md-12">
-            <h3 class="card-title">Devisi Berhasil Ditambahkan.</h3>
+            <h3 class="card-title">Divisi Berhasil Ditambahkan.</h3>
             <div class="card-tools">
                 <button type="button" class="btn btn-tool" data-card-widget="remove"><i
                         class="fas fa-times"></i>
@@ -55,6 +74,7 @@ class Devisi extends BaseController
     </div>');
         return redirect()->to('devisi/TambahDevisi');
     }
+
     public function updateDevisi($id_user)
     {
         $devisiModel = new DevisiModel();

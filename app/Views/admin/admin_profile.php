@@ -1,13 +1,11 @@
-<?php
-$session = session();
-$successMsg = $session->getFlashdata('success');
-if ($successMsg) {
-    echo '<p style="color: green;">' . $successMsg . '</p>';
-}
-?>
-
-
 <div class="col-md-12">
+    <?php
+    $session = session();
+    $successMsg = $session->getFlashdata('success');
+    if ($successMsg) {
+        echo '<p style="color: green;">' . $successMsg . '</p>';
+    }
+    ?>
     <div class="card card-primary">
         <div class="card-header">
             <h3 class="card-title">Data
@@ -16,6 +14,7 @@ if ($successMsg) {
 
             <!-- /.card-tools -->
         </div>
+
         <div class="card-body">
             <form action=" <?= base_url('profile/save_admin'); ?>" method="post">
 

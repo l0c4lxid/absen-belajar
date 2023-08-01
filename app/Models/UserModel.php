@@ -16,4 +16,5 @@ class UserModel extends Model
         $this->join('tbl_devisi', 'tbl_devisi.id_devisi = tbl_user.id_devisi');
         return $this->where('level_user', 2)->findAll();
     }
+
 }

@@ -41,7 +41,7 @@ class Profile extends BaseController
     public function save_admin()
     {
         $session = session();
-        $userId = $session->get('user_id');
+        $userId = $session->get('id_user');
         $newUsername = $this->request->getPost('username');
         $newPassword = $this->request->getPost('password');
 
@@ -56,14 +56,24 @@ class Profile extends BaseController
         ]);
         // Setelah berhasil disimpan, tampilkan pesan sukses atau lakukan redirect
         $session = session();
-        $session->setFlashdata('success', 'Admin profile updated successfully.');
+        $session->setFlashdata('success', '<div class="card card-warning shadow">
+        <div class="card-header col-md-12">
+            <h3 class="card-title">Username / Password Telah Di Ubah !!</h3>
+            <div class="card-tools">
+                <button type="button" class="btn btn-tool" data-card-widget="remove"><i
+                        class="fas fa-times"></i>
+                </button>
+            </div>
+            <!-- /.card-tools -->
+        </div>
+    </div>');
         return redirect()->to('profile/admin');
     }
 
     public function save_user()
     {
         $session = session();
-        $userId = $session->get('user_id');
+        $userId = $session->get('id_user');
         $newUsername = $this->request->getPost('username');
         $newPassword = $this->request->getPost('password');
 
@@ -79,7 +89,17 @@ class Profile extends BaseController
 
         // Setelah berhasil disimpan, tampilkan pesan sukses atau lakukan redirect
         $session = session();
-        $session->setFlashdata('success', 'User profile updated successfully.');
+        $session->setFlashdata('success', '<div class="card card-warning shadow">
+        <div class="card-header col-md-12">
+            <h3 class="card-title">Username / Password Telah Di Ubah !!</h3>
+            <div class="card-tools">
+                <button type="button" class="btn btn-tool" data-card-widget="remove"><i
+                        class="fas fa-times"></i>
+                </button>
+            </div>
+            <!-- /.card-tools -->
+        </div>
+    </div>');
         return redirect()->to('profile/user');
     }
 

@@ -7,12 +7,6 @@ use App\Models\UserModel;
 
 class Absensi extends BaseController
 {
-    public function __construct()
-    {
-        // Load model yang dibutuhkan
-        $this->absenModel = new AbsenModel();
-        $this->userModel = new UserModel();
-    }
     public function index()
     {
         $session = session();
@@ -29,7 +23,43 @@ class Absensi extends BaseController
         $data['navbar'] = 'user/template/v_navbar.php';
         $data['footer'] = 'user/template/v_footer.php';
         $data['sidebar'] = 'user/template/v_sidebar.php';
+
+
         return view('user/template/temp_user', $data);
+    }
+    public function Laporan()
+    {
+        $absenModel = new AbsenModel();
+        $userModel = new UserModel();
+        $data['users'] = $userModel->where('level_user', 2)->findAll();
+
+        // Get the query parameters for id_user, bulan, and tahun
+        $id_user = $this->request->getGet('id_user');
+        $bulan = $this->request->getGet('bulan');
+        $tahun = $this->request->getGet('tahun');
+
+        // Jika parameter pencarian tidak ada, tampilkan semua data absensi
+        if (!$id_user || !$bulan || !$tahun) {
+            $data['absensi'] = $absenModel->findAll();
+        } else {
+            // Lakukan pencarian data absensi berdasarkan id_user, bulan, dan tahun
+            $data['absensi'] = $absenModel->getAbsenByUserId($id_user, $bulan, $tahun);
+        }
+        $data['userInfo'] = [];
+        foreach ($data['users'] as $user) {
+            $data['userInfo'][$user['id_user']] = [
+                'nama' => $user['nama'],
+                'id_user' => $user['id_user'],
+            ];
+        }
+        $data['judul'] = 'Absensi';
+        $data['subjudul'] = 'absen-laporan';
+        $data['page'] = 'admin/v_absensi';
+        $data['navbar'] = 'admin/template/v_navbar.php';
+        $data['footer'] = 'admin/template/v_footer.php';
+        $data['sidebar'] = 'admin/template/v_sidebar.php';
+
+        return view('admin/template/temp_admin', $data);
     }
 
     public function Admin()
@@ -37,28 +67,15 @@ class Absensi extends BaseController
         $absenModel = new AbsenModel();
         $data['judul'] = 'Absensi';
         $data['subjudul'] = 'absen-all';
-        $data['page'] = 'admin/v_absensi';
+        $data['page'] = 'admin/absen_view';
         $data['navbar'] = 'admin/template/v_navbar.php';
         $data['footer'] = 'admin/template/v_footer.php';
         $data['sidebar'] = 'admin/template/v_sidebar.php';
         $data['allAbsenWithUserInfo'] = $absenModel->getAllAbsenWithUserInfo();
         return view('admin/template/temp_admin', $data);
     }
-    public function filter()
-    {
-        $absenModel = new AbsenModel();
-        // Ambil data dari form filter
-        $id_user = $this->request->getPost('id_user');
-        // Buat array untuk menyimpan kriteria filter
-        $filter = [];
-        if (!empty($id_user)) {
-            $filter['id_user'] = $id_user;
-        }
-        // Ambil data absen dengan kriteria filter
-        $data['allAbsenWithUserInfo'] = $absenModel->getFilteredAbsenWithUserInfo($filter);
-        // Memuat view dengan data yang dikirimkan
-        return view('admin/v_absensi', $data);
-    }
+
+
     public function absen_masuk()
     {
         $session = session();
@@ -112,8 +129,6 @@ class Absensi extends BaseController
     </div>');
         return redirect()->to(base_url('absensi'));
     }
-
-
     public function absen_keluar()
     {
         $session = session();

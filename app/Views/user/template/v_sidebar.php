@@ -31,7 +31,7 @@
                     class="nav-link <?= $subjudul == 'ubah-profile' ? 'active' : '' ?>">
                     <i class=" nav-icon fas fa-id-badge"></i>
                     <p>
-                        Ubah Profile
+                        Ubah Sandi
                     </p>
                 </a>
             </li>
