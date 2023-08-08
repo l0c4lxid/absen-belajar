@@ -34,16 +34,17 @@
     <link rel="stylesheet" href="<?= base_url() ?>plugins/datatables-bs4/css/dataTables.bootstrap4.min.css">
     <link rel="stylesheet" href="<?= base_url() ?>plugins/datatables-responsive/css/responsive.bootstrap4.min.css">
     <link rel="stylesheet" href="<?= base_url() ?>plugins/datatables-buttons/css/buttons.bootstrap4.min.css">
+    <link rel="shortcut icon" type="image/png" href="<?= base_url() ?>/favicon.png">
 </head>
 
 <body class="hold-transition sidebar-mini layout-fixed">
     <div class="wrapper">
 
         <!-- Preloader -->
-        <!-- <div class="preloader flex-column justify-content-center align-items-center">
+        <div class="preloader flex-column justify-content-center align-items-center">
             <img class="animation__shake" src="<?= base_url() ?>/dist/img/AdminLTELogo.png" alt="Logo" height="100"
                 width="100">
-        </div> -->
+        </div>
 
         <?php
         if ($navbar) {

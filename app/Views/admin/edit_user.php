@@ -68,6 +68,7 @@
                     <div class="col-6">
                         <button class='btn btn-danger btn-block' type="submit">Update</button>
                     </div>
+                </div>
             </form>
         </div>
     </div>

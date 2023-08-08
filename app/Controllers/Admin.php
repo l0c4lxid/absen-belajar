@@ -64,7 +64,7 @@ class Admin extends BaseController
                 <!-- /.card-tools -->
             </div>
         </div>');
-            return redirect()->to('admin/add_user');
+            return redirect()->to('admin/SemuaUser');
         }
 
         // Jika username belum ada, lanjutkan untuk menyimpan user baru
@@ -72,7 +72,7 @@ class Admin extends BaseController
         if (!$devisi) {
             // Jika id_devisi tidak valid (tidak ada di tabel devisi), mungkin ada kesalahan
             // Tampilkan pesan error atau lakukan penanganan sesuai kebutuhan
-            return redirect()->to('admin/add_user')->with('error', 'Devisi tidak valid.');
+            return redirect()->to('admin/SemuaUser')->with('error', 'Devisi tidak valid.');
         }
 
         $data = [

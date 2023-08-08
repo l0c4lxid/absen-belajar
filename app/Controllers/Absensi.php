@@ -210,7 +210,17 @@ class Absensi extends BaseController
             ->where('jam_keluar', null) // Update hanya jika 'jam_keluar' belum diisi
             ->set($data)
             ->update();
-
+        $session->setFlashdata('success', '<div class="card card-danger shadow">
+            <div class="card-header col-md-12">
+                <h3 class="card-title">Anda telah melakukan absen keluar hari ini!</h3>
+                <div class="card-tools">
+                    <button type="button" class="btn btn-tool" data-card-widget="remove"><i
+                            class="fas fa-times"></i>
+                    </button>
+                </div>
+                <!-- /.card-tools -->
+            </div>
+        </div>');
         return redirect()->to(base_url('absensi'));
     }
 

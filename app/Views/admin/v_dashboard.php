@@ -59,7 +59,7 @@
             <!-- ./col -->
             <div class="col-lg-3 col-6">
                 <!-- small box -->
-                <div class="small-box bg-warning">
+                <div class="small-box bg-primary">
                     <div class="inner">
                         <h3>
                             <?= $jumlahAbsenMasuk ?>
