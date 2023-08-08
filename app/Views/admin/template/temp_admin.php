@@ -42,8 +42,7 @@
 
         <!-- Preloader -->
         <div class="preloader flex-column justify-content-center align-items-center">
-            <img class="animation__shake" src="<?= base_url() ?>/dist/img/AdminLTELogo.png" alt="Logo" height="100"
-                width="100">
+            <img class="animation__shake" src="<?= base_url() ?>/ribbon.png" alt="Logo" height="100" width="100">
         </div>
 
         <?php

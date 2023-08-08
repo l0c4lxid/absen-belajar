@@ -89,7 +89,17 @@ class Admin extends BaseController
 
         // Tampilkan notifikasi dan redirect kembali ke halaman tambah user
         $session = session();
-        $session->setFlashdata('success', 'User added successfully.');
+        $session->setFlashdata('success', '<div class="card card-success shadow">
+            <div class="card-header col-md-12">
+                <h3 class="card-title">Berhasil Ditambahakan!!</h3>
+                <div class="card-tools">
+                    <button type="button" class="btn btn-tool" data-card-widget="remove"><i
+                            class="fas fa-times"></i>
+                    </button>
+                </div>
+                <!-- /.card-tools -->
+            </div>
+        </div>');
         return redirect()->to('admin/SemuaUser');
     }
 
@@ -178,7 +188,17 @@ class Admin extends BaseController
         $userModel->update($id_user, $data);
 
         // Redirect kembali ke halaman list user level 2 dengan notifikasi
-        return redirect()->to('admin/SemuaUser')->with('success', 'User updated successfully.');
+        return redirect()->to('admin/SemuaUser')->with('success', '<div class="card card-success shadow">
+        <div class="card-header col-md-12">
+            <h3 class="card-title">Update Data Berhasil!!</h3>
+            <div class="card-tools">
+                <button type="button" class="btn btn-tool" data-card-widget="remove"><i
+                        class="fas fa-times"></i>
+                </button>
+            </div>
+            <!-- /.card-tools -->
+        </div>
+    </div>');
     }
 
     public function deleteUser($id_user)
@@ -194,7 +214,17 @@ class Admin extends BaseController
             $userModel->delete($id_user);
 
             // Redirect kembali ke halaman list user level 2 dengan notifikasi
-            return redirect()->to('admin/SemuaUser')->with('success', 'User deleted successfully.');
+            return redirect()->to('admin/SemuaUser')->with('success', '<div class="card card-danger shadow">
+            <div class="card-header col-md-12">
+                <h3 class="card-title">User Data Berhasil Dihapus!!</h3>
+                <div class="card-tools">
+                    <button type="button" class="btn btn-tool" data-card-widget="remove"><i
+                            class="fas fa-times"></i>
+                    </button>
+                </div>
+                <!-- /.card-tools -->
+            </div>
+        </div>');
         } else {
             // Redirect ke halaman lain jika user tidak memiliki akses untuk menghapus
             return redirect()->to('admin/SemuaUser')->with('error', 'You do not have permission to delete this user.');
