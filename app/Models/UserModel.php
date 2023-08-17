@@ -8,7 +8,7 @@ class UserModel extends Model
 {
     protected $table = 'tbl_user';
     protected $primaryKey = 'id_user';
-    protected $allowedFields = ['id_devisi', 'username', 'password', 'level_user', 'nama', 'alamat', 'no_telp', 'devisi'];
+    protected $allowedFields = ['id_devisi', 'username', 'password', 'level_user', 'nama', 'alamat', 'no_telp', ''];
 
     public function getUsersWithDevisi()
     {

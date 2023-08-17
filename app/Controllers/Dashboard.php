@@ -27,11 +27,11 @@ class Dashboard extends BaseController
 
             $currentDate = date('Y-m-d');
 
-            // Menghitung jumlah absen masuk pada hari ini
-            $jumlahAbsenMasuk = $absenModel->where('keterangan', 'Masuk')
-                ->orWhere('keterangan', 'Keluar')
+            // Menghitung jumlah absen masuk dan keluar pada hari ini
+            $jumlahAbsenMasukKeluar = $absenModel->whereIn('keterangan', ['Masuk', 'Keluar'])
                 ->where('DATE(jam_masuk)', $currentDate)
                 ->countAllResults();
+
 
             // Menghitung jumlah absen keluar pada hari ini
             $jumlahAbsenKeluar = $absenModel->where('keterangan', 'Keluar')
@@ -39,7 +39,7 @@ class Dashboard extends BaseController
                 ->countAllResults();
 
             // Menghitung jumlah pegawai yang belum absen masuk pada hari ini
-            $jumlahPegawaiBelumAbsenMasuk = $jumlahPegawai - $jumlahAbsenMasuk;
+            $jumlahPegawaiBelumAbsenMasuk = $jumlahPegawai - $jumlahAbsenMasukKeluar;
 
             // Menghitung jumlah pegawai yang belum absen keluar pada hari ini
             $jumlahPegawaiBelumAbsenKeluar = $jumlahPegawai - $jumlahAbsenKeluar;
