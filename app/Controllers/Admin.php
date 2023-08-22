@@ -54,9 +54,9 @@ class Admin extends BaseController
             // Jika username sudah ada, tampilkan pesan error
             $session = session();
             $session->setFlashdata('error', '<div class="card card-warning shadow">
-            <div class="card-header col-md-12">
-                <h3 class="card-title">Username Telah Ada !!!</h3>
-                <div class="card-tools">
+                                <div class="card-header col-md-12">
+                                    <h3 class="card-title">Username Telah Ada !!!</h3>
+                                    <div class="card-tools">
                     <button type="button" class="btn btn-tool" data-card-widget="remove"><i
                             class="fas fa-times"></i>
                     </button>
