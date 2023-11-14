@@ -41,7 +41,7 @@
                     class="nav-link <?= $subjudul == 'data-magang' ? 'active' : '' ?>">
                     <i class="nav-icon fas fa-users"></i>
                     <p>
-                        Data Magang
+                        Data User
                     </p>
                 </a>
             </li>
@@ -50,7 +50,15 @@
                     class="nav-link <?= $subjudul == 'tambah-devisi' ? 'active' : '' ?>">
                     <i class="nav-icon fas fa-briefcase"></i>
                     <p>
-                        Tambah Devisi Magang
+                        Devisi User
+                    </p>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="<?= base_url('jadwal'); ?>" class="nav-link <?= $subjudul == 'jam' ? 'active' : '' ?>">
+                    <i class="nav-icon fas fa-clock"></i>
+                    <p>
+                        Atur Waktu
                     </p>
                 </a>
             </li>

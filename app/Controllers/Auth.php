@@ -21,6 +21,8 @@ class Auth extends BaseController
                 return redirect()->to('Dashboard');
             } elseif ($userLevel == 2) {
                 return redirect()->to('Dashboard');
+            } elseif ($userLevel == 3) {
+                return redirect()->to('Dashboard');
             }
         }
 
@@ -45,6 +47,8 @@ class Auth extends BaseController
                 if ($user['level_user'] == 1) {
                     return redirect()->to('Dashboard');
                 } elseif ($user['level_user'] == 2) {
+                    return redirect()->to('Dashboard');
+                } elseif ($user['level_user'] == 3) {
                     return redirect()->to('Dashboard');
                 }
             } else {

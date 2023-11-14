@@ -1,5 +1,5 @@
 <div class="container-fluid">
-    <div class="row ">
+    <div class="row justify-content-center align-items-center">
         <!-- left column -->
         <div class="col-md-12">
             <?php
@@ -9,33 +9,33 @@
                 echo '<p style="color: green;">' . $successMsg . '</p>';
             }
             ?>
-            <form action="<?= base_url('profile/save_user'); ?>" method="post">
-
-                <div class="card-body col-md-12">
-                    <div class="form-group">
-                        <label for="username">Username</label>
-                        <input type="text" name="username" required class="form-control" id="username"
-                            value="<?= $userUsername; ?>">
-                    </div>
-                    <div class="form-group">
-                        <label for="password">password</label>
-                        <input type="text" name="password" required class="form-control" id="password"
-                            placeholder="password">
-                    </div>
+            <div class="card">
+                <div class="card-body">
+                    <form action="<?= base_url('profile/save_user'); ?>" method="post">
+                        <div class="form-group">
+                            <label for="username">Username</label>
+                            <input type="text" name="username" required class="form-control" id="username"
+                                value="<?= $userUsername; ?>">
+                        </div>
+                        <div class="form-group">
+                            <label for="password">Password</label>
+                            <input type="password" name="password" required class="form-control" id="password"
+                                placeholder="Password">
+                        </div>
+                        <div class='row'>
+                            
+                                    <div class="col-4 text-center"> <!-- Adjusted column size and added text-center class -->
+                                        <button type="button" class="btn btn-primary btn-block" onclick="window.location.href='/absen/dashboard'">Back</button>
+                                </div>
+                            <div class='col-4'>
+                            </div>
+                            <div class="col-4 text-center"> <!-- Adjusted column size and added text-center class -->
+                                <button type="submit" class="btn btn-danger btn-block">Simpan</button>
+                            </div>
+                        </div>
+                    </form>
                 </div>
-                <div class='row'>
-                    <div class="col-md-6">
-                        <button type="submit" class="btn btn-primary btn-block">Back to
-                            Dashboard</button>
-                    </div>
-                    <div class="col-md-6">
-                        <button href='<?= base_url('profile/user'); ?>' class="btn btn-danger btn-block">Simpan</button>
-                    </div>
-                </div>
-                <!-- /.col -->
-
-
-            </form>
+            </div>
         </div>
     </div>
 </div>

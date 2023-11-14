@@ -108,7 +108,14 @@
                     </div>
                     <div class="modal-footer justify-content-between">
                         <button type="button" class="btn btn-default" data-dismiss="modal">Tutup</button>
-                        <button type="submit" class="btn btn-primary">Simpan</button>
+                        <?php
+                        // Check if the division name is CS or SATPAM and add the disabled attribute accordingly
+                        if ($value['keterangan'] !== 'CS') {
+                            ?>
+                            <button type="submit" class="btn btn-primary">Simpan</button>
+                        <?php } else { ?>
+                            <button type="button" class="btn btn-primary" disabled>Simpan</button>
+                        <?php } ?>
                     </div>
                     <?php echo form_close() ?>
                 </div>
@@ -137,8 +144,15 @@
                 </div>
                 <div class="modal-footer justify-content-between">
                     <button type="button" class="btn btn-default" data-dismiss="modal">Tutup</button>
-                    <a href="<?= base_url('devisi/deleteDivision/' . $value['id_devisi']) ?>"
-                        class="btn btn-danger">Hapus</a>
+                    <?php
+                    // Check if the division name is CS or SATPAM and add the disabled attribute accordingly
+                    if ($value['keterangan'] !== 'CS') {
+                        ?>
+                        <a href="<?= base_url('devisi/deleteDivision/' . $value['id_devisi']) ?>"
+                            class="btn btn-danger">Hapus</a>
+                    <?php } else { ?>
+                        <button type="button" class="btn btn-danger" disabled>Hapus</button>
+                    <?php } ?>
                 </div>
                 <?php echo form_close() ?>
             </div>

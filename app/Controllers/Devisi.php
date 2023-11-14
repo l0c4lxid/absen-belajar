@@ -33,6 +33,9 @@ class Devisi extends BaseController
         // Ambil data dari form
         $divisionName = $this->request->getPost('keterangan');
 
+        // Convert the division name to uppercase
+        $divisionName = strtoupper($divisionName);
+
         // Cek apakah data divisi sudah ada di database
         $existingDivision = $divisionModel->where('keterangan', $divisionName)->first();
         if ($existingDivision) {
@@ -81,6 +84,9 @@ class Devisi extends BaseController
 
         // Ambil data semua divisi dari form
         $devisi = $this->request->getPost('keterangan');
+
+        // Convert the division name to uppercase
+        $devisi = strtoupper($devisi);
 
         // $data['divisions'] = $divisions;
         $data = [

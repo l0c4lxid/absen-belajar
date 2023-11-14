@@ -27,7 +27,9 @@
                             <label for="id_user">Pilih Pengguna:</label>
                             <select class="custom-select form-control" name="id_user" id="id_user">
                                 <?php foreach ($users as $user): ?>
-                                    <option value="<?= $user['id_user'] ?>"><?= $user['nama'] ?></option>
+                                    <option value="<?= $user['id_user'] ?>">
+                                        <?= $user['nama'] ?>
+                                    </option>
                                 <?php endforeach; ?>
                             </select>
                         </div>
@@ -52,7 +54,9 @@
                                     12 => 'Desember'
                                 ); ?>
                                 <?php for ($i = 1; $i <= 12; $i++): ?>
-                                    <option value="<?php echo $i; ?>"><?php echo $bulanIndonesia[$i]; ?></option>
+                                    <option value="<?php echo $i; ?>">
+                                        <?php echo $bulanIndonesia[$i]; ?>
+                                    </option>
                                 <?php endfor; ?>
                             </select>
                         </div>
@@ -65,7 +69,9 @@
                             <select class="custom-select form-control" name="tahun" id="tahun">
                                 <?php $tahunSekarang = date("Y"); ?>
                                 <?php for ($tahun = $tahunSekarang; $tahun >= $tahunSekarang - 5; $tahun--): ?>
-                                    <option value="<?php echo $tahun; ?>"><?php echo $tahun; ?></option>
+                                    <option value="<?php echo $tahun; ?>">
+                                        <?php echo $tahun; ?>
+                                    </option>
                                 <?php endfor; ?>
                             </select>
                         </div>
@@ -88,7 +94,9 @@
                             <th>Nama</th>
                             <th>Tanggal</th>
                             <th>Waktu Masuk</th>
+                            <th>Waktu Masuk Telat</th>
                             <th>Waktu Keluar</th>
+                            <th>Waktu Keluar Telat</th>
                             <!-- <th>Keterangan</th> -->
                         </tr>
                     </thead>
@@ -105,14 +113,33 @@
                                 <td>
                                     <?php echo tanggal_indonesia($absen['jam_masuk']) . ', ' . date('d', strtotime($absen['jam_masuk'])) . ' ' . $bulanIndonesia[date('n', strtotime($absen['jam_masuk']))] . ' ' . date('Y', strtotime($absen['jam_masuk'])); ?>
                                 </td>
+
                                 <td>
                                     <?php echo date('H:i:s', strtotime($absen['jam_masuk'])); ?>
+                                </td>
+                                <td class='text-center'>
+                                    <?php
+                                    if ($absen['masuk_telat'] == 1) {
+                                        echo 'Ya';
+                                    } elseif ($absen['masuk_telat'] == 2) {
+                                        echo 'Tidak';
+                                    }
+                                    ?>
                                 </td>
                                 <td>
                                     <?php
                                     // Tampilkan waktu keluar jika tidak NULL, jika NULL, jangan tampilkan apa pun
                                     if ($absen['jam_keluar'] !== NULL) {
                                         echo date('H:i:s', strtotime($absen['jam_keluar']));
+                                    }
+                                    ?>
+                                </td>
+                                <td class='text-center'>
+                                    <?php
+                                    if ($absen['keluar_telat'] == 1) {
+                                        echo 'Ya';
+                                    } elseif ($absen['keluar_telat'] == 2) {
+                                        echo 'Tidak';
                                     }
                                     ?>
                                 </td>

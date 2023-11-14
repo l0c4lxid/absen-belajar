@@ -34,10 +34,13 @@
 
 
                 <div class="row">
-                    <div class="col-6">
+                    <div class="col-4">
                         <a href="<?= base_url('dashboard'); ?>" class="btn btn-primary btn-block">Kembali</a>
                     </div>
-                    <div class="col-6">
+                    <div class="col-4">
+                    
+                    </div>
+                    <div class="col-4">
                         <button href="<?= base_url('profile/admin'); ?>"
                             class="btn btn-danger btn-block">Simpan</button>
                     </div>

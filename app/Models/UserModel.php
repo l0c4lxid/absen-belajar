@@ -14,7 +14,7 @@ class UserModel extends Model
     {
         $this->select('tbl_user.*, tbl_devisi.keterangan');
         $this->join('tbl_devisi', 'tbl_devisi.id_devisi = tbl_user.id_devisi');
-        return $this->where('level_user', 2)->findAll();
+        return $this->where('level_user', 2)->orWhere('tbl_user.level_user', 3)->findAll();
     }
 
 }

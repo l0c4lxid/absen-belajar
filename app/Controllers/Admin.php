@@ -19,7 +19,27 @@ class Admin extends BaseController
         // Tampilkan view untuk dashboard admin
         return view('admin/template/temp_admin', $data);
     }
+    public function SemuaUser()
+    {
+        $userModel = new UserModel();
 
+        // Ambil data user dengan level_user 2 beserta relasi devisi dari database
+        $users = $userModel->getUsersWithDevisi();
+
+        // Prepare the data for the view
+        $data = [
+            'judul' => 'Tambah Pekerja Magang',
+            'subjudul' => 'data-magang',
+            'page' => 'admin/data_magang',
+            'navbar' => 'admin/template/v_navbar.php',
+            'footer' => 'admin/template/v_footer.php',
+            'sidebar' => 'admin/template/v_sidebar.php',
+            'users' => $users,
+            // Add the $users data to the $data array
+        ];
+        // Tampilkan view untuk menampilkan data user level_user 2
+        return view('admin/template/temp_admin', $data);
+    }
     public function TambahUser()
     {
         $data = [
@@ -75,23 +95,31 @@ class Admin extends BaseController
             return redirect()->to('admin/SemuaUser')->with('error', 'Devisi tidak valid.');
         }
 
+        // Set the default 'level_user' to 2
+        $level_user = 2;
+
+        // Check if the 'keterangan' is 'cs' or 'ob' and set 'level_user' to 3
+        if ($devisi['keterangan'] === 'CS' || $devisi['keterangan'] === 'SATPAM') {
+            $level_user = 3;
+        }
+
         $data = [
             'username' => $username,
             'password' => password_hash($password, PASSWORD_DEFAULT),
-            'level_user' => 2,
+            'level_user' => $level_user,
             'nama' => $nama,
             'alamat' => $alamat,
             'no_telp' => $no_telp,
-            // Simpan keterangan devisi ke tabel tbl_user
-            'id_devisi' => $id_devisi, // Simpan id_devisi ke tabel tbl_user
+            'id_devisi' => $id_devisi,
         ];
         $userModel->insert($data);
+
 
         // Tampilkan notifikasi dan redirect kembali ke halaman tambah user
         $session = session();
         $session->setFlashdata('success', '<div class="card card-success shadow">
             <div class="card-header col-md-12">
-                <h3 class="card-title">Berhasil Ditambahakan!!</h3>
+                <h3 class="card-title">Berhasil Ditambahkan!!</h3>
                 <div class="card-tools">
                     <button type="button" class="btn btn-tool" data-card-widget="remove"><i
                             class="fas fa-times"></i>
@@ -104,26 +132,7 @@ class Admin extends BaseController
     }
 
 
-    public function SemuaUser()
-    {
-        $userModel = new UserModel();
 
-        // Ambil data user dengan level_user 2 beserta relasi devisi dari database
-        $users = $userModel->getUsersWithDevisi();
-
-        // Prepare the data for the view
-        $data = [
-            'judul' => 'Tambah Pekerja Magang',
-            'subjudul' => 'data-magang',
-            'page' => 'admin/data_magang',
-            'navbar' => 'admin/template/v_navbar.php',
-            'footer' => 'admin/template/v_footer.php',
-            'sidebar' => 'admin/template/v_sidebar.php',
-            'users' => $users, // Add the $users data to the $data array
-        ];
-        // Tampilkan view untuk menampilkan data user level_user 2
-        return view('admin/template/temp_admin', $data);
-    }
     public function editUser($id_user)
     {
         $userModel = new UserModel();
@@ -142,7 +151,8 @@ class Admin extends BaseController
                 'footer' => 'admin/template/v_footer.php',
                 'sidebar' => 'admin/template/v_sidebar.php',
                 'users' => $user,
-                'devisiData' => $devisiModel->findAll(), // Mengambil data devisi untuk dropdown
+                'devisiData' => $devisiModel->findAll(),
+                // Mengambil data devisi untuk dropdown
             ];
 
             // Tampilkan view untuk mengedit data user
@@ -174,7 +184,8 @@ class Admin extends BaseController
             'nama' => $nama,
             'alamat' => $alamat,
             'no_telp' => $no_telp,
-            'id_devisi' => $devisi, // Ganti 'devisi' menjadi 'id_devisi'
+            'id_devisi' => $devisi,
+            // Ganti 'devisi' menjadi 'id_devisi'
         ];
 
         // Cek apakah password dikosongkan pada form, jika tidak kosong, update password

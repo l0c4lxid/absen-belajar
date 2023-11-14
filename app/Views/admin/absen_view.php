@@ -16,8 +16,10 @@
                         <th>Nama</th>
                         <th>Tanggal</th>
                         <th>Waktu Masuk</th>
+                        <th>Telat Masuk</th>
                         <th>Waktu Keluar</th>
-                        <th>Devisi</th>
+                        <th>Telat Keluar</th>
+                        <th>Status</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -36,9 +38,27 @@
                             </td>
                             <td>
                                 <?php echo $absen['waktu_masuk']; ?>
+
+                            </td>
+                            <td class='text-center'>
+                                <?php
+                                if ($absen['masuk_telat'] == 1) {
+                                    echo 'Ya';
+                                } elseif ($absen['masuk_telat'] == 2) {
+                                    echo 'Tidak';
+                                }
+                                ?>
                             </td>
                             <td>
                                 <?php echo $absen['waktu_keluar']; ?>
+                            </td>
+                            <td class='text-center'>
+                                <?php if ($absen['keluar_telat'] == 1) {
+                                    echo 'Ya';
+                                } elseif ($absen['keluar_telat'] == 2) {
+                                    echo 'Tidak';
+                                }
+                                ?>
                             </td>
                             <td>
                                 <?php echo $absen['keterangan']; ?>

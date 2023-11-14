@@ -60,10 +60,22 @@ $routes->get('admin/delete_division/(:num)', 'Admin::deleteDivision/$1', ['filte
 $routes->get('admin/add_user', 'Admin::getDivisions', ['filter' => 'auth']);
 $routes->post('admin/save_user', 'Admin::saveUser', ['filter' => 'auth']);
 
-$routes->get('absensi/absen_masuk', 'Absensi::absen_masuk');
-$routes->get('absensi/absen_keluar', 'Absensi::absen_keluar');
-$routes->post('absensi/absen_masuk', 'Absensi::absen_masuk');
-$routes->post('absensi/absen_keluar', 'Absensi::absen_keluar');
+$routes->get('/jadwal', 'Jam::index', ['filter' => 'auth']);
+$routes->get('/jadwal/edit/(:num)', 'Jam::edit/$1', ['filter' => 'auth']);
+$routes->post('/jadwal/update/(:num)', 'Jam::update/$1', ['filter' => 'auth']);
+
+
+$routes->get('absensi/absen_masuk', 'Absensi::absen_masuk', ['filter' => 'auth']);
+$routes->get('absensi/absen_keluar', 'Absensi::absen_keluar', ['filter' => 'auth']);
+$routes->post('absensi/absen_masuk', 'Absensi::absen_masuk', ['filter' => 'auth']);
+$routes->post('absensi/absen_keluar', 'Absensi::absen_keluar', ['filter' => 'auth']);
+
+$routes->get('absensi/kehadiran', 'Absensi::absensi_dua', ['filter' => 'auth']);
+
+$routes->get('absensi/absen_masuk_dua', 'Absensi::absen_masuk_dua', ['filter' => 'auth']);
+$routes->get('absensi/absen_keluar_dua', 'Absensi::absen_keluar_dua', ['filter' => 'auth']);
+$routes->post('absensi/absen_masuk_dua', 'Absensi::absen_masuk_dua', ['filter' => 'auth']);
+$routes->post('absensi/absen_keluar_dua', 'Absensi::absen_keluar_dua', ['filter' => 'auth']);
 
 
 

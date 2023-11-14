@@ -8,7 +8,7 @@ class AbsenModel extends Model
 {
     protected $table = 'tbl_absen';
     protected $primaryKey = 'id_absen';
-    protected $allowedFields = ['id_user', 'jam_masuk', 'jam_keluar', 'keterangan'];
+    protected $allowedFields = ['id_user', 'jam_masuk', 'jam_keluar', 'keterangan', 'masuk_telat', 'keluar_telat'];
     public function getAbsenByUserId($id_user, $bulan = null, $tahun = null)
     {
         $builder = $this->where('id_user', $id_user);
@@ -23,10 +23,11 @@ class AbsenModel extends Model
     }
     public function getAllAbsenWithUserInfo()
     {
-        $results = $this->select('tbl_absen.*, user.username, user.password, user.nama, user.alamat, user.no_telp, devisi.keterangan')
+        $results = $this->select('tbl_absen.*, user.username, user.password, user.nama, user.alamat, user.no_telp')
             ->join('tbl_user as user', 'user.id_user = tbl_absen.id_user')
             ->join('tbl_devisi as devisi', 'devisi.id_devisi = user.id_devisi')
             ->where('user.level_user', 2)
+            ->orWhere('user.level_user', 3)
             ->findAll();
 
         // Memisahkan tanggal dan waktu untuk setiap data
