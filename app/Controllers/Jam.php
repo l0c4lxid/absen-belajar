@@ -11,11 +11,13 @@ class Jam extends BaseController
     {
         // Fetch time schedules from the database
         $jamModel = new JamModel();
-        $schedules = $jamModel->findAll();
+        $schedules = $jamModel->where('id_jam >', 0)->findAll();
+        $cs = $jamModel->where('id_jam =', 0)->findAll();
 
         // Ambil data semua jam dari database
         $data = [
             'schedules' => $schedules,
+            'cs' => $cs,
             'judul' => 'Pengaturan Jadwal',
             'subjudul' => 'Jam',
             'page' => 'admin/jam',
@@ -75,19 +77,23 @@ class Jam extends BaseController
 
         // Tampilkan notifikasi dan redirect kembali ke halaman tambah jam
         $session = session();
-        $session->setFlashdata('success', '<div class="card card-success shadow">
-        <div class="card-header col-md-12">
-            <h3 class="card-title">Jam Berhasil Ditambahkan.</h3>
-            <div class="card-tools">
-                <button type="button" class="btn btn-tool" data-card-widget="remove"><i
-                        class="fas fa-times"></i>
-                </button>
+        $session->setFlashdata('success', '<div class="row">
+        <div class="col-md-12">
+            <div class="card card-success shadow">
+                <div class="card-header col-md-12">
+                    <h3 class="card-title">Jam Berhasil Ditambahkan.</h3>
+                    <div class="card-tools">
+                        <button type="button" class="btn btn-tool" data-card-widget="remove"><i
+                                class="fas fa-times"></i>
+                        </button>
+                    </div>
+                </div>
             </div>
-            <!-- /.card-tools -->
         </div>
     </div>');
         return redirect()->to('jadwal');
     }
+
     public function updatejam($id_jam)
     {
         $jamModel = new JamModel();
@@ -110,15 +116,18 @@ class Jam extends BaseController
 
         // Tampilkan view untuk menampilkan daftar jam
         // return view('admin/temp_admin', $data);
-        return redirect()->to('jadwal')->with('success', '<div class="card card-warning shadow">
-        <div class="card-header col-md-12">
-            <h3 class="card-title">Jadwal Telah Diganti</h3>
-            <div class="card-tools">
-                <button type="button" class="btn btn-tool" data-card-widget="remove"><i
-                        class="fas fa-times"></i>
-                </button>
+        return redirect()->to('jadwal')->with('success', '<div class="row">
+        <div class="col-md-12">
+            <div class="card card-success shadow">
+                <div class="card-header col-md-12">
+                    <h3 class="card-title">Jadwal telah diganti.</h3>
+                    <div class="card-tools">
+                        <button type="button" class="btn btn-tool" data-card-widget="remove"><i
+                                class="fas fa-times"></i>
+                        </button>
+                    </div>
+                </div>
             </div>
-            <!-- /.card-tools -->
         </div>
     </div>');
     }
@@ -130,15 +139,18 @@ class Jam extends BaseController
         $jamModel->delete($id_jam);
 
         // Redirect kembali ke halaman list jam dengan notifikasi
-        return redirect()->to('jadwal')->with('success', '<div class="card card-danger shadow">
-        <div class="card-header col-md-12">
-            <h3 class="card-title">Jadwal Telah Dihapus.</h3>
-            <div class="card-tools">
-                <button type="button" class="btn btn-tool" data-card-widget="remove"><i
-                        class="fas fa-times"></i>
-                </button>
+        return redirect()->to('jadwal')->with('success', '<div class="row">
+        <div class="col-md-12">
+            <div class="card card-success shadow">
+                <div class="card-header col-md-12">
+                    <h3 class="card-title">Jadwal telah dihapus.</h3>
+                    <div class="card-tools">
+                        <button type="button" class="btn btn-tool" data-card-widget="remove"><i
+                                class="fas fa-times"></i>
+                        </button>
+                    </div>
+                </div>
             </div>
-            <!-- /.card-tools -->
         </div>
     </div>');
     }

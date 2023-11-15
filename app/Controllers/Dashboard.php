@@ -37,12 +37,14 @@ class Dashboard extends BaseController
             // Menghitung jumlah absen masuk dan keluar pada hari ini
             $jumlahAbsenMasukKeluar = $absenModel->whereIn('keterangan', ['Masuk', 'Keluar'])
                 ->where('DATE(jam_masuk)', $currentDate)
+                ->orWhere('DATE(jam_keluar)', $currentDate)
+                ->groupBy('id_user') // Group by user ID to count each user once
                 ->countAllResults();
-
 
             // Menghitung jumlah absen keluar pada hari ini
             $jumlahAbsenKeluar = $absenModel->where('keterangan', 'Keluar')
                 ->where('DATE(jam_keluar)', $currentDate)
+                ->groupBy('id_user') // Group by user ID to count each user once
                 ->countAllResults();
 
             // Menghitung jumlah pegawai yang belum absen masuk pada hari ini
@@ -50,6 +52,7 @@ class Dashboard extends BaseController
 
             // Menghitung jumlah pegawai yang belum absen keluar pada hari ini
             $jumlahPegawaiBelumAbsenKeluar = $jumlahPegawai - $jumlahAbsenKeluar;
+
 
             $data = [
                 'judul' => 'Dashboard',
@@ -149,6 +152,25 @@ class Dashboard extends BaseController
             $countAbsenKeluar = $absenModel->where('id_user', $userId)
                 ->where('DATE(jam_keluar)', date('Y-m-d'))
                 ->countAllResults();
+            // Get the id_jam associated with the user
+            $userModel = new UserModel(); // Adjust with your actual UserModel class
+            $user = $userModel->find($userId);
+
+            if (!$user || !isset($user['id_jam'])) {
+                // Handle the case where user data or id_jam is not found
+                return redirect()->to(base_url('absensi'))->with('error', 'Data user tidak valid.');
+            }
+
+            $idJam = $user['id_jam'];
+
+            // Validasi jam masuk
+            $jamModel = new JamModel(); // Adjust with your actual JamModel class
+            $jamData = $jamModel->find($idJam);
+
+            if (!$jamData) {
+                // Handle the case where jam data is not found in the database
+                return redirect()->to(base_url('absensi'))->with('error', 'Data jam tidak valid.');
+            }
 
             $userId = $session->get('id_user');
             $userLevel = $session->get('level_user');
@@ -162,8 +184,11 @@ class Dashboard extends BaseController
                 'userLevel' => $userLevel,
                 'countAbsenMasuk' => $countAbsenMasuk,
                 'countAbsenKeluar' => $countAbsenKeluar,
+                'jam' => $jamData
 
             ];
+            // var_dump($data);
+            // die;
             // Jika level_user adalah user, tampilkan view user_dashboard
             return view('user/template/temp_user', $data);
         } else {

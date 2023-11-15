@@ -32,22 +32,18 @@
                                 <button class="btn btn-primary col-md-6" type="submit" name="submit"
                                     <?= ($countAbsenMasuk >= 2 || $countAbsenKeluar >= 2) ? 'disabled' : '' ?>>Absen
                                     Masuk</button>
-
                             </form>
-
                         </div>
                     </div>
                 </div>
-
                 <!-- /.info-box-content -->
                 <div class="col-md-6 col-sm-6 col-12">
                     <div class="info-box bg-Secondary">
                         <span class="info-box-icon"><i class="far fa-bookmark"></i></span>
                         <div class="info-box-content d-flex justify-content-center align-items-center">
                             <button class="btn btn-danger col-md-6" data-toggle="modal" data-target="#absenKeluarModal"
-                                id='btnKeluar' <?= ($countAbsenMasuk < 2 || $countAbsenKeluar >= 2) ? 'disabled' : '' ?>>Absen Keluar</button>
+                                id='btnKeluar' <?= ($countAbsenMasuk > 2 || $countAbsenKeluar >= 2) ? 'disabled' : '' ?>>Absen Keluar</button>
                         </div>
-
                     </div>
                 </div>
             </div>
@@ -82,7 +78,7 @@
     </div>
 </div>
 <!-- Tambahkan script JavaScript -->
-<script>
+<!-- <script>
     // Fungsi untuk menyembunyikan tombol Absen Keluar setelah diklik
     document.addEventListener('DOMContentLoaded', function () {
         const btnKeluar = document.getElementById('btnKeluar');
@@ -93,7 +89,7 @@
             absenKeluarModal.style.display = 'none';
         });
     });
-</script>
+</script> -->
 <!-- Tambahkan script JavaScript -->
 <script>
     // Fungsi untuk memperbarui jam, hari, dan tanggal secara real-time

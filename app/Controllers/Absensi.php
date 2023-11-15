@@ -50,7 +50,7 @@ class Absensi extends BaseController
         $data['absensi'] = $absenModel->getAbsenByUserId($id_user, $bulan, $tahun);
         $data['judul'] = 'Absensi';
         $data['subjudul'] = 'absen';
-        $data['page'] = 'user/absensi/absen_view_cs';
+        $data['page'] = 'user/absensi/absen_view';
         $data['navbar'] = 'user/template/v_navbar.php';
         $data['footer'] = 'user/template/v_footer.php';
         $data['sidebar'] = 'user/template/v_sidebar.php';
@@ -358,13 +358,54 @@ class Absensi extends BaseController
                 return redirect()->to(base_url('absensi/kehadiran'));
             }
         }
+        $userModel = new UserModel(); // Adjust with your actual UserModel class
+        $user = $userModel->find($userId);
+
+        if (!$user || !isset($user['id_jam'])) {
+            // Handle the case where user data or id_jam is not found
+            return redirect()->to(base_url('absensi'))->with('error', 'Data user tidak valid.');
+        }
+        $idJam = $user['id_jam'];
+
+        // Get the "jam_keluar_awal" and "jam_keluar_akhir" values for the selected "id_jam"
+        $jamModel = new JamModel();
+        $jamData = $jamModel->find($idJam);
+
+        $jamBatasTelatKeluarkAwal = $jamData['jam_masuk_awal']; //06.00
+        $jamBatasTelatKeluarAkhir = $jamData['jam_keluar_awal']; //16.30
+
+
+        // Check if it's the first or second clock-in
+        $countAbsenMasuk = $this->absenModel->where('id_user', $userId)
+            ->where('DATE(jam_masuk)', $today)
+            ->countAllResults();
+
+        // Validasi jam masuk
+        $jamKeluarPertama = date('H:i:s', strtotime($jamBatasTelatKeluarkAwal) - 3600);
+        $jamKeluarKedua = date('H:i:s', strtotime($jamBatasTelatKeluarAkhir) - 3600);
+
+        if ($countAbsenMasuk == 0) {
+            // First clock-in
+            if ($jamBatasTelatKeluarkAwal <= $jamKeluarPertama) {
+                $masukTelat = 2;
+            } else {
+                $masukTelat = 1;
+            }
+        } elseif ($countAbsenMasuk == 1) {
+            // Second clock-in
+            if ($jamBatasTelatKeluarAkhir <= $jamKeluarKedua) {
+                $masukTelat = 2;
+            } else {
+                $masukTelat = 1;
+            }
+        }
 
         // Save "absen masuk" data
         $dataMasuk = [
             'id_user' => $userId,
             'jam_masuk' => date('Y-m-d H:i:s'),
             'keterangan' => 'Masuk',
-            'masuk_telat' => null,
+            'masuk_telat' => $masukTelat,
         ];
 
         $this->absenModel->save($dataMasuk);
@@ -446,7 +487,7 @@ class Absensi extends BaseController
         } else {
             // User hasn't done "absen keluar" today
             // Check if the user has already done "absen masuk" twice today
-            if ($countAbsenMasuk >= 2) {
+            if ($countAbsenMasuk > 2) {
                 // User has already done "absen masuk" twice today
                 $session->setFlashdata('error', '<div class="card card-warning shadow">
                 <div class="card-header col-md-12">
@@ -459,12 +500,53 @@ class Absensi extends BaseController
                 return redirect()->to(base_url('absensi/kehadiran'));
             }
         }
+        // Get the id_jam associated with the user
+        $userModel = new UserModel(); // Adjust with your actual UserModel class
+        $user = $userModel->find($userId);
+        if (!$user || !isset($user['id_jam'])) {
+            // Handle the case where user data or id_jam is not found
+            return redirect()->to(base_url('absensi'))->with('error', 'Data user tidak valid.');
+        }
+        $idJam = $user['id_jam'];
+
+        // Get the "jam_keluar_awal" and "jam_keluar_akhir" values for the selected "id_jam"
+        $jamModel = new JamModel();
+        $jamData = $jamModel->find($idJam);
+
+        $jamBatasTelatKeluarkAwal = $jamData['jam_masuk_akhir']; //9.00
+        $jamBatasTelatKeluarAkhir = $jamData['jam_keluar_akhir']; //21.30
+
+
+        // Check if it's the first or second clock-in
+        $countAbsenMasuk = $this->absenModel->where('id_user', $userId)
+            ->where('DATE(jam_keluar)', $today)
+            ->countAllResults();
+
+        // Validasi jam keluar
+        $jamKeluarPertama = date('H:i:s', strtotime($jamBatasTelatKeluarkAwal) - 3600);
+        $jamKeluarKedua = date('H:i:s', strtotime($jamBatasTelatKeluarAkhir) - 3600);
+
+        if ($countAbsenMasuk == 0) {
+            // First clock-in
+            if ($jamBatasTelatKeluarkAwal >= $jamKeluarPertama) {
+                $keluarTelat = 1;
+            } else {
+                $keluarTelat = 2;
+            }
+        } elseif ($countAbsenMasuk == 1) {
+            // Second clock-in
+            if ($jamBatasTelatKeluarAkhir >= $jamKeluarKedua) {
+                $keluarTelat = 1;
+            } else {
+                $keluarTelat = 2;
+            }
+        }
 
         // Save "absen keluar" data
         $data = [
             'jam_keluar' => date('Y-m-d H:i:s'),
             'keterangan' => 'Keluar',
-            'keluar_telat' => null,
+            'keluar_telat' => $keluarTelat,
         ];
 
         $this->absenModel->where('id_user', $userId)
