@@ -55,10 +55,10 @@
                 </a>
             </li>
             <li class="nav-item">
-                <a href="<?= base_url('jadwal'); ?>" class="nav-link <?= $subjudul == 'jam' ? 'active' : '' ?>">
+                <a href="<?= base_url('jadwal'); ?>" class="nav-link <?= $subjudul == 'Jam' ? 'active' : '' ?>">
                     <i class="nav-icon fas fa-clock"></i>
                     <p>
-                        Atur Waktu
+                        Jam Kerja
                     </p>
                 </a>
             </li>

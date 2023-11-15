@@ -8,13 +8,17 @@ class UserModel extends Model
 {
     protected $table = 'tbl_user';
     protected $primaryKey = 'id_user';
-    protected $allowedFields = ['id_devisi', 'username', 'password', 'level_user', 'nama', 'alamat', 'no_telp', ''];
+    protected $allowedFields = ['id_devisi', 'id_jam', 'username', 'password', 'level_user', 'nama', 'alamat', 'no_telp', ''];
 
-    public function getUsersWithDevisi()
+    public function getUsersWithDevisiJam()
     {
-        $this->select('tbl_user.*, tbl_devisi.keterangan');
+        $this->select('tbl_user.*, tbl_devisi.keterangan, tbl_jam.*');
         $this->join('tbl_devisi', 'tbl_devisi.id_devisi = tbl_user.id_devisi');
-        return $this->where('level_user', 2)->orWhere('tbl_user.level_user', 3)->findAll();
+        $this->join('tbl_jam', 'tbl_jam.id_jam = tbl_user.id_jam');
+        $this->whereIn('tbl_user.level_user', [2, 3]); // Use whereIn for multiple values
+
+        return $this->findAll();
     }
+
 
 }

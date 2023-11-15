@@ -48,8 +48,20 @@
                                 required>
                         </div>
                     </div>
-                    <div class="col-md-6">
+                    <div class="col-md-3">
+                        <div class="form-group">
+                            <label for="id_jam">Jam Kerja :</label>
+                            <select name="id_jam" id="id_jam" class="form-control" required>
+                                <?php
+                                foreach ($jam as $value) {
+                                    echo '<option value="' . $value['id_jam'] . '">' . $value['shift'] . ' | ' . $value['jam_masuk_awal'] . ' - ' . $value['jam_masuk_akhir'] . ' | ' . $value['jam_keluar_awal'] . ' - ' . $value['jam_keluar_akhir'] . '</option>';
+                                }
+                                ?>
+                            </select>
+                        </div>
 
+                    </div>
+                    <div class="col-md-3">
                         <div class='form-group'>
                             <label for="devisi">Devisi:</label>
                             <select class="form-control" id="devisi" name="devisi" required>
@@ -62,10 +74,12 @@
                             </select>
                         </div>
                     </div>
-                    <div class="col-6">
+                    <div class="col-4 mt-5">
                         <a href="javascript:history.go(-1);" class="btn btn-primary btn-block">Kembali</a>
                     </div>
-                    <div class="col-6">
+                    <div class="col-4">
+                    </div>
+                    <div class="col-4 mt-5">
                         <button class='btn btn-danger btn-block' type="submit">Update</button>
                     </div>
                 </div>

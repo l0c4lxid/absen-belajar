@@ -8,5 +8,5 @@ class JamModel extends Model
 {
     protected $table = 'tbl_jam';
     protected $primaryKey = 'id_jam';
-    protected $allowedFields = ['masuk_1', 'keluar_1', 'masuk_2', 'keluar_2'];
+    protected $allowedFields = ['shift', 'jam_masuk_awal', 'jam_masuk_akhir', 'jam_keluar_awal', 'jam_keluar_akhir'];
 }

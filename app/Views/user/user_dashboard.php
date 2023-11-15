@@ -129,13 +129,7 @@
         const dateString = `${dayName}, ${day.toString().padStart(2, '0')} ${month} ${year}`; // Menyusun format tanggal dan nama hari
         dateElement.innerText = dateString;
 
-        // Check if the current time is before 15:00
-        const btnKeluarElement = document.getElementById('btnKeluar');
-        if (hours < 15) {
-            btnKeluarElement.disabled = true; // Disable the button
-        } else {
-            btnKeluarElement.disabled = false; // Enable the button
-        }
+
     }
 
     // Memperbarui jam setiap 1 detik
@@ -143,4 +137,31 @@
 
     // Memanggil fungsi updateClock() untuk pertama kali
     updateClock();
+</script>
+<!-- ... (your existing HTML code) -->
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const jamKeluarAwal = '<?= $jamKeluarAwal ?>'; // Replace with the actual value from your PHP data
+        const jamKeluarAkhir = '<?= $jamKeluarAkhir ?>'; // Replace with the actual value from your PHP data
+        const btnKeluarElement = document.getElementById('btnKeluar');
+
+        // Function to check if the current time is within the allowed range
+        function isCurrentTimeInRange() {
+            const currentTime = new Date().toLocaleTimeString('en-US', { timeZone: 'Asia/Jakarta', hour12: false });
+            return currentTime >= jamKeluarAwal && currentTime <= jamKeluarAkhir;
+        }
+
+        // Check if the current time is within the allowed range
+        if (!isCurrentTimeInRange()) {
+            btnKeluarElement.disabled = true; // Disable the button
+        }
+
+        // Optional: Add an event listener to show a message if the button is clicked outside the allowed range
+        btnKeluarElement.addEventListener('click', function () {
+            if (!isCurrentTimeInRange()) {
+                alert('Absen keluar hanya dapat dilakukan antara jam ' + jamKeluarAwal + ' - ' + jamKeluarAkhir);
+                return false; // Prevent the button click
+            }
+        });
+    });
 </script>

@@ -29,8 +29,10 @@
                         <span class="info-box-icon"><i class="far fa-bookmark"></i></span>
                         <div class="info-box-content">
                             <form action="<?= base_url('absensi/absen_masuk_dua') ?>" method="post">
-                                <button class="btn btn-primary col-md-6" type="submit" name="submit">Absen Masuk
-                                </button>
+                                <button class="btn btn-primary col-md-6" type="submit" name="submit"
+                                    <?= ($countAbsenMasuk >= 2 || $countAbsenKeluar >= 2) ? 'disabled' : '' ?>>Absen
+                                    Masuk</button>
+
                             </form>
 
                         </div>
@@ -43,7 +45,7 @@
                         <span class="info-box-icon"><i class="far fa-bookmark"></i></span>
                         <div class="info-box-content d-flex justify-content-center align-items-center">
                             <button class="btn btn-danger col-md-6" data-toggle="modal" data-target="#absenKeluarModal"
-                                id='btnKeluar'>Absen Keluar </button>
+                                id='btnKeluar' <?= ($countAbsenMasuk < 2 || $countAbsenKeluar >= 2) ? 'disabled' : '' ?>>Absen Keluar</button>
                         </div>
 
                     </div>
@@ -79,7 +81,19 @@
         </div>
     </div>
 </div>
+<!-- Tambahkan script JavaScript -->
+<script>
+    // Fungsi untuk menyembunyikan tombol Absen Keluar setelah diklik
+    document.addEventListener('DOMContentLoaded', function () {
+        const btnKeluar = document.getElementById('btnKeluar');
+        const absenKeluarModal = document.getElementById('absenKeluarModal');
 
+        btnKeluar.addEventListener('click', function () {
+            // Sembunyikan tombol Absen Keluar setelah diklik
+            absenKeluarModal.style.display = 'none';
+        });
+    });
+</script>
 <!-- Tambahkan script JavaScript -->
 <script>
     // Fungsi untuk memperbarui jam, hari, dan tanggal secara real-time

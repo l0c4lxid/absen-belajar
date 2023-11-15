@@ -5,6 +5,7 @@ namespace App\Controllers;
 use App\Controllers\BaseController;
 use App\Models\AbsenModel;
 use App\Models\DevisiModel;
+use App\Models\JamModel;
 use App\Models\UserModel;
 
 class Dashboard extends BaseController
@@ -86,9 +87,33 @@ class Dashboard extends BaseController
                 ->where('DATE(jam_keluar)', $today)
                 ->first();
 
+            // Get the "jam_keluar_awal" value based on the user's "id_jam"
+            // Get the id_jam associated with the user
+            $userModel = new UserModel(); // Adjust with your actual UserModel class
+            $user = $userModel->find($userId);
+
+            if (!$user || !isset($user['id_jam'])) {
+                // Handle the case where user data or id_jam is not found
+                return redirect()->to(base_url('absensi'))->with('error', 'Data user tidak valid.');
+            }
+
+            $idJam = $user['id_jam'];
+
+            // Validasi jam masuk
+            $jamModel = new JamModel(); // Adjust with your actual JamModel class
+            $jamData = $jamModel->find($idJam);
+
+            if (!$jamData) {
+                // Handle the case where jam data is not found in the database
+                return redirect()->to(base_url('absensi'))->with('error', 'Data jam tidak valid.');
+            }
+
+            $jamBatasTelatKeluarAwal = $jamData['jam_keluar_awal'];
+            $jamBatasTelatKeluarAkhir = $jamData['jam_keluar_akhir'];
 
             $hasAbsenToday = ($absenMasukToday) ? true : false;
             $hasAbsenTodayKeluar = ($absenKeluarToday) ? true : false;
+
             $data = [
                 'judul' => 'Dashboard',
                 'subjudul' => 'Dashboard',
@@ -98,19 +123,32 @@ class Dashboard extends BaseController
                 'sidebar' => 'user/template/v_sidebar.php',
                 'hasAbsenToday' => $hasAbsenToday,
                 'hasAbsenTodayKeluar' => $hasAbsenTodayKeluar,
+                'jamKeluarAwal' => $jamBatasTelatKeluarAwal,
+                'jamKeluarAkhir' => $jamBatasTelatKeluarAkhir,
             ];
+            // var_dump($data);
+            // die;
             // Jika level_user adalah user, tampilkan view user_dashboard
             return view('user/template/temp_user', $data);
         } elseif ($level_user == 3) {
 
             $absenModel = new AbsenModel();
             $session = session();
-
-            // Pastikan user telah login dan sesi telah berisi data user dengan level_user
+            $userId = $session->get('id_user');
+            $userLevel = $session->get('level_user');
             // Pastikan user telah login dan sesi telah berisi data user dengan level_user
             if (!$session->has('id_user') || !$session->has('level_user')) {
                 return redirect()->to(base_url());
             }
+
+            // Cek jumlah absen masuk dan absen keluar yang telah dilakukan hari ini
+            $countAbsenMasuk = $absenModel->where('id_user', $userId)
+                ->where('DATE(jam_masuk)', date('Y-m-d'))
+                ->countAllResults();
+
+            $countAbsenKeluar = $absenModel->where('id_user', $userId)
+                ->where('DATE(jam_keluar)', date('Y-m-d'))
+                ->countAllResults();
 
             $userId = $session->get('id_user');
             $userLevel = $session->get('level_user');
@@ -122,6 +160,8 @@ class Dashboard extends BaseController
                 'footer' => 'user/template/v_footer.php',
                 'sidebar' => 'user/template/v_sidebar.php',
                 'userLevel' => $userLevel,
+                'countAbsenMasuk' => $countAbsenMasuk,
+                'countAbsenKeluar' => $countAbsenKeluar,
 
             ];
             // Jika level_user adalah user, tampilkan view user_dashboard
@@ -131,6 +171,7 @@ class Dashboard extends BaseController
             return redirect()->to('login');
         }
     }
+
     public function userList()
     {
         $userModel = new UserModel();
