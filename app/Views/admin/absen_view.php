@@ -15,11 +15,11 @@
                         <th>No.</th>
                         <th>Nama</th>
                         <th>Tanggal</th>
-                        <th>Waktu Masuk</th>
-                        <th>Telat Masuk</th>
-                        <th>Waktu Keluar</th>
-                        <th>Telat Keluar</th>
-                        <th>Status</th>
+                        <th class='text-center'>Waktu Masuk</th>
+                        <th class='text-center'>Telat Masuk</th>
+                        <th class='text-center'>Waktu Keluar</th>
+                        <th class='text-center'>Telat Keluar</th>
+                        <th class='text-center'>Status</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -33,30 +33,30 @@
                             <td>
                                 <?php echo $absen['nama']; ?>
                             </td>
-                            <td>
+                            <td class='text-center'>
                                 <?php echo $absen['tanggal_masuk']; ?>
                             </td>
-                            <td>
+                            <td class='text-center'>
                                 <?php echo $absen['waktu_masuk']; ?>
 
                             </td>
                             <td class='text-center'>
                                 <?php
                                 if ($absen['masuk_telat'] == 1) {
-                                    echo 'Ya';
+                                    echo '<span style="color: red;">Terlambat</span>';
                                 } elseif ($absen['masuk_telat'] == 2) {
-                                    echo 'Tidak';
+                                    echo '<span style="color: green;">Tepat</span>';
                                 }
                                 ?>
                             </td>
-                            <td>
+                            <td class='text-center'>
                                 <?php echo $absen['waktu_keluar']; ?>
                             </td>
                             <td class='text-center'>
                                 <?php if ($absen['keluar_telat'] == 1) {
-                                    echo 'Ya';
+                                    echo '<span style="color: red;">Terlambat</span>';
                                 } elseif ($absen['keluar_telat'] == 2) {
-                                    echo 'Tidak';
+                                    echo '<span style="color: green;">Tepat</span>';
                                 }
                                 ?>
                             </td>

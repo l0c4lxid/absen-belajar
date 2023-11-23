@@ -41,8 +41,10 @@ class Auth extends BaseController
                     'level_user' => $user['level_user'],
                     'id_jam' => $user['id_jam'],
                     'logged_in' => true,
+                    'last_activity' => time(), // Menyimpan waktu aktivitas terakhir
                 ];
-                $session->set($sessionData);
+                // Atur waktu kadaluarsa sesi menjadi 1 jam (3600 detik)
+                $session->set($sessionData, ['last_activity' => time() + 3600]);
 
                 // Redirect ke halaman dashboard berdasarkan level_user setelah login berhasil
                 if ($user['level_user'] == 1) {

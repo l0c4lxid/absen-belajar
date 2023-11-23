@@ -162,6 +162,8 @@ class Dashboard extends BaseController
             }
 
             $idJam = $user['id_jam'];
+            $jamSekarang = date('H:i:s'); // Mendapatkan jam sekarang
+
 
             // Validasi jam masuk
             $jamModel = new JamModel(); // Adjust with your actual JamModel class
@@ -171,6 +173,16 @@ class Dashboard extends BaseController
                 // Handle the case where jam data is not found in the database
                 return redirect()->to(base_url('absensi'))->with('error', 'Data jam tidak valid.');
             }
+            $masuk_1 = $jamData['jam_masuk_awal'];
+            $keluar_1 = $jamData['jam_masuk_akhir'];
+            $masuk_2 = $jamData['jam_keluar_awal'];
+            $keluar_2 = $jamData['jam_keluar_akhir'];
+
+
+            $masuk_1_kurang = date('H:i:s', strtotime($masuk_1) - 3600);
+            $keluar_1_tambah = date('H:i:s', strtotime($keluar_1) + 3600);
+            $masuk_2_kurang = date('H:i:s', strtotime($masuk_2) - 3600);
+            $keluar_2_tambah = date('H:i:s', strtotime($keluar_2) + 3600);
 
             $userId = $session->get('id_user');
             $userLevel = $session->get('level_user');
@@ -184,8 +196,15 @@ class Dashboard extends BaseController
                 'userLevel' => $userLevel,
                 'countAbsenMasuk' => $countAbsenMasuk,
                 'countAbsenKeluar' => $countAbsenKeluar,
-                'jam' => $jamData
-
+                'masuk_1_kurang' => $masuk_1_kurang,
+                'keluar_1_tambah' => $keluar_1_tambah,
+                'masuk_2_kurang' => $masuk_2_kurang,
+                'keluar_2_tambah' => $keluar_2_tambah,
+                'masuk_1' => $masuk_1,
+                'keluar_1' => $keluar_1,
+                'masuk_2' => $masuk_2,
+                'keluar_2' => $keluar_2,
+                'jamSekarang' => $jamSekarang
             ];
             // var_dump($data);
             // die;

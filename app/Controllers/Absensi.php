@@ -371,7 +371,7 @@ class Absensi extends BaseController
         $jamModel = new JamModel();
         $jamData = $jamModel->find($idJam);
 
-        $jamBatasTelatKeluarkAwal = $jamData['jam_masuk_awal']; //06.00
+        $jamBatasTelatKeluarkAwal = $jamData['jam_masuk_awal']; //06.00 
         $jamBatasTelatKeluarAkhir = $jamData['jam_keluar_awal']; //16.30
 
 
@@ -381,24 +381,22 @@ class Absensi extends BaseController
             ->countAllResults();
 
         // Validasi jam masuk
-        $jamKeluarPertama = date('H:i:s', strtotime($jamBatasTelatKeluarkAwal) - 3600);
-        $jamKeluarKedua = date('H:i:s', strtotime($jamBatasTelatKeluarAkhir) - 3600);
+        $jamKeluarPertama = date('H:i:s', strtotime($jamBatasTelatKeluarkAwal . ' -1 hour')); //5.00
+        $jamKeluarKedua = date('H:i:s', strtotime($jamBatasTelatKeluarAkhir . ' -1 hour')); //8.00
 
-        if ($countAbsenMasuk == 0) {
-            // First clock-in
-            if ($jamBatasTelatKeluarkAwal <= $jamKeluarPertama) {
-                $masukTelat = 2;
-            } else {
-                $masukTelat = 1;
-            }
-        } elseif ($countAbsenMasuk == 1) {
-            // Second clock-in
-            if ($jamBatasTelatKeluarAkhir <= $jamKeluarKedua) {
-                $masukTelat = 2;
-            } else {
-                $masukTelat = 1;
-            }
+
+        $jamSekarang = date('H:i:s'); // Mendapatkan jam sekarang
+
+        if ($countAbsenMasuk == 0 && $jamSekarang >= $jamKeluarPertama && $jamSekarang <= $jamBatasTelatKeluarkAwal) {
+            // Jika countAbsenMasuk = 0 dan jam sekarang di antara $jamKeluarPertama dan $jamBatasTelatKeluarkAwal
+            $masukTelat = 2; // Tepat waktu
+        } elseif ($countAbsenMasuk == 1 && $jamSekarang >= $jamKeluarKedua && $jamSekarang <= $jamBatasTelatKeluarAkhir) {
+            // Jika countAbsenMasuk = 1 dan jam sekarang di antara $jamKeluarKedua dan $jamBatasTelatKeluarAkhir
+            $masukTelat = 2; // Tepat waktu
+        } else {
+            $masukTelat = 1; // Jika tidak memenuhi kondisi di atas, maka dianggap telat
         }
+
 
         // Save "absen masuk" data
         $dataMasuk = [
@@ -523,24 +521,21 @@ class Absensi extends BaseController
             ->countAllResults();
 
         // Validasi jam keluar
-        $jamKeluarPertama = date('H:i:s', strtotime($jamBatasTelatKeluarkAwal) - 3600);
-        $jamKeluarKedua = date('H:i:s', strtotime($jamBatasTelatKeluarAkhir) - 3600);
+        $jamKeluarPertama = date('H:i:s', strtotime($jamBatasTelatKeluarkAwal) + 3600);
+        $jamKeluarKedua = date('H:i:s', strtotime($jamBatasTelatKeluarAkhir) + 3600);
 
-        if ($countAbsenMasuk == 0) {
-            // First clock-in
-            if ($jamBatasTelatKeluarkAwal >= $jamKeluarPertama) {
-                $keluarTelat = 1;
-            } else {
-                $keluarTelat = 2;
-            }
-        } elseif ($countAbsenMasuk == 1) {
-            // Second clock-in
-            if ($jamBatasTelatKeluarAkhir >= $jamKeluarKedua) {
-                $keluarTelat = 1;
-            } else {
-                $keluarTelat = 2;
-            }
+        $jamSekarang = date('H:i:s'); // Mendapatkan jam sekarang
+
+        if ($countAbsenKeluar == 0 && $jamSekarang >= $jamBatasTelatKeluarkAwal && $jamSekarang <= $jamKeluarPertama) {
+            // Jika countAbsenMasuk = 0 dan jam sekarang di antara $jamKeluarPertama dan $jamBatasTelatKeluarkAwal
+            $keluarTelat = 2; // Tepat waktu
+        } elseif ($countAbsenKeluar == 1 && $jamSekarang >= $jamBatasTelatKeluarAkhir && $jamSekarang <= $jamKeluarKedua) {
+            // Jika countAbsenMasuk = 1 dan jam sekarang di antara $jamKeluarKedua dan $jamBatasTelatKeluarAkhir
+            $keluarTelat = 2; // Tepat waktu
+        } else {
+            $keluarTelat = 1; // Jika tidak memenuhi kondisi di atas, maka dianggap telat
         }
+
 
         // Save "absen keluar" data
         $data = [

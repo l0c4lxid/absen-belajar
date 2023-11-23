@@ -78,8 +78,8 @@ $routes->post('absensi/absen_masuk_dua', 'Absensi::absen_masuk_dua', ['filter' =
 $routes->post('absensi/absen_keluar_dua', 'Absensi::absen_keluar_dua', ['filter' => 'auth']);
 
 $routes->group('user', ['namespace' => 'App\Controllers'], function ($routes) {
-    $routes->get('getUserJamId', 'Dashboard::getUserJamId');
-    $routes->get('getJamKeluarAkhir/(:num)', 'Dashboard::getJamKeluarAkhir/$1');
+    $routes->get('getUserJamId', 'Dashboard::getUserJamId', ['filter' => 'auth']);
+    $routes->get('getJamKeluarAkhir/(:num)', 'Dashboard::getJamKeluarAkhir/$1', ['filter' => 'auth']);
 });
 
 

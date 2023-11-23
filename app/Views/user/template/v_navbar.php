@@ -16,7 +16,7 @@
         </li>
         <li class="nav-item">
             <a class="nav-link" data-toggle="modal" data-target="#modal-logout">
-                <i class="fas fa-sign-out-alt"></i>Log Out
+                <i class="fas fa-sign-out-alt"></i> Keluar
             </a>
         </li>
     </ul>

@@ -29,7 +29,7 @@
                         <span class="info-box-icon"><i class="far fa-bookmark"></i></span>
                         <div class="info-box-content">
                             <form action="<?= base_url('absensi/absen_masuk_dua') ?>" method="post">
-                                <button class="btn btn-primary col-md-6" type="submit" name="submit"
+                                <button class="btn btn-primary col-md-6" type="submit" name="submit" id='btnMasuk'
                                     <?= ($countAbsenMasuk >= 2 || $countAbsenKeluar >= 2) ? 'disabled' : '' ?>>Absen
                                     Masuk</button>
                             </form>
@@ -77,19 +77,7 @@
         </div>
     </div>
 </div>
-<!-- Tambahkan script JavaScript -->
-<!-- <script>
-    // Fungsi untuk menyembunyikan tombol Absen Keluar setelah diklik
-    document.addEventListener('DOMContentLoaded', function () {
-        const btnKeluar = document.getElementById('btnKeluar');
-        const absenKeluarModal = document.getElementById('absenKeluarModal');
 
-        btnKeluar.addEventListener('click', function () {
-            // Sembunyikan tombol Absen Keluar setelah diklik
-            absenKeluarModal.style.display = 'none';
-        });
-    });
-</script> -->
 <!-- Tambahkan script JavaScript -->
 <script>
     // Fungsi untuk memperbarui jam, hari, dan tanggal secara real-time
@@ -130,4 +118,33 @@
 
     // Memanggil fungsi updateClock() untuk pertama kali
     updateClock();
+</script>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        var jamSekarang = "<?php echo $jamSekarang; ?>"; // Get the current time from PHP
+        var countAbsenMasuk = <?php echo $countAbsenMasuk; ?>; // Get the count of Absen Masuk from PHP
+        var countAbsenKeluar = <?php echo $countAbsenKeluar; ?>; // Get the count of Absen Keluar from PHP
+        var masuk_2_kurang = "<?php echo $masuk_2_kurang; ?>";
+        var keluar_2_tambah = "<?php echo $keluar_2_tambah; ?>";
+        var keluar_2 = "<?php echo $keluar_2; ?>";
+        var keluar_1 = "<?php echo $keluar_1; ?>";
+        var masuk_1_kurang = "<?php echo $masuk_1_kurang; ?>";
+
+
+        // Compare time values directly
+        if (countAbsenMasuk === 0 && (jamSekarang <= masuk_1_kurang || jamSekarang >= keluar_2_tambah)) {
+            document.getElementById("btnMasuk").disabled = true;
+        }
+        if (countAbsenKeluar === 0 && (jamSekarang <= keluar_1 || jamSekarang >= keluar_2_tambah)) {
+            document.getElementById("btnKeluar").disabled = true;
+        }
+
+        if (countAbsenMasuk === 1 && (jamSekarang <= masuk_2_kurang || jamSekarang >= keluar_2_tambah)) {
+            document.getElementById("btnMasuk").disabled = true;
+        }
+
+        if (countAbsenKeluar === 1 && (jamSekarang <= keluar_2 || jamSekarang >= keluar_2_tambah)) {
+            document.getElementById("btnKeluar").disabled = true;
+        }
+    });
 </script>

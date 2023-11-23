@@ -111,7 +111,7 @@
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
-                <h4 class="modal-title">Log Out
+                <h4 class="modal-title">Keluar
                 </h4>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
@@ -122,7 +122,7 @@
             </div>
             <div class="modal-footer justify-content-between">
                 <button type="button" class="btn btn-default" data-dismiss="modal">Tutup</button>
-                <a href="<?= base_url('logout'); ?>" class="btn btn-danger">Keluar</a>
+                <a href="<?= base_url('logout'); ?>" class="btn btn-danger">Ya, Keluar</a>
             </div>
 
         </div>

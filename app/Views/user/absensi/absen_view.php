@@ -80,10 +80,10 @@
                         <tr>
                             <th>No.</th>
                             <th>Tanggal</th>
-                            <th>Waktu Masuk</th>
-                            <th>Waktu Masuk Telat</th>
-                            <th>Waktu Keluar</th>
-                            <th>Waktu Keluar Telat</th>
+                            <th class='text-center'>Waktu Masuk</th>
+                            <th class='text-center'>Keterangan Masuk</th>
+                            <th class='text-center'>Waktu Keluar</th>
+                            <th class='text-center'>Keterangan Keluar</th>
                             <!-- <th>Keterangan</th> -->
                         </tr>
                     </thead>
@@ -97,19 +97,19 @@
                                 <td>
                                     <?php echo tanggal_indonesia($absen['jam_masuk']) . ', ' . date('d', strtotime($absen['jam_masuk'])) . ' ' . $bulanIndonesia[date('n', strtotime($absen['jam_masuk']))] . ' ' . date('Y', strtotime($absen['jam_masuk'])); ?>
                                 </td>
-                                <td>
+                                <td class='text-center'>
                                     <?php echo date('H:i:s', strtotime($absen['jam_masuk'])); ?>
                                 </td>
                                 <td class='text-center'>
                                     <?php
                                     if ($absen['masuk_telat'] == 1) {
-                                        echo 'Ya';
+                                        echo '<span style="color: red;">Terlambat</span>';
                                     } elseif ($absen['masuk_telat'] == 2) {
-                                        echo 'Tidak';
+                                        echo '<span style="color: green;">Tepat</span>';
                                     }
                                     ?>
                                 </td>
-                                <td>
+                                <td class='text-center'>
                                     <?php
                                     // Tampilkan waktu keluar jika tidak NULL, jika NULL, jangan tampilkan apa pun
                                     if ($absen['jam_keluar'] !== NULL) {
@@ -120,9 +120,9 @@
                                 <td class='text-center'>
                                     <?php
                                     if ($absen['keluar_telat'] == 1) {
-                                        echo 'Ya';
+                                        echo '<span style="color: red;">Terlambat</span>';
                                     } elseif ($absen['keluar_telat'] == 2) {
-                                        echo 'Tidak';
+                                        echo '<span style="color: green;">Tepat</span>';
                                     }
                                     ?>
                                 </td>
