@@ -70,6 +70,8 @@ $routes->get('absensi/absen_keluar', 'Absensi::absen_keluar', ['filter' => 'auth
 $routes->post('absensi/absen_masuk', 'Absensi::absen_masuk', ['filter' => 'auth']);
 $routes->post('absensi/absen_keluar', 'Absensi::absen_keluar', ['filter' => 'auth']);
 
+$routes->post('absensi/berita_acara', 'Absensi::berita_acara', ['filter' => 'auth']);
+
 $routes->get('absensi/kehadiran', 'Absensi::absensi_dua', ['filter' => 'auth']);
 
 $routes->get('absensi/absen_masuk_dua', 'Absensi::absen_masuk_dua', ['filter' => 'auth']);

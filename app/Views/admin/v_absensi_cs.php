@@ -53,9 +53,9 @@
                                     11 => 'November',
                                     12 => 'Desember'
                                 ); ?>
-                                <?php for ($i = 1; $i <= 12; $i++): ?>
+                                <?php for ($index = 1; $index <= 12; $index++): ?>
                                     <option value="<?php echo $i; ?>">
-                                        <?php echo $bulanIndonesia[$i]; ?>
+                                        <?php echo $bulanIndonesia[$index]; ?>
                                     </option>
                                 <?php endfor; ?>
                             </select>

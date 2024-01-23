@@ -190,6 +190,41 @@ class Absensi extends BaseController
         </div>');
         return redirect()->to(base_url('absensi'));
     }
+    public function berita_acara()
+    {
+        $session = session();
+        // Pastikan user telah login dan sesi telah berisi data user dengan level_user
+        if (!$session->has('id_user')) {
+            return redirect()->to(base_url());
+        }
+        $userId = $session->get('id_user');
+
+        // Periksa apakah user sudah melakukan "absen masuk" hari ini di database
+        $today = date('Y-m-d');
+
+        $beritaacara = $this->request->getPost('berita_acara');
+
+        $data = [
+            'berita_acara' => $beritaacara,
+        ];
+        $this->absenModel->where('id_user', $userId)
+            ->where('DATE(jam_masuk)', $today)
+            ->where('berita_acara', null) // Update hanya jika 'berita_acara' belum diisi
+            ->set($data)
+            ->update();
+        $session->setFlashdata('success', '<div class="card card-warning shadow">
+            <div class="card-header col-md-12">
+                <h3 class="card-title">Anda telah melakukan mengisi berita acara!</h3>
+                <div class="card-tools">
+                    <button type="button" class="btn btn-tool" data-card-widget="remove"><i
+                            class="fas fa-times"></i>
+                    </button>
+                </div>
+            </div>
+        </div>');
+        return redirect()->to(base_url('dashboard'));
+
+    }
 
     public function absen_keluar()
     {
@@ -420,8 +455,6 @@ class Absensi extends BaseController
 
         return redirect()->to(base_url('absensi/kehadiran'));
     }
-
-
 
     public function absen_keluar_dua()
     {

@@ -29,6 +29,17 @@
                     <input class="btn btn-primary" type="submit" name="submit" value="Absen Masuk">
                 </form>
             </div> -->
+            <?php
+            $session = session();
+            $successMsg = $session->getFlashdata('success');
+            $errorMsg = $session->getFlashdata('error');
+            if ($successMsg) {
+                echo '<p style="color: green;">' . $successMsg . '</p>';
+            }
+            if ($errorMsg) {
+                echo '<p style="color: red;">' . $errorMsg . '</p>';
+            }
+            ?>
             <div class="row">
                 <div class="col-md-6 col-sm-6 col-12">
                     <div class="info-box bg-Secondary">
@@ -53,7 +64,10 @@
                     <div class="info-box bg-Secondary">
                         <span class="info-box-icon"><i class="far fa-bookmark"></i></span>
                         <div class="info-box-content d-flex justify-content-center align-items-center">
-                            <?php if (!$hasAbsenTodayKeluar): ?>
+
+                            <?php if (!$BeritaAcara): ?>
+                                <button class="btn btn-secondary col-md-6" disabled>Isi Dulu Berita Acara</button>
+                            <?php elseif (!$hasAbsenTodayKeluar): ?>
                                 <button class="btn btn-danger col-md-6" data-toggle="modal" data-target="#absenKeluarModal"
                                     id='btnKeluar'>Absen Keluar</button>
                             <?php else: ?>
@@ -63,7 +77,23 @@
 
                     </div>
                 </div>
+                <?php if ($hasAbsenToday && (!$BeritaAcara)): ?>
+                    <div class="col-md-12">
+                        <div class="card-header">
+                            <h3 class="card-title text-danger">
+                                Isi berita acara!!
+                            </h3>
+                        </div>
+                        <div class="card-body">
+                            <form action="<?= base_url('absensi/berita_acara') ?>" method="post">
+                                <textarea id="summernote" name="berita_acara"
+                                    placeholder="Masukkan berita acara Anda di sini..."></textarea>
+                                <button class="btn btn-primary" type="submit">Simpan</button>
+                            </form>
 
+                        </div>
+                    </div>
+                <?php endif; ?>
             </div>
             <!-- /.info-box -->
         </div>

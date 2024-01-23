@@ -9,7 +9,6 @@ class Admin extends BaseController
 {
     public function index()
     {
-
         $data = [
             'judul' => 'Dashboard',
             'page' => 'admin/v_dashboard.php',

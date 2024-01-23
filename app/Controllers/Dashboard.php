@@ -89,6 +89,12 @@ class Dashboard extends BaseController
             $absenKeluarToday = $this->absenModel->where('id_user', $userId)
                 ->where('DATE(jam_keluar)', $today)
                 ->first();
+            $beritaAcaraToday = $this->absenModel->where('id_user', $userId)
+                ->where('berita_acara IS NOT NULL') // Check if 'berita_acara' is not null
+                ->where('DATE(jam_masuk)', $today)
+                ->first();
+
+
 
             // Get the "jam_keluar_awal" value based on the user's "id_jam"
             // Get the id_jam associated with the user
@@ -117,6 +123,9 @@ class Dashboard extends BaseController
             $hasAbsenToday = ($absenMasukToday) ? true : false;
             $hasAbsenTodayKeluar = ($absenKeluarToday) ? true : false;
 
+            // Check if $beritaAcaraToday is defined, and set $beritaAcara accordingly
+            $beritaAcara = isset($beritaAcaraToday['berita_acara']) ? $beritaAcaraToday['berita_acara'] : null;
+
             $data = [
                 'judul' => 'Dashboard',
                 'subjudul' => 'Dashboard',
@@ -128,6 +137,7 @@ class Dashboard extends BaseController
                 'hasAbsenTodayKeluar' => $hasAbsenTodayKeluar,
                 'jamKeluarAwal' => $jamBatasTelatKeluarAwal,
                 'jamKeluarAkhir' => $jamBatasTelatKeluarAkhir,
+                'BeritaAcara' => $beritaAcara
             ];
             // var_dump($data);
             // die;

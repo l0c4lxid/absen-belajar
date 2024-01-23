@@ -38,6 +38,8 @@
 <script src="<?= base_url() ?>plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
 <!-- AdminLTE App -->
 <script src="<?= base_url() ?>dist/js/adminlte.js"></script>
+<!-- Summernote -->
+<script src="<?= base_url() ?>plugins/summernote/summernote-bs4.min.js"></script>
 <!-- DataTables  & Plugins -->
 <script src="<?= base_url() ?>plugins/datatables/jquery.dataTables.min.js"></script>
 <script src="<?= base_url() ?>plugins/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>
@@ -75,4 +77,17 @@
             "responsive": true,
         });
     });
+</script>
+<!-- Page specific script -->
+<script>
+    $(function () {
+        // Summernote
+        $('#summernote').summernote()
+
+        // CodeMirror
+        CodeMirror.fromTextArea(document.getElementById("codeMirrorDemo"), {
+            mode: "htmlmixed",
+            theme: "monokai"
+        });
+    })
 </script>

@@ -74,3 +74,48 @@
         });
     });
 </script>
+<!-- Page specific script -->
+<!-- <script>
+    $('#summernote').summernote({
+        callbacks: {
+            onChange: function (contents, $editable) {
+                // Atur tinggi baris di sini
+                $editable.css('line-height', '5'); // Ganti dengan tinggi baris yang diinginkan
+            }
+        }
+    });
+
+    $(".hint2basic").summernote({
+        height: 100,
+        toolbar: false,
+        placeholder: 'type with apple, orange, watermelon and lemon',
+        hint: {
+            words: ['apple', 'orange', 'watermelon', 'lemon'],
+            match: /\b(\w{1,})$/,
+            search: function (keyword, callback) {
+                callback($.grep(this.words, function (item) {
+                    return item.indexOf(keyword) === 0;
+                }));
+            }
+        }
+    });
+</script> -->
+<script>
+    $(document).ready(function () {
+        $('#summernote').summernote({
+            toolbar: false,
+            height: 100,
+            focus: true,
+            placeholder: 'Masukkan berita acara Anda di sini...',
+
+        });
+    });
+</script>
+<!-- <script type="text/javascript">
+    $(".hint2basic").summernote({
+        focus: true
+        height: 100,
+        toolbar: false,
+        placeholder: '<p style="text-align: center; ">Berita acara hari ini...</p>',
+    });
+</script> -->

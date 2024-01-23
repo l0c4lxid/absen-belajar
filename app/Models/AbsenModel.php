@@ -8,7 +8,7 @@ class AbsenModel extends Model
 {
     protected $table = 'tbl_absen';
     protected $primaryKey = 'id_absen';
-    protected $allowedFields = ['id_user', '', 'jam_masuk', 'jam_keluar', 'keterangan', 'masuk_telat', 'keluar_telat'];
+    protected $allowedFields = ['id_user', 'berita_acara', 'jam_masuk', 'jam_keluar', 'keterangan', 'masuk_telat', 'keluar_telat'];
     public function getAbsenByUserId($id_user, $bulan = null, $tahun = null)
     {
         $builder = $this->where('id_user', $id_user);

@@ -35,6 +35,20 @@
     <link rel="stylesheet" href="<?= base_url() ?>plugins/datatables-responsive/css/responsive.bootstrap4.min.css">
     <link rel="stylesheet" href="<?= base_url() ?>plugins/datatables-buttons/css/buttons.bootstrap4.min.css">
     <link rel="shortcut icon" type="image/png" href="<?= base_url() ?>/favicon.png">
+    <style>
+        .hint2basic::before {
+            content: 'Berita acara hari ini.';
+            display: block;
+            text-align: center;
+            color: #999;
+            /* Placeholder text color */
+            height: 100px;
+            /* Set the height as needed */
+            line-height: 100px;
+            /* Set the line height as needed */
+        }
+    </style>
+
 </head>
 
 <body class="hold-transition sidebar-mini layout-fixed">
