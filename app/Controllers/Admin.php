@@ -104,8 +104,8 @@ class Admin extends BaseController
         // Check if the 'keterangan' is 'cs' or '' and set 'level_user' to 3
         if ($devisi['keterangan'] === 'CS') {
             $level_user = 3;
-            // Set $id_jam to 0 if 'keterangan' is 'CS'
-            $id_jam = 0;
+            // Set $id_jam to 1 if 'keterangan' is 'CS'
+            $id_jam = 1;
         } else {
             // Check if id_jam exists in tbl_jam
             $jam = $jamModel->find($id_jam);

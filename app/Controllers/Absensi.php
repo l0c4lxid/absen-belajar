@@ -226,7 +226,7 @@ class Absensi extends BaseController
             ->where('berita_acara', null) // Update hanya jika 'berita_acara' belum diisi
             ->set($data)
             ->update();
-        $session->setFlashdata('success', '<div class="card card-warning shadow">
+        $session->setFlashdata('success', '<div class="card card-success shadow">
             <div class="card-header col-md-12">
                 <h3 class="card-title">Anda telah melakukan mengisi berita acara!</h3>
                 <div class="card-tools">

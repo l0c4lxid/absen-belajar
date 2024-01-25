@@ -1,6 +1,3 @@
-<!-- app/Views/jadwal/index.php -->
-<!-- Include DataTables CSS -->
-
 <div class="col-md-12">
 
     <?php

@@ -11,8 +11,8 @@ class Jam extends BaseController
     {
         // Fetch time schedules from the database
         $jamModel = new JamModel();
-        $schedules = $jamModel->where('id_jam >', 0)->findAll();
-        $cs = $jamModel->where('id_jam =', 0)->findAll();
+        $schedules = $jamModel->where('id_jam >', 1)->findAll();
+        $cs = $jamModel->where('id_jam =', 1)->findAll();
 
         // Ambil data semua jam dari database
         $data = [

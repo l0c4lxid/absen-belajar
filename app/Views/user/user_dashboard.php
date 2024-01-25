@@ -65,7 +65,9 @@
                         <span class="info-box-icon"><i class="far fa-bookmark"></i></span>
                         <div class="info-box-content d-flex justify-content-center align-items-center">
 
-                            <?php if (!$BeritaAcara): ?>
+                            <?php if (!$hasAbsenToday): ?>
+                                <button class="btn btn-secondary col-md-6" disabled>Belum Absen Masuk!!</button>
+                            <?php elseif (!$BeritaAcara): ?>
                                 <button class="btn btn-secondary col-md-6" disabled>Isi Dulu Berita Acara</button>
                             <?php elseif (!$hasAbsenTodayKeluar): ?>
                                 <button class="btn btn-danger col-md-6" data-toggle="modal" data-target="#absenKeluarModal"
