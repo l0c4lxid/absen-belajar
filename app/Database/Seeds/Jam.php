@@ -30,6 +30,13 @@ class Jam extends Seeder
                 'jam_keluar_awal' => '21:00:00',
                 'jam_keluar_akhir' => '22:00:00',
             ],
+            [
+                'shift' => 'PKL',
+                'jam_masuk_awal' => '07:00:00',
+                'jam_masuk_akhir' => '08:00:00',
+                'jam_keluar_awal' => '15:00:00',
+                'jam_keluar_akhir' => '16:00:00',
+            ],
         ];
 
         // Insert data ke dalam tabel tbl_jam

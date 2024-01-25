@@ -1,0 +1,17 @@
+Petunjuk Install
+
+1. Buka Folder Absen
+2. Buka cmd
+
+Masukan Beberapa Perintah Berikut
+
+- Migrasi Database
+php spark migrate
+
+- Seeder user jam devisi
+php spark db:seed User
+
+php spark db:seed Jam
+
+php spark db:seed Devisi
+

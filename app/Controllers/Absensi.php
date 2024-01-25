@@ -228,7 +228,7 @@ class Absensi extends BaseController
             ->update();
         $session->setFlashdata('success', '<div class="card card-success shadow">
             <div class="card-header col-md-12">
-                <h3 class="card-title">Anda telah melakukan mengisi berita acara!</h3>
+                <h3 class="card-title">Anda telah mengisi berita acara!</h3>
                 <div class="card-tools">
                     <button type="button" class="btn btn-tool" data-card-widget="remove"><i
                             class="fas fa-times"></i>
