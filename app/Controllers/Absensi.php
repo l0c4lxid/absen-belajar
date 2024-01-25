@@ -83,7 +83,7 @@ class Absensi extends BaseController
                 'id_user' => $user['id_user'],
             ];
         }
-        $data['judul'] = 'Absensi';
+        $data['judul'] = 'Laporan';
         $data['subjudul'] = 'absen-laporan';
         $data['page'] = 'admin/v_absensi';
         $data['navbar'] = 'admin/template/v_navbar.php';
@@ -93,16 +93,30 @@ class Absensi extends BaseController
         return view('admin/template/temp_admin', $data);
     }
 
-    public function Admin()
+    public function DataAbsenSatu()
     {
         $absenModel = new AbsenModel();
         $data['judul'] = 'Absensi';
-        $data['subjudul'] = 'absen-all';
-        $data['page'] = 'admin/absen_view';
+        $data['subjudul'] = 'absen-satu';
+        $data['page'] = 'admin/absen_view_satu';
         $data['navbar'] = 'admin/template/v_navbar.php';
         $data['footer'] = 'admin/template/v_footer.php';
         $data['sidebar'] = 'admin/template/v_sidebar.php';
-        $data['allAbsenWithUserInfo'] = $absenModel->getAllAbsenWithUserInfo();
+        $data['allAbsenWithUserInfo'] = $absenModel->getAbsenSatu();
+        // var_dump($data);
+        // die;
+        return view('admin/template/temp_admin', $data);
+    }
+    public function DataAbsenDua()
+    {
+        $absenModel = new AbsenModel();
+        $data['judul'] = 'Absensi';
+        $data['subjudul'] = 'absen-dua';
+        $data['page'] = 'admin/absen_view_dua';
+        $data['navbar'] = 'admin/template/v_navbar.php';
+        $data['footer'] = 'admin/template/v_footer.php';
+        $data['sidebar'] = 'admin/template/v_sidebar.php';
+        $data['allAbsenWithUserInfo'] = $absenModel->getAbsenDua();
         // var_dump($data);
         // die;
         return view('admin/template/temp_admin', $data);

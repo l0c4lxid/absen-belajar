@@ -65,6 +65,10 @@ $routes->get('/jadwal/edit/(:num)', 'Jam::edit/$1', ['filter' => 'auth']);
 $routes->post('/jadwal/update/(:num)', 'Jam::update/$1', ['filter' => 'auth']);
 
 
+$routes->get('Absensi/Absensatu', 'Absensi::DataAbsenSatu', ['filter' => 'auth']);
+$routes->get('Absensi/Absendua', 'Absensi::DataAbsenDua', ['filter' => 'auth']);
+
+
 $routes->get('absensi/absen_masuk', 'Absensi::absen_masuk', ['filter' => 'auth']);
 $routes->get('absensi/absen_keluar', 'Absensi::absen_keluar', ['filter' => 'auth']);
 $routes->post('absensi/absen_masuk', 'Absensi::absen_masuk', ['filter' => 'auth']);

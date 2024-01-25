@@ -19,7 +19,6 @@
                         <th class='text-center'>Telat Masuk</th>
                         <th class='text-center'>Waktu Keluar</th>
                         <th class='text-center'>Telat Keluar</th>
-                        <th class='text-center'>Status</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -60,9 +59,7 @@
                                 }
                                 ?>
                             </td>
-                            <td>
-                                <?php echo $absen['keterangan']; ?>
-                            </td>
+
                         </tr>
                     <?php endforeach; ?>
                 </tbody>

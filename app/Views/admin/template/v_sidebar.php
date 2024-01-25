@@ -62,14 +62,39 @@
                     </p>
                 </a>
             </li>
-            <li class="nav-item">
-                <a href="<?= base_url("Absensi/Admin") ?>"
-                    class="nav-link <?= $subjudul == 'absen-all' ? 'active' : '' ?>">
+            <!-- <li class="nav-item">
+                <a href=">"
+                    class="nav-link ">
                     <i class="nav-icon fas fa-user"></i>
                     <p>
                         Data Absen
                     </p>
                 </a>
+            </li> -->
+            <li class="nav-item">
+                <a href="#" class="nav-link <?= $judul == 'Absensi' ? 'active' : '' ?>">
+                    <i class="nav-icon fas fa-user"></i>
+                    <p>
+                        Data Absen
+                        <i class="fas fa-angle-left right"></i>
+                    </p>
+                </a>
+                <ul class="nav nav-treeview">
+                    <li class="nav-item">
+                        <a href="<?= base_url("Absensi/Absensatu") ?>"
+                            class="nav-link <?= $subjudul == 'absen-satu' ? 'active' : '' ?>">
+                            <i class="far fa-circle nav-icon text-primary"></i>
+                            <p>Data Absen Satu</p>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="<?= base_url("Absensi/Absendua") ?>"
+                            class="nav-link <?= $subjudul == 'absen-dua' ? 'active' : '' ?>">
+                            <i class="far fa-circle nav-icon text-info"></i>
+                            <p>Data Absen Dua</p>
+                        </a>
+                    </li>
+                </ul>
             </li>
             <li class="nav-item">
                 <a href="<?= base_url("Absensi/Laporan") ?>"
